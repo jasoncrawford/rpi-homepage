@@ -13,22 +13,22 @@
 | [post](#2-post) | 25 | ✓ |
 | [simple-text](#3-simple-text) | 6 | ✓ |
 | [post-index](#4-post-index) | 3 | ✓ |
-| [year-archive](#5-year-archive) | 3 | ✓ (reuses post-index components) |
-| [person-grid](#6-person-grid) | 2 | ✓ |
-| [conference](#7-conference) | 3 | ✓ |
-| [fellowship-landing](#8-fellowship-landing) | 4 | ✓ |
-| [program-landing](#9-program-landing) | 1 | ✓ |
-| [fellow-profile](#10-fellow-profile) | 74 | ✓ |
-| [advisory-profile](#11-advisory-profile) | 29 | ✓ |
-| [expert-profile](#12-expert-profile) | 20 | ✓ |
-| [member-profile](#13-member-profile) | 6 | ✓ |
+| [person-grid](#5-person-grid) | 1 | ✓ |
+| [conference](#6-conference) | 3 | ✓ |
+| [fellowship-landing](#7-fellowship-landing) | 3 | ✓ |
+| [program-landing](#8-program-landing) | 1 | ✓ |
+| [fellow-profile](#9-fellow-profile) | 74 | ✓ |
+| [advisory-profile](#10-advisory-profile) | 29 | ✓ |
+| [expert-profile](#11-expert-profile) | 20 | ✓ |
+| [member-profile](#12-member-profile) | 6 | ✓ |
 | [blog-subdomain-redirect](#a-blog-subdomain-redirect) | 17 | redirect only |
 | [wp-api-endpoint](#b-wp-api-endpoint) | 46 | not replicated |
 | [404-returned](#c-404-returned) | 19 | not replicated |
-| [http-duplicate](#d-http-duplicate) | 2 | handled by Netlify |
+| [homepage-redirect](#d-homepage-redirect) | 5 | not replicated |
+| [http-duplicate](#e-http-duplicate) | 2 | handled by Netlify |
 | **Total** | **261** | |
 
-Migratable pages requiring Astro routes: **177**
+Migratable pages requiring Astro routes: **172**
 
 ---
 
@@ -179,42 +179,17 @@ Hero/media section followed by a featured row (2-col at `.col-6-xmd`) and then a
 
 ---
 
-### 5. `year-archive`
+### 5. `person-grid`
 
-**URLs (3):**
-
-- https://rootsofprogress.org/year/2023
-- https://rootsofprogress.org/year/2024
-- https://rootsofprogress.org/year/2025
-
-**Captured files:** `capture/html/year/<year>/index.html`
-
-#### Layout
-
-Identical structure to `post-index`: featured 2-col row + 3-col post grid using the same `.posts`, `.col-4-md`, `.col-6-xmd`, `.inside`, `.thumb`, `.title`, `.excerpt` classes. Content is filtered to posts from that calendar year.
-
-#### Components needed
-
-Reuse **PostCard** and **PostGrid** from `post-index`. The Astro route filters data by year.
-
-#### Existing placeholder assessment
-
-No unique components needed beyond `post-index` work.
-
----
-
-### 6. `person-grid`
-
-**URLs (2):**
+**URLs (1):**
 
 - https://rootsofprogress.org/fellows
-- https://rootsofprogress.org/fellowship/fellows
 
-**Captured files:** `capture/html/fellows/index.html`, `capture/html/fellowship/fellows/index.html`
+**Captured file:** `capture/html/fellows/index.html`
 
 #### Layout
 
-Responsive grid of fellow profile cards. Each card uses `.block` with a headshot (`.thumb`) and bio summary (`.bio-title`, `.bio`). `/fellows` is a WordPress archive-style listing of all fellows; `/fellowship/fellows` is a WordPress singular page showing the fellowship cohort (likely a filtered subset). Both share the card structure.
+Responsive grid of fellow profile cards. Each card uses `.block` with a headshot (`.thumb`) and bio summary (`.bio-title`, `.bio`). A WordPress archive-style listing of all fellows.
 
 #### Key CSS classes
 
@@ -231,7 +206,7 @@ Responsive grid of fellow profile cards. Each card uses `.block` with a headshot
 
 ---
 
-### 7. `conference`
+### 6. `conference`
 
 **URLs (3):**
 
@@ -272,22 +247,21 @@ Multi-section modular layout. All three pages share the same section sequence (w
 
 ---
 
-### 8. `fellowship-landing`
+### 7. `fellowship-landing`
 
-**URLs (4):**
+**URLs (3):**
 
 - https://rootsofprogress.org/fellowship
-- https://rootsofprogress.org/fellowship-2
 - https://rootsofprogress.org/fellowship-2024
 - https://rootsofprogress.org/fellowship-2025
 
-**Captured files:** `capture/html/fellowship*/index.html`
+**Captured files:** `capture/html/fellowship/index.html`, `capture/html/fellowship-2024/index.html`, `capture/html/fellowship-2025/index.html`
 
 #### Layout
 
 Parallax hero (`section.media`) followed by accordion-heavy curriculum layout. Two-column heading/content split (`col-6-md`) throughout. Six or more `section.text.acco.alt.fellow` blocks represent collapsible curriculum topic sections. Agenda cards at the bottom (`section.text.agenda`).
 
-`fellowship-2` is a separate program ("Audience Building Intensive") sharing the same template. `/fellowship-2024` and `/fellowship-2025` are year editions of the main fellowship. All four use identical markup structure; only content differs.
+`/fellowship-2024` and `/fellowship-2025` are year editions of the main fellowship. All three use identical markup structure; only content differs.
 
 #### Key CSS classes
 
@@ -305,7 +279,7 @@ No close match among existing placeholders.
 
 ---
 
-### 9. `program-landing`
+### 8. `program-landing`
 
 **URLs (1):**
 
@@ -340,7 +314,7 @@ No close match. All components are shared with other types; none currently exist
 
 ---
 
-### 10. `fellow-profile`
+### 9. `fellow-profile`
 
 **URLs (74):** all paths under `https://rootsofprogress.org/fellow/`
 
@@ -447,7 +421,7 @@ Full-page popup/modal style (`section.fellows.alt.popups`). The page renders the
 
 ---
 
-### 11. `advisory-profile`
+### 10. `advisory-profile`
 
 **URLs (29):** all paths under `https://rootsofprogress.org/advisory/`
 
@@ -508,7 +482,7 @@ Two-column bio split (`section.bio`): headshot on the left (`.thumb` inside `.co
 
 ---
 
-### 12. `expert-profile`
+### 11. `expert-profile`
 
 **URLs (20):** all paths under `https://rootsofprogress.org/expert/`
 
@@ -561,7 +535,7 @@ Same popup/modal structure as `fellow-profile` (`section.fellows.alt.popups`, `.
 
 ---
 
-### 13. `member-profile`
+### 12. `member-profile`
 
 **URLs (6):**
 
@@ -650,7 +624,25 @@ URLs that the live WP site currently returns 404 for. No content to migrate.
 
 ---
 
-### D. `http-duplicate`
+### D. `homepage-redirect`
+
+**Count:** 5 URLs — captured with status 200 but serve homepage content
+
+These URLs return the homepage HTML verbatim (confirmed by matching sha256 `80d78a1f...` against the homepage capture). There is no distinct page to migrate.
+
+| URL | Note |
+|-----|------|
+| `/year/2023` | WP year archive falls back to homepage |
+| `/year/2024` | WP year archive falls back to homepage |
+| `/year/2025` | WP year archive falls back to homepage |
+| `/fellowship/fellows` | Redirects to `/fellows` (same sha256 `f9b626bc...`) |
+| `/fellowship-2` | Temporary staging copy of the fellowship page; not for migration |
+
+**Treatment:** No Astro route. `/year/*` and `/fellowship/fellows` will naturally 404 on the new site (acceptable — neither appears in the site nav). `/fellowship-2` is intentionally excluded.
+
+---
+
+### E. `http-duplicate`
 
 **Count:** 2 URLs — status 200 (bare HTTP)
 
@@ -671,13 +663,13 @@ File these issues after this doc merges. Each maps to one page type.
 |-------|-------|-----------------|----------:|
 | C2 | Build `post` template — parallax post with optional sidebar | `post` | 25 |
 | C3 | Build `simple-text` template — hero + prose content | `simple-text` | 6 |
-| C4 | Build `post-index` and `year-archive` templates — featured + 3-col post grid | `post-index`, `year-archive` | 6 |
+| C4 | Build `post-index` template — featured + 3-col post grid | `post-index` | 3 |
 | C5 | Build `fellow-profile` template — full-page popup layout | `fellow-profile` | 74 |
 | C6 | Build `expert-profile` template — popup + essays section | `expert-profile` | 20 |
 | C7 | Build `advisory-profile` and `member-profile` templates — two-column bio | `advisory-profile`, `member-profile` | 35 |
-| C8 | Build `person-grid` template — fellows listing pages | `person-grid` | 2 |
+| C8 | Build `person-grid` template — fellows listing page | `person-grid` | 1 |
 | C9 | Build `conference` template — multi-section event page | `conference` | 3 |
-| C10 | Build `fellowship-landing` template — accordion curriculum layout | `fellowship-landing` | 4 |
+| C10 | Build `fellowship-landing` template — accordion curriculum layout | `fellowship-landing` | 3 |
 | C11 | Build `program-landing` template — Progress in Medicine | `program-landing` | 1 |
 | C12 | Build `homepage` — custom landing page | `homepage` | 1 |
 
