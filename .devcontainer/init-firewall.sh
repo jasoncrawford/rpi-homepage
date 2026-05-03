@@ -29,10 +29,6 @@ fi
 iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
 # Allow inbound DNS responses
 iptables -A INPUT -p udp --sport 53 -j ACCEPT
-# Allow outbound SSH
-iptables -A OUTPUT -p tcp --dport 22 -j ACCEPT
-# Allow inbound SSH responses
-iptables -A INPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
 # Allow localhost
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A OUTPUT -o lo -j ACCEPT
@@ -86,12 +82,8 @@ for domain in \
     "productionresultssa10.blob.core.windows.net" \
     "productionresultssa11.blob.core.windows.net" \
     "productionresultssa12.blob.core.windows.net" \
+    "brunel-production.up.railway.app" \
     ; do
-    # --- PROJECT DOMAINS ---
-    # Add your project-specific domains here, e.g.:
-    #   "your-project.supabase.co" \
-    #   "api.your-service.com" \
-
     echo "Resolving $domain..."
     ips=$(dig +noall +answer A "$domain" | awk '$4 == "A" {print $5}')
     if [ -z "$ips" ]; then
@@ -109,6 +101,32 @@ for domain in \
     done < <(echo "$ips")
 done
 
+# Read project-specific domains from .devcontainer/firewall-extras.txt
+EXTRAS_FILE="/workspace/.devcontainer/firewall-extras.txt"
+if [ -f "$EXTRAS_FILE" ]; then
+    echo "Loading project-specific domains from $EXTRAS_FILE..."
+    while IFS= read -r domain || [ -n "$domain" ]; do
+        # Skip empty lines and comments
+        [[ -z "$domain" || "$domain" =~ ^# ]] && continue
+        echo "Resolving extra domain: $domain..."
+        ips=$(dig +noall +answer A "$domain" | awk '$4 == "A" {print $5}')
+        if [ -z "$ips" ]; then
+            echo "WARNING: Failed to resolve $domain (skipping)"
+            continue
+        fi
+        while read -r ip; do
+            if [[ ! "$ip" =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
+                echo "ERROR: Invalid IP from DNS for $domain: $ip"
+                exit 1
+            fi
+            echo "Adding $ip for $domain"
+            ipset add allowed-domains "$ip" 2>/dev/null || true
+        done < <(echo "$ips")
+    done < "$EXTRAS_FILE"
+else
+    echo "No firewall-extras.txt found, skipping project-specific domains"
+fi
+
 # Get host IP from default route
 HOST_IP=$(ip route | grep default | cut -d" " -f3)
 if [ -z "$HOST_IP" ]; then
@@ -116,6 +134,7 @@ if [ -z "$HOST_IP" ]; then
     exit 1
 fi
 
+# shellcheck disable=SC2001  # sed regex uses anchors not supported by ${//}
 HOST_NETWORK=$(echo "$HOST_IP" | sed "s/\.[0-9]*$/.0\/24/")
 echo "Host network detected as: $HOST_NETWORK"
 
@@ -137,6 +156,11 @@ iptables -A OUTPUT -m set --match-set allowed-domains dst -j ACCEPT
 
 # Explicitly REJECT all other outbound traffic for immediate feedback
 iptables -A OUTPUT -j REJECT --reject-with icmp-admin-prohibited
+
+# Block all IPv6 traffic
+ip6tables -P INPUT DROP
+ip6tables -P FORWARD DROP
+ip6tables -P OUTPUT DROP
 
 echo "Firewall configuration complete"
 echo "Verifying firewall rules..."
