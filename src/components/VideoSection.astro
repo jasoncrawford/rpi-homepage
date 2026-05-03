@@ -1,0 +1,145 @@
+---
+export interface Props {
+  headline: string;
+  embedUrl: string;
+  videoTitle: string;
+  videoLink: string;
+  excerpt: string;
+  tags?: string[];
+  background?: string;
+}
+
+const { headline, embedUrl, videoTitle, videoLink, excerpt, tags = [], background = "#fff" } = Astro.props;
+---
+
+<section class="video" style={`background: ${background};`} data-view>
+  <div class="container">
+    <div class="grid">
+      <div class="col-12-sm">
+        <div class="headline">
+          <h2>{headline}</h2><span></span>
+        </div>
+        <div class="inside">
+          <div class="video">
+            <div>
+              <iframe
+                src={embedUrl}
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                title={videoTitle}
+              ></iframe>
+            </div>
+          </div>
+          <div class="content">
+            <h3 class="title">
+              <a href={videoLink} rel="noopener" target="_blank">{videoTitle}</a>
+            </h3>
+            <div class="excerpt">{excerpt}</div>
+            <div class="bottoms" data-count={tags.length + 1}>
+              {tags.map((tag) => (
+                <div><span>{tag}</span></div>
+              ))}
+              <div>
+                <span>
+                  <a href={videoLink} rel="noopener" target="_blank" class="btn">
+                    Watch full video
+                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 5.29995L10.3555 4.94836L10.7032 5.29995L10.3555 5.65155L10 5.29995ZM9.53572 5.79995L0.25 5.79995L0.25 4.79995L9.53572 4.79995V5.79995ZM6.17693 0.723356L10.3555 4.94836L9.6445 5.65155L5.46593 1.42655L6.17693 0.723356ZM10.3555 5.65155L6.17693 9.87655L5.46593 9.17336L9.6445 4.94836L10.3555 5.65155Z" fill="#FFFCF2"></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  section.video {
+    padding: 60px 0;
+  }
+  @media (max-width: 767px) {
+    section.video {
+      padding: 36px 0;
+    }
+  }
+  section.video .headline {
+    margin-bottom: 60px;
+  }
+  @media (max-width: 767px) {
+    section.video .headline {
+      margin-bottom: 36px;
+    }
+  }
+  section.video .title {
+    text-align: center;
+    font-size: 37px;
+    line-height: 120%;
+    color: var(--DarkGreen);
+    padding-bottom: 15px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #a6c4a7;
+    font-weight: 400;
+  }
+  section.video .title a {
+    color: var(--DarkGreen);
+    border: 0;
+  }
+  @media (min-width: 1025px) {
+    section.video .title a:hover {
+      color: var(--Red);
+      border-color: var(--Red);
+    }
+  }
+  @media (max-width: 767px) {
+    section.video .title {
+      font-size: 30px;
+    }
+  }
+  section.video .inside {
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid #a6c4a7;
+  }
+  @media (max-width: 1199px) {
+    section.video .inside {
+      display: block;
+    }
+  }
+  section.video .excerpt {
+    line-height: 135%;
+  }
+  section.video .video {
+    width: 60%;
+  }
+  section.video .video div {
+    padding-bottom: 60%;
+    position: relative;
+  }
+  section.video .video iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block !important;
+  }
+  @media (max-width: 1199px) {
+    section.video .video {
+      width: 100%;
+    }
+  }
+  section.video .content {
+    width: 40%;
+    padding: 30px 30px 24px;
+  }
+  @media (max-width: 1199px) {
+    section.video .content {
+      width: 100%;
+      padding: 18px;
+    }
+  }
+</style>

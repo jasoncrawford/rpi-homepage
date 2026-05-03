@@ -1,0 +1,23 @@
+---
+export interface Props {
+  background?: string;
+  dataView?: boolean;
+}
+
+const { background, dataView = true } = Astro.props;
+const style = background ? `background:${background}` : undefined;
+---
+
+<section class="text" style={style} data-view={dataView || undefined}>
+  <div class="container">
+    <div class="grid">
+      <slot name="full" />
+      <div class="col-6-md">
+        <slot name="left" />
+      </div>
+      <div class="col-6-md">
+        <slot name="right" />
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,179 @@
+---
+export interface PostCard {
+  title: string;
+  titleHtml?: string;
+  excerpt?: string;
+  href: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  external?: boolean;
+  readMoreText?: string;
+}
+
+export interface Props {
+  headline?: string;
+  items: PostCard[];
+  background?: string;
+}
+
+const { headline, items, background } = Astro.props;
+const style = background ? `background: ${background};` : undefined;
+
+const arrowSvg = `<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 4.96865L10.3555 4.61706L10.7032 4.96865L10.3555 5.32025L10 4.96865ZM9.53572 5.46865L0.25 5.46865L0.25 4.46865L9.53572 4.46865V5.46865ZM6.17693 0.392058L10.3555 4.61706L9.6445 5.32025L5.46593 1.09525L6.17693 0.392058ZM10.3555 5.32025L6.17693 9.54525L5.46593 8.84206L9.6445 4.61706L10.3555 5.32025Z" fill="#FFFCF2"/></svg>`;
+---
+
+<section class="posts" style={style} data-view>
+  <div class="container">
+    {headline && (
+      <div class="grid">
+        <div class="col-12-sm">
+          <div class="headline">
+            <h2>{headline}</h2><span></span>
+          </div>
+        </div>
+      </div>
+    )}
+    <div class="grid">
+      {items.map((item, i) => (
+        <div class={`col-4-md t--fadedown t--delay_${(i + 1) * 250}`}>
+          {item.imageSrc && (
+            <a
+              class="thumb"
+              href={item.href}
+              target={item.external ? "_blank" : undefined}
+              rel={item.external ? "noopener" : undefined}
+            >
+              <img
+                src={item.imageSrc}
+                alt={item.imageAlt ?? ""}
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          )}
+          <div class="inside">
+            {item.titleHtml ? (
+              <div class="title mh" set:html={item.titleHtml} />
+            ) : (
+              <a
+                href={item.href}
+                class="title mh"
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noopener" : undefined}
+              >
+                {item.title}
+              </a>
+            )}
+            {item.excerpt && (
+              <div class="excerpt mh">{item.excerpt}</div>
+            )}
+            <div class={`bottoms${item.external ? " hend-xs" : ""}`}>
+              <div>
+                <a
+                  class="btn"
+                  href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noopener" : undefined}
+                  set:html={(item.readMoreText ?? "Read more") + " " + arrowSvg}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  section.posts {
+    padding: 60px 0;
+  }
+  @media (max-width: 767px) {
+    section.posts {
+      padding: 36px 0;
+    }
+  }
+  section.posts .headline {
+    margin: 40px 0 60px;
+  }
+  @media (max-width: 767px) {
+    section.posts .headline {
+      margin: 36px 0;
+    }
+  }
+  section.posts .thumb {
+    display: block;
+    padding-bottom: 61%;
+    border: 1px solid #a6c4a7;
+    border-bottom: 0;
+  }
+  section.posts .thumb + .inside {
+    border-top: 0;
+  }
+  section.posts .inside {
+    padding: 20px;
+    border: 1px solid #a6c4a7;
+    margin-bottom: 60px;
+  }
+  @media (max-width: 767px) {
+    section.posts .inside {
+      margin-bottom: 36px;
+      padding: 15px;
+    }
+  }
+  section.posts .title {
+    text-align: center;
+    font-family: "Palast", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--DarkGreen);
+    min-height: 72px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #a6c4a7;
+    display: block;
+  }
+  section.posts a.title {
+    transition: color 0.2s ease;
+    border: 0;
+  }
+  @media (min-width: 1025px) {
+    section.posts a.title:hover {
+      color: var(--Red);
+    }
+  }
+  section.posts .excerpt {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    padding-top: 25px;
+  }
+  section.posts .bottoms {
+    margin-top: 20px;
+    position: relative;
+  }
+  section.posts .bottoms div:last-child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    padding-right: 0;
+  }
+  @media (max-width: 767px) {
+    section.posts .bottoms div:last-child {
+      position: relative;
+      top: 0;
+      transform: none;
+      padding-right: 10px;
+    }
+  }
+  section.posts .bottoms .btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  section.posts .bottoms.hend-xs {
+    justify-content: flex-end;
+  }
+</style>

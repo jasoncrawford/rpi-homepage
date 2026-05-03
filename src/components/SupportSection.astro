@@ -1,0 +1,85 @@
+---
+export interface Props {
+  title: string;
+  patreonUrl?: string;
+  paypalUrl?: string;
+  contactEmail?: string;
+  moreUrl?: string;
+  moreText?: string;
+}
+
+const {
+  title,
+  patreonUrl = "https://www.patreon.com/rootsofprogress",
+  paypalUrl = "https://www.paypal.com/donate?hosted_button_id=DH53T4CSFD8GC",
+  contactEmail = "jason@rootsofprogress.org",
+  moreUrl = "/support/",
+  moreText = "More details here",
+} = Astro.props;
+---
+
+<section class="support" data-view>
+  <div class="container">
+    <div class="grid vcenter-xs">
+      <div class="col-6-md">
+        <!-- Decorative SVG illustration from original site -->
+        <svg width="634" height="468" viewBox="0 0 634 468" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g opacity="0.3">
+            <path d="M118.738 44.6986V47.8632L115.51 48.243C100.636 49.0658 85.4459 45.648 72.0911 39.0655C82.8509 27.6094 94.4336 16.9129 106.712 7.10242C113.422 18.4952 117.725 31.4703 118.738 44.6986Z" fill="#FFFCF2"/>
+            <path d="M199.374 51.5385L198.488 54.5765L195.323 54.0702C163.55 46.5383 136.27 19.4488 131.144 -10.7421L169.879 -32.8947C193.931 -14.9827 206.02 20.3982 199.374 51.5385Z" fill="#FFFCF2"/>
+            <path d="M318.745 41.3463L316.972 42.8653L315.2 41.3463C292.921 18.5607 288.87 -22.4533 313.555 -42.2008C314.441 -42.9603 316.023 -43.7831 316.972 -44.416C317.859 -43.7831 319.441 -42.9603 320.39 -42.2008C345.075 -22.4533 341.024 18.5607 318.745 41.3463Z" fill="#FFFCF2"/>
+            <path d="M320.074 207.171L316.972 209.955L313.808 207.171C274.503 166.916 267.414 94.6352 310.896 59.7607C312.542 58.4315 315.263 57.039 316.972 55.9631C318.618 57.039 321.34 58.4315 322.985 59.7607C366.531 94.6352 359.442 166.916 320.074 207.171Z" fill="#FFFCF2"/>
+            <path d="M415.253 51.5385L416.202 54.5765L419.304 54.0702C451.077 46.5383 478.357 19.4488 483.483 -10.7421L444.748 -32.8947C420.696 -14.9827 408.607 20.3982 415.253 51.5385Z" fill="#FFFCF2"/>
+            <path d="M496.007 44.6986V47.8632L499.235 48.243C514.109 49.0658 529.299 45.648 542.654 39.0655C531.894 27.6094 520.311 16.9129 508.033 7.10242C501.323 18.4952 497.02 31.4703 496.007 44.6986Z" fill="#FFFCF2"/>
+            <path d="M316.972 467.636L249.513 400.177L316.972 332.718L384.431 400.177L316.972 467.636Z" fill="#FFFCF2"/>
+            <path d="M316.972 332.718L249.513 265.259L316.972 197.8L384.431 265.259L316.972 332.718Z" fill="#FFFCF2"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col-6-md">
+        <h2>{title}</h2>
+        <p>You can support us monthly through Patreon:</p>
+        <p>
+          <a href={patreonUrl} target="_blank" rel="noopener">
+            <img src="https://rootsofprogress.org/wp-content/themes/theme/assets/img/patreon.png" alt="Patreon" width="120" height="30" loading="lazy" />
+          </a>
+        </p>
+        <p>
+          For a one-time donation, we take <a href={paypalUrl} target="_blank" rel="noopener">PayPal</a>.
+          Or <a href={`mailto:${contactEmail}`}>get in touch</a> to talk about a larger contribution or other payment methods.
+          We are a 501(c)(3) public educational charity; in the US, donations to such organizations are tax-deductible.
+        </p>
+        <p>
+          <a href={moreUrl}>{moreText}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  section.support {
+    background: #edeade;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 60px 0;
+  }
+  @media (max-width: 1023px) {
+    section.support {
+      padding: 36px 0;
+      font-size: 17px;
+    }
+    section.support svg {
+      display: none;
+    }
+  }
+  section.support h2 {
+    margin-bottom: 27px;
+  }
+  section.support p {
+    line-height: 135%;
+  }
+  section.support p + p {
+    padding-top: 16px;
+  }
+</style>
