@@ -303,14 +303,18 @@ Most complex single-page type: combines multi-section landing (from `conference`
 
 #### Components needed
 
-- **ProgramHero** — shares structure with ConferenceHero/FellowshipHero
-- **ExpertGrid** — `section.fellows.alt.popups` (shared with expert-profile type)
-- **VideoSection** — embedded video block
-- **AgendaSection** — shared with conference and fellowship-landing
+- **MediaSection** (`src/components/MediaSection.astro`) — parallax hero (`section.media`); shared with conference and fellowship-landing
+- **ExpertGrid** (`src/components/ExpertGrid.astro`) — `section.fellows.alt.popups` with popup modals; shared with expert-profile type
+- **VideoSection** (`src/components/VideoSection.astro`) — embedded video block (`section.video`)
+- **AgendaSection** (`src/components/AgendaSection.astro`) — two-col header + schedule image (`section.text.agenda`); shared with conference and fellowship-landing
+- **TextSection** (`src/components/TextSection.astro`) — two-col text section (`section.text`) with background/variant props; shared across all landing types
+- **NewsletterSection** (`src/components/NewsletterSection.astro`) — red CTA banner (`section.newsletter`); shared across all page types
+- **AccordionSection** (`src/components/AccordionSection.astro`) — collapsible curriculum (`section.text.acco.alt.fellow`)
+- **RPILayout** (`src/layouts/RPILayout.astro`) — layout for demo pages using `public/rpi-theme.css`
 
 #### Existing placeholder assessment
 
-No close match. All components are shared with other types; none currently exist as placeholders.
+All components implemented (C11, PR #55). Demo page at `src/pages/demo/program-landing-demo.astro`.
 
 ---
 

@@ -100,7 +100,7 @@ One issue per page type. Each issue:
 
 - References the relevant captured HTML files and `docs/design-tokens.md`
 - Implements the components in `src/components/`
-- Builds a `*-demo.astro` route under `src/pages/_demo/` that renders sample data through the component, for visual review
+- Builds a `*-demo.astro` route under `src/pages/demo/` that renders sample data through the component, for visual review (note: `src/pages/_demo/` does not work — Astro excludes `_`-prefixed directories from routing)
 - Updates or replaces the existing PersonCard / HeroSection / EventCard placeholders rather than adding parallel ones
 
 Component fidelity is judged by visual diff against the original, not against the spec. Use `npm run visual-diff -- /demo/<component>` to screenshot the demo route and compare with `npm run visual-diff -- /<corresponding-live-path>`.
