@@ -78,18 +78,24 @@ Migrate Roots of Progress nonprofit website from WordPress to Astro static site,
 
 ## Issue Breakdown
 
-See GitHub milestone for the complete list of 10 issues with dependencies:
+The original 10-issue plan was restructured after issues #1–#6 (foundation) merged. The first attempt at content extraction (issue #7 / PR #23) produced invented pages and paraphrased text because it allowed LLM-mediated tools in the content path. Issues #7–#10 and the redo #24 were closed and replaced by the v2 plan.
 
-1. Project Setup (Tasks 1-5) — No blockers
-2. Directory Structure & Base Layouts (Tasks 6-9) — Depends on #1
-3. Core Components (Tasks 10-12) — Depends on #1; parallel with #2
-4. Page Templates & Homepage (Tasks 13-15) — Depends on #2, #3
-5. Content Collections & Sample Data (Tasks 16-18) — Depends on #2, #4
-6. Data-Driven Components & Pages (Tasks 19-21) — Depends on #3, #5
-7. Build, Test & WordPress Migration (Tasks 22-25) — Depends on #6
-8. Advanced Features (Tasks 26-28) — Depends on #7
-9. Deployment Configuration & Testing (Tasks 29-33) — Depends on #8
-10. Content Migration Completion & Documentation (Tasks 34-40) — Depends on #9
+**Foundation (complete):**
+- #1 Project Setup
+- #2 Directory Structure & Base Layouts
+- #3 Core Components (placeholders)
+- #4 Page Templates & Homepage
+- #5 Content Collections & Sample Data
+- #6 Data-Driven Components & Pages
+
+**v2 plan — capture-first, no LLM in content path:**
+- **Phase A — Mechanical Capture:** #27 (crawl HTML), #28 (download images)
+- **Phase B — Design System:** #29 (extract tokens), #30 (rebuild Base + CSS)
+- **Phase C — Page-Type Components:** #31 (inventory) + one issue per page type discovered
+- **Phase D — Page-by-Page Reproduction:** filed after C1 inventory lands; one issue per page group; can run in parallel
+- **Phase E — Verification:** filed after Phase D; visual diff, staging review, cutover prep
+
+See `docs/superpowers/plans/2026-05-01-wordpress-migration.md` for the full plan, including the discipline rules every implementing PR must follow.
 
 ## Success Criteria
 
