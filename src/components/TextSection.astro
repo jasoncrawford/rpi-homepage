@@ -21,3 +21,58 @@ const style = background ? `background:${background}` : undefined;
     </div>
   </div>
 </section>
+
+<style is:global>
+  section.text {
+    padding: 60px 0;
+  }
+  section.text:first-of-type {
+    padding-top: 150px;
+  }
+  @media (max-width: 1023px) {
+    section.text [class*="col-6"] + div {
+      padding-top: 20px;
+    }
+  }
+  @media (max-width: 767px) {
+    section.text {
+      padding: 36px 0;
+    }
+    section.text:first-child {
+      padding-top: 90px;
+    }
+  }
+  section.text .max {
+    max-width: 600px;
+    position: relative;
+  }
+  section.text h1 {
+    font-size: 46px;
+    font-family: "Palast", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+  }
+  @media (max-width: 767px) {
+    section.text h1 {
+      font-size: 40px;
+    }
+  }
+  section.text h2,
+  section.text h3,
+  section.text h4 {
+    padding-bottom: 14px;
+  }
+  section.text *+h2,
+  section.text *+h3,
+  section.text *+h4 {
+    padding-top: 27px;
+  }
+  section.text p {
+    line-height: 135%;
+  }
+  section.text p + p {
+    padding-top: 16px;
+  }
+  section.text .btn {
+    margin-top: 7px;
+  }
+</style>
