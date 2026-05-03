@@ -1,8 +1,86 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import HeroSection from '../components/HeroSection.astro';
+import EventCard from '../components/EventCard.astro';
+
+const recentPosts = (await getCollection('blog'))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 3);
 ---
 
-<Base title="Roots of Progress">
-  <h1>Roots of Progress</h1>
-  <p>A culture of progress for the 21st century.</p>
+<Base
+  title="Roots of Progress"
+  description="A culture of progress for the 21st century. Roots of Progress is a nonprofit dedicated to understanding and accelerating human progress."
+>
+  <HeroSection
+    title="A culture of progress for the 21st century"
+    subtitle="While humanity has achieved remarkable progress over the past few centuries, we can and should accelerate it further."
+  />
+
+  <section class="mission-section">
+    <div class="section-inner">
+      <h2>Our Mission</h2>
+      <p>
+        Roots of Progress is a nonprofit dedicated to establishing a new philosophy of progress
+        — one that supports innovation, science, and technology as forces for human flourishing.
+        We run programs in research, education, and community-building to help make progress
+        both faster and more broadly beneficial.
+      </p>
+      <a href="/about/" class="btn">Learn more about us</a>
+    </div>
+  </section>
+
+  <section class="programs-section">
+    <div class="section-inner">
+      <h2>Our Programs</h2>
+      <div class="programs-grid">
+        <div class="program-card">
+          <h3>Fellowship</h3>
+          <p>Support for researchers and writers working on progress-relevant topics.</p>
+          <a href="/programs/">Learn more →</a>
+        </div>
+        <div class="program-card">
+          <h3>Conference</h3>
+          <p>Annual gathering of researchers, entrepreneurs, and philanthropists.</p>
+          <a href="/programs/">Learn more →</a>
+        </div>
+        <div class="program-card">
+          <h3>Progress in Medicine</h3>
+          <p>Exploring the history and future of medical innovation.</p>
+          <a href="/programs/">Learn more →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {recentPosts.length > 0 && (
+    <section class="news-section">
+      <div class="section-inner">
+        <h2>Latest News</h2>
+        <div class="card-grid">
+          {recentPosts.map((post) => (
+            <EventCard
+              title={post.data.title}
+              date={post.data.date.toISOString().split('T')[0]}
+              description={post.data.description}
+              link={`/blog/${post.slug}/`}
+            />
+          ))}
+        </div>
+        <a href="/blog/" class="btn btn-secondary">View all posts</a>
+      </div>
+    </section>
+  )}
+
+  <section class="cta-section">
+    <div class="section-inner">
+      <h2>Support Our Work</h2>
+      <p>
+        Help us build a culture that values and accelerates human progress.
+        Your support funds fellowships, conferences, and research.
+      </p>
+      <a href="/support/" class="btn">Support Roots of Progress</a>
+    </div>
+  </section>
 </Base>
