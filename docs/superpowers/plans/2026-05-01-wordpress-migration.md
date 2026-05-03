@@ -1291,40 +1291,52 @@ Expected: HTML files for all pages in dist/.
 
 ## Phase 1h: WordPress Content Extraction
 
-### Task 23: Prepare WordPress content export
+### Task 23: Extract WordPress content via direct HTTP scraping
 
 **Files:**
-- Create: scripts directory, export lists
+- Create: `scripts/extract-content.mjs`
 
-This task is a guide for exporting WordPress content. You'll need to:
+> **⚠️ CRITICAL: Do NOT use WebFetch (or any LLM-mediated tool) to extract content.** WebFetch returns an LLM-summarized interpretation of the page, not the raw text — this silently paraphrases every piece of content and makes the migration useless. The LLM writes the script; the script runs without the LLM. See the `verbatim-content-extraction` skill.
 
-- [ ] **Step 1: Export WordPress posts via XML**
+> **Note on XML export:** WordPress page builders (like the one used on rootsofprogress.org) store body content in a custom serialized format in the database. The XML export body fields are not reliable for migration. **Always scrape rendered HTML from the live site.**
 
-From WordPress admin panel:
-1. Go to **Tools > Export**
-2. Select **All content**
-3. Download the XML file as `wp-export.xml`
-4. Save to root of project: `/Users/jason/projects/rpi-homepage/wp-export.xml`
+The correct pipeline is: `fetch() → raw HTML → cheerio/node-html-parser → turndown → verbatim markdown`
 
-Expected: XML file with all posts, pages, metadata
+- [ ] **Step 1: Discover all URLs via sitemap**
 
-- [ ] **Step 2: Create extraction script plan**
+```bash
+curl https://rootsofprogress.org/sitemap_index.xml
+```
 
-We'll use Claude Code to help convert the WordPress XML to markdown files. The process:
-1. Parse XML file
-2. For each post/page:
-   - Extract title, content, date, author, featured image
-   - Convert HTML content to markdown
-   - Create frontmatter with metadata
-   - Save as `src/content/blog/[slug].md` or `src/content/pages/[slug].md`
+This returns a sitemap index. Each subsidiary sitemap (e.g. `post-sitemap.xml`, `page-sitemap.xml`, `fellow-sitemap.xml`, `advisory-sitemap.xml`) lists the URLs to scrape.
 
-- [ ] **Step 3: Download WordPress images**
+- [ ] **Step 2: Write extraction script**
 
-1. Use WordPress admin or FTP to access `/wp-content/uploads/`
-2. Download all images
-3. Organize into `src/assets/images/` with structure like: `src/assets/images/2024/post-slug/image.jpg`
+Install dependencies:
+```bash
+npm install turndown node-html-parser
+```
 
-**Note:** This will be handled with Claude Code assistance.
+Write `scripts/extract-content.mjs` using Node.js `fetch()` to download each URL, `node-html-parser` to parse HTML and extract the content container, and `turndown` to convert HTML to markdown. Extract frontmatter fields (title, date, author, description) from page metadata.
+
+- [ ] **Step 3: Run and spot-check**
+
+```bash
+node scripts/extract-content.mjs
+```
+
+Spot-check at least 5 extracted files by comparing title, first paragraph, and last paragraph against the live site. Any mismatch means the content selector is wrong — fix the script, not the markdown files.
+
+- [ ] **Step 4: Download images**
+
+Profile images are at non-predictable CDN paths. Scrape each profile page, extract the `wp-content/uploads` image URL from the `<img>` tag, then download. See the existing `scripts/download-images.mjs` for this pattern.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add scripts/ src/content/ src/data/ src/assets/images/
+git commit -m "Migrate WordPress content via direct HTML scraping (issue #24)"
+```
 
 ---
 
