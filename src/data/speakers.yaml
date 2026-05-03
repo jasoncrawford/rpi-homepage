@@ -1,0 +1,19 @@
+- name: Dr. Sarah Chen
+  role: Professor of History, UC Berkeley
+  bio: Dr. Chen explores how societies have navigated major technological transitions, focusing on energy, transportation, and communication.
+  website: https://sarahchen.example.com
+
+- name: David Hoffman
+  role: Technology Entrepreneur & Investor
+  bio: David has founded three technology companies and actively invests in frontier science. He writes and speaks on innovation policy and the future of research.
+  website: https://davidhoffman.example.com
+
+- name: Prof. Elena Rodriguez
+  role: Director, Progress Studies Lab
+  bio: Prof. Rodriguez studies the economic and social conditions that produce scientific and technological breakthroughs across different eras and regions.
+  website: https://elenarod.example.com
+
+- name: James Okafor
+  role: Senior Fellow, Future of Science Initiative
+  bio: James focuses on how research funding structures and incentive systems shape the kinds of science that get done and who does it.
+  website: https://jamesokafor.example.com
