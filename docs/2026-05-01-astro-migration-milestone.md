@@ -91,7 +91,7 @@ The original 10-issue plan was restructured after issues #1–#6 (foundation) me
 - #6 Data-Driven Components & Pages
 
 **v2 plan — capture-first, no LLM in content path:**
-- **Phase A — Mechanical Capture:** #27 ✓ crawl HTML (merged PR #33), #28 (download images)
+- **Phase A — Mechanical Capture:** #27 ✓ crawl HTML (merged PR #33), #28 ✓ download images (PR #36 open)
 - **Phase B — Design System:** #29 (extract tokens), #30 (rebuild Base + CSS)
 - **Phase C — Page-Type Components:** #31 (inventory) + one issue per page type discovered
 - **Phase D — Page-by-Page Reproduction:** filed after C1 inventory lands; one issue per page group; can run in parallel
@@ -139,7 +139,7 @@ No fixed deadline, but targeting completion in order of dependency (estimated ~2
 
 ---
 
-**Status:** Phase A in progress — A1 complete (merged PR #33); A2 (#28) next
+**Status:** Phase A in progress — A1 complete (merged PR #33); A2 in review (PR #36)
 
 **Assigned to:** Brunel (implementation via 10 PR-sized issues)
 
