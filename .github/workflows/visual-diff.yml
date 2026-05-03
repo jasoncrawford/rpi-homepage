@@ -1,0 +1,34 @@
+name: Visual Diff
+
+on:
+  push:
+    branches: [feature/c11-program-landing]
+
+jobs:
+  visual-diff:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - name: Run visual diff — demo page (local only)
+        run: npm run visual-diff -- /demo/program-landing-demo
+        continue-on-error: true
+
+      - name: Run visual diff — live page comparison
+        run: npm run visual-diff -- /progress-in-medicine/
+        continue-on-error: true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: visual-diff-screenshots
+          path: tmp/visual-diff/
+          retention-days: 7
