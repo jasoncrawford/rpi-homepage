@@ -804,42 +804,13 @@ git commit -m "Create EventCard component for displaying events/programs"
 **Files:**
 - Create: `src/pages/[slug].astro`
 
-- [ ] **Step 1: Write [slug].astro**
+> **Implemented in PR #N (issue #4).** Uses `getCollection('pages')` for static path generation. Renders page title as an `<h1>` outside the `<Content />` component, wrapped in `content-page` / `prose` CSS classes consistent with the global stylesheet.
 
-```astro
----
-import { getCollection } from 'astro:content';
-import Base from '../layouts/Base.astro';
+- [x] **Step 1: Write [slug].astro**
 
-export async function getStaticPaths() {
-  const pages = await getCollection('pages');
-  return pages.map(page => ({
-    params: { slug: page.slug },
-    props: { page }
-  }));
-}
+- [x] **Step 2: Verify file created**
 
-const { page } = Astro.props;
-const { Content } = await page.render();
----
-
-<Base title={page.data.title} description={page.data.description}>
-  <Content />
-</Base>
-```
-
-- [ ] **Step 2: Verify file created**
-
-```bash
-cat src/pages/\[slug\].astro
-```
-
-- [ ] **Step 3: Commit**
-
-```bash
-git add src/pages/\[slug\].astro
-git commit -m "Create dynamic page template for content collection pages"
-```
+- [x] **Step 3: Commit**
 
 ---
 
@@ -848,53 +819,15 @@ git commit -m "Create dynamic page template for content collection pages"
 **Files:**
 - Create: `src/pages/blog/[slug].astro`
 
-- [ ] **Step 1: Create blog directory**
+> **Implemented in PR #N (issue #4).** Uses `getCollection('blog')` for static path generation. Passes `title`, `date`, `author`, and `description` from frontmatter to the `BlogPost` layout, then renders `<Content />` inside it.
 
-```bash
-mkdir -p src/pages/blog
-```
+- [x] **Step 1: Create blog directory**
 
-- [ ] **Step 2: Write blog/[slug].astro**
+- [x] **Step 2: Write blog/[slug].astro**
 
-```astro
----
-import { getCollection } from 'astro:content';
-import BlogPost from '../../layouts/BlogPost.astro';
+- [x] **Step 3: Verify file created**
 
-export async function getStaticPaths() {
-  const blogPosts = await getCollection('blog');
-  return blogPosts.map(post => ({
-    params: { slug: post.slug },
-    props: { post }
-  }));
-}
-
-const { post } = Astro.props;
-const { Content } = await post.render();
----
-
-<BlogPost 
-  title={post.data.title}
-  date={post.data.date}
-  author={post.data.author}
-  description={post.data.description}
->
-  <Content />
-</BlogPost>
-```
-
-- [ ] **Step 3: Verify file created**
-
-```bash
-cat src/pages/blog/\[slug\].astro
-```
-
-- [ ] **Step 4: Commit**
-
-```bash
-git add src/pages/blog/
-git commit -m "Create blog post template for blog collection"
-```
+- [x] **Step 4: Commit**
 
 ---
 
@@ -903,7 +836,9 @@ git commit -m "Create blog post template for blog collection"
 **Files:**
 - Create: `src/pages/index.astro`
 
-- [ ] **Step 1: Write index.astro**
+> **Implemented in PR #N (issue #4).** Homepage includes: `HeroSection` with tagline, mission section, programs grid (Conference, Fellowship, Progress in Medicine), dynamic latest-news section driven by the blog collection (sorted by date, up to 3 posts, shown via `EventCard`), and a support CTA section. The news section is conditionally rendered and will populate automatically as blog posts are added.
+
+- [x] **Step 1: Write index.astro**
 
 ```astro
 ---
@@ -977,18 +912,9 @@ const recentNews = [];
 </style>
 ```
 
-- [ ] **Step 2: Verify file created**
+- [x] **Step 2: Verify file created**
 
-```bash
-head -40 src/pages/index.astro
-```
-
-- [ ] **Step 3: Commit**
-
-```bash
-git add src/pages/index.astro
-git commit -m "Create homepage with hero section and event previews"
-```
+- [x] **Step 3: Commit**
 
 ---
 
@@ -999,7 +925,9 @@ git commit -m "Create homepage with hero section and event previews"
 **Files:**
 - Create: `src/content/config.ts`
 
-- [ ] **Step 1: Write config.ts**
+> **Implemented in PR #N (issue #4).** Required by the page templates; implemented early. Schema uses `z.coerce.date()` (not `z.date()`) to handle ISO date strings from markdown frontmatter. Blog schema: `title` (required), `date` (required, coerced), `author` and `description` (optional). Pages schema: `title` (required), `description` and `order` (optional).
+
+- [x] **Step 1: Write config.ts**
 
 ```typescript
 import { defineCollection, z } from 'astro:content';
@@ -1027,18 +955,9 @@ const blog = defineCollection({
 export const collections = { pages, blog };
 ```
 
-- [ ] **Step 2: Verify file created**
+- [x] **Step 2: Verify file created**
 
-```bash
-cat src/content/config.ts
-```
-
-- [ ] **Step 3: Commit**
-
-```bash
-git add src/content/config.ts
-git commit -m "Add Astro content collection schema configuration"
-```
+- [x] **Step 3: Commit**
 
 ---
 
