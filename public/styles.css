@@ -1,0 +1,262 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+  background: #fff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: #1a5fa8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25;
+  font-weight: 700;
+  color: #111;
+}
+
+h1 { font-size: 2.25rem; margin-bottom: 1rem; }
+h2 { font-size: 1.75rem; margin: 2rem 0 0.75rem; }
+h3 { font-size: 1.375rem; margin: 1.5rem 0 0.5rem; }
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+blockquote {
+  border-left: 4px solid #ddd;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #555;
+  font-style: italic;
+}
+
+/* ===== Layout Containers ===== */
+.header-inner,
+.footer-inner,
+.content-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ===== Site Header ===== */
+.site-header {
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.site-logo {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-logo:hover {
+  text-decoration: none;
+  color: #1a5fa8;
+}
+
+/* ===== Navigation ===== */
+.site-nav {
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.site-nav a {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #444;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav a:hover {
+  color: #1a5fa8;
+  text-decoration: none;
+}
+
+/* ===== Main Content ===== */
+#main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* ===== Blog Post Layout ===== */
+.blog-post {
+  max-width: 720px;
+}
+
+.blog-post-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  color: #666;
+  margin-top: 0.75rem;
+}
+
+.blog-meta time::after {
+  content: "·";
+  margin-left: 0.5rem;
+}
+
+.blog-meta .author {
+  color: #555;
+}
+
+.blog-post-body > * + * {
+  margin-top: 1rem;
+}
+
+.blog-post-body h2 {
+  margin-top: 2.5rem;
+}
+
+.blog-post-body h3 {
+  margin-top: 2rem;
+}
+
+/* ===== Site Footer ===== */
+.site-footer {
+  border-top: 1px solid #e5e5e5;
+  background: #fafafa;
+  padding: 2.5rem 0;
+  margin-top: auto;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-links a {
+  color: #666;
+}
+
+.footer-links a:hover {
+  color: #1a5fa8;
+}
+
+/* ===== Responsive ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  h1 { font-size: 1.875rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .site-nav {
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  #main-content {
+    padding: 2rem 1.25rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  h1 { font-size: 1.625rem; }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    gap: 1rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .blog-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .blog-meta time::after {
+    display: none;
+  }
+}

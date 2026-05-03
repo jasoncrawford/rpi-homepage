@@ -1,0 +1,57 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const { title, description = "Roots of Progress Institute", image } = Astro.props;
+const pageTitle = title === "Roots of Progress" ? title : `${title} | Roots of Progress`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    {image && <meta property="og:image" content={image} />}
+
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/" class="site-logo">Roots of Progress</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/programs/">Programs</a>
+          <a href="/support/">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>&copy; {new Date().getFullYear()} Roots of Progress Institute. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="https://x.com/rootsofprogress" rel="noopener noreferrer">Twitter</a></li>
+          <li><a href="https://linkedin.com/company/roots-of-progress/" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="mailto:contact@rootsofprogress.org">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
