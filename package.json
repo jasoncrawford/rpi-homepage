@@ -10,7 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "echo 'No tests configured'"
+    "test": "node --test scripts/download-images.test.mjs"
   },
   "dependencies": {
     "astro": "^4.16.19",
