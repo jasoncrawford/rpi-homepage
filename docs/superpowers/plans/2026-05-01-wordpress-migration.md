@@ -5,6 +5,8 @@
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 >
 > **READ THIS FIRST:** `verbatim-content-extraction` skill. Any LLM-mediated tool (WebFetch, asking Claude to "convert this HTML to markdown", etc.) silently paraphrases content. The migration must be **mechanical** — direct HTTP, library-based HTML→markdown, no LLM in the content path.
+>
+> **REQUIRED ON PAGE/COMPONENT PRs:** `visual-page-verification` skill. Run `npm run visual-diff -- <path>`, read the PNGs with the Read tool, iterate until local matches live, and attach screenshots in the PR body. See `docs/visual-diff.md`.
 
 ---
 
@@ -101,7 +103,7 @@ One issue per page type. Each issue:
 - Builds a `*-demo.astro` route under `src/pages/_demo/` that renders sample data through the component, for visual review
 - Updates or replaces the existing PersonCard / HeroSection / EventCard placeholders rather than adding parallel ones
 
-Component fidelity is judged by visual diff against the original, not against the spec.
+Component fidelity is judged by visual diff against the original, not against the spec. Use `npm run visual-diff -- /demo/<component>` to screenshot the demo route and compare with `npm run visual-diff -- /<corresponding-live-path>`.
 
 ---
 
@@ -189,7 +191,7 @@ Phases A → B → C run sequentially. Within Phase D, page-group issues run in 
 1. **No LLM in the content path.** Not WebFetch, not "Claude, convert this HTML." LLM writes scripts; scripts process content.
 2. **No invented pages.** If a URL isn't in `capture/manifest.json`, it doesn't exist on the new site.
 3. **No invented copy.** All page body text traces back to a captured HTML file via a mechanical transform. If a string can't be traced, delete it.
-4. **Visual diff before merge.** Every page-shipping PR includes a side-by-side comparison in the PR description.
+4. **Visual diff before merge.** Every page-shipping PR includes a side-by-side comparison in the PR description. Use `npm run visual-diff -- <path>` to capture screenshots, read both PNGs with the Read tool, and paste them in the PR body. Invoke the `visual-page-verification` skill. Claiming "matches the original" without having read the screenshots is a red flag.
 5. **Capture is immutable.** `capture/` is read-only after Phase A. If the live site changes mid-migration, re-run capture as a separate PR with a fresh date stamp.
 6. **Scope: `rootsofprogress.org` only.** `blog.rootsofprogress.org` and `newsletter.rootsofprogress.org` are separate sites and are **not** part of this migration. Do not capture, convert, or reproduce content from those subdomains.
 
