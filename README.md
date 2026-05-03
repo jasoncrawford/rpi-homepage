@@ -26,6 +26,9 @@ src/
     blog/            # Blog posts (.md)
   data/              # Structured data files (.yaml)
   components/        # Reusable Astro components
+    HeroSection.astro  # Large banner with title and subtitle
+    PersonCard.astro   # Person display: name, role, bio, image, website
+    EventCard.astro    # Event display: date, location, description, link
   assets/
     images/          # Site images
 public/
