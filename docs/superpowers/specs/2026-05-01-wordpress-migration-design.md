@@ -204,12 +204,12 @@ import { fellows } from '../data/fellows.yaml'
 ## Migration Strategy
 
 ### Step 1: Content Extraction & Conversion
-- Export all WordPress posts/pages (content, metadata, featured images)
-- Convert HTML to markdown with YAML frontmatter
+- Scrape rendered HTML from the live WordPress site (XML export is not reliable — the page builder stores body content in a custom format that doesn't survive export)
+- Convert HTML to markdown with YAML frontmatter using a library (`turndown`, `node-html-markdown`) — **no LLM in the content path** (LLM-mediated tools paraphrase content silently)
 - Download and organize images into `src/assets/images/`
-- Extract structured data (fellows, speakers) into `.yaml` files
+- Extract structured data (fellows, speakers) into `.yaml` files by scraping profile pages
 
-**Effort:** Claude Code can automate much of this extraction and conversion
+**Effort:** Write a Node.js scraping script; Claude Code writes the script but never touches the content directly. See the `verbatim-content-extraction` skill.
 
 ### Step 2: Build Astro Skeleton
 - Create the directory structure above
@@ -244,18 +244,18 @@ import { fellows } from '../data/fellows.yaml'
 
 ## Phase 1 Success Criteria
 
-- [x] All WordPress content migrated to markdown/YAML
-- [x] All images migrated to `src/assets/`
-- [x] Homepage and all main pages render correctly
+- [ ] All WordPress content migrated to markdown/YAML
+- [ ] All images migrated to `src/assets/`
+- [x] Homepage and all main pages render correctly (sample content — real content pending migration)
 - [x] Component system working (fellows, speakers, etc. render from data)
 - [x] Navigation, header, footer functional
 - [x] Blog posts display with correct metadata
-- [x] Links and images working
-- [x] Staging site fully functional and tested
+- [ ] All links and images working with real content
+- [ ] Staging site fully functional and tested with real content
 - [x] SEO metadata (title, description, OG tags) present on all pages
-- [x] Accessibility baseline met (WCAG AA)
-- [x] Google Analytics integrated (meta tag)
-- [x] Team can navigate and understand the structure
+- [ ] Accessibility baseline met (WCAG AA)
+- [ ] Google Analytics integrated (real GA ID, not placeholder)
+- [ ] Team can navigate and understand the structure
 
 ---
 
@@ -332,7 +332,7 @@ Or with Claude Code:
 
 | Risk | Mitigation |
 |------|-----------|
-| Content extraction errors | Claude Code automates with human review; test thoroughly on staging |
+| Content extraction errors | Use direct HTTP scraping + a library (`turndown`) — never LLM-mediated tools, which silently paraphrase. Spot-check 5+ extracted files against live site before committing. |
 | Image paths breaking | Centralize image organization in `src/assets/`; use Astro's Image component for optimization |
 | Team members confused by git workflow | Phase 2 Decap CMS removes need for git; Phase 1 uses Claude Code to handle commits |
 | SEO metadata lost | Explicitly map WordPress metadata (title, description) to frontmatter; verify sitemap generation |
