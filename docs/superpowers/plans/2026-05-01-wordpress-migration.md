@@ -189,6 +189,7 @@ Phases A → B → C run sequentially. Within Phase D, page-group issues run in 
 3. **No invented copy.** All page body text traces back to a captured HTML file via a mechanical transform. If a string can't be traced, delete it.
 4. **Visual diff before merge.** Every page-shipping PR includes a side-by-side comparison in the PR description.
 5. **Capture is immutable.** `capture/` is read-only after Phase A. If the live site changes mid-migration, re-run capture as a separate PR with a fresh date stamp.
+6. **Scope: `rootsofprogress.org` only.** `blog.rootsofprogress.org` and `newsletter.rootsofprogress.org` are separate sites and are **not** part of this migration. Do not capture, convert, or reproduce content from those subdomains.
 
 ---
 

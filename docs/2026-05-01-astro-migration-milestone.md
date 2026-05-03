@@ -10,6 +10,8 @@ type: milestone
 
 Migrate Roots of Progress nonprofit website from WordPress to Astro static site, eliminating security vulnerabilities, enabling team-friendly maintenance via Claude Code, and establishing a foundation for eventual Decap CMS layer (Phase 2).
 
+**Scope:** `rootsofprogress.org` only. `blog.rootsofprogress.org` and `newsletter.rootsofprogress.org` are separate sites and are not part of this migration.
+
 ## Definition of Done
 
 - All WordPress content migrated to markdown/YAML files in git
