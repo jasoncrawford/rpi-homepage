@@ -1,0 +1,32 @@
+---
+import { load as loadYaml } from 'js-yaml';
+import rawSpeakers from '../data/speakers.yaml?raw';
+import Base from '../layouts/Base.astro';
+import PersonCard from '../components/PersonCard.astro';
+
+interface Speaker {
+  name: string;
+  role?: string;
+  bio?: string;
+  image?: string;
+  website?: string;
+}
+
+const speakers = loadYaml(rawSpeakers) as Speaker[];
+---
+
+<Base
+  title="Speakers"
+  description="Meet the speakers at Roots of Progress events — leading thinkers on science, technology, and human progress."
+>
+  <h1>Speakers</h1>
+  <p>
+    Our events bring together researchers, entrepreneurs, and intellectuals working on the
+    most important questions about the future of human progress. Below are featured speakers
+    from our programs and conference.
+  </p>
+
+  <div class="card-grid">
+    {speakers.map((speaker) => <PersonCard {...speaker} />)}
+  </div>
+</Base>

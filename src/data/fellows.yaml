@@ -1,0 +1,14 @@
+- name: Jane Smith
+  role: Research Fellow
+  bio: Jane researches the history of technological innovation in 19th-century America, with a focus on how institutional conditions shaped invention rates.
+  website: https://janesmith.example.com
+
+- name: Marcus Johnson
+  role: Writing Fellow
+  bio: Marcus is writing a book on the history of nuclear energy and its relationship to broader attitudes about technological risk and progress.
+  website: https://marcusjohnson.example.com
+
+- name: Dr. Priya Patel
+  role: Innovation Fellow
+  bio: Priya studies how regulatory environments in academic medicine affect the speed at which new drugs and treatments reach patients.
+  website: https://priyapatel.example.com

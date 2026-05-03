@@ -1,0 +1,32 @@
+---
+import { load as loadYaml } from 'js-yaml';
+import rawFellows from '../data/fellows.yaml?raw';
+import Base from '../layouts/Base.astro';
+import PersonCard from '../components/PersonCard.astro';
+
+interface Fellow {
+  name: string;
+  role?: string;
+  bio?: string;
+  image?: string;
+  website?: string;
+}
+
+const fellows = loadYaml(rawFellows) as Fellow[];
+---
+
+<Base
+  title="Fellows"
+  description="Meet the Roots of Progress fellows — researchers and writers advancing the study of human progress."
+>
+  <h1>Fellows</h1>
+  <p>
+    Our fellowship program supports researchers and writers pursuing full-time work on
+    progress-relevant topics. Fellows spend a year exploring the history, drivers, and future
+    of technological and scientific progress.
+  </p>
+
+  <div class="card-grid">
+    {fellows.map((fellow) => <PersonCard {...fellow} />)}
+  </div>
+</Base>

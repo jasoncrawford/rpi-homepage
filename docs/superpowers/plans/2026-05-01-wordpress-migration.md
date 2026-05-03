@@ -1134,7 +1134,9 @@ git commit -m "Add sample blog posts for testing content collection"
 **Files:**
 - Create: `src/data/fellows.yaml`
 
-- [ ] **Step 1: Write fellows.yaml**
+> **Implemented in PR (issue #6).** Fellows use `name`, `role`, `bio`, and `website` fields — mapping directly to PersonCard props. No `id` or `image` fields in sample data (no images available yet). Three sample fellows included.
+
+- [x] **Step 1: Write fellows.yaml**
 
 ```yaml
 - id: jane-smith
@@ -1152,18 +1154,9 @@ git commit -m "Add sample blog posts for testing content collection"
   website: https://johndoe.example.com
 ```
 
-- [ ] **Step 2: Verify file created**
+- [x] **Step 2: Verify file created**
 
-```bash
-cat src/data/fellows.yaml
-```
-
-- [ ] **Step 3: Commit**
-
-```bash
-git add src/data/fellows.yaml
-git commit -m "Add sample fellows data for component rendering"
-```
+- [x] **Step 3: Commit**
 
 ---
 
@@ -1172,7 +1165,9 @@ git commit -m "Add sample fellows data for component rendering"
 **Files:**
 - Create: `src/data/speakers.yaml`
 
-- [ ] **Step 1: Write speakers.yaml**
+> **Implemented in PR (issue #6).** Speakers use `name`, `role`, `bio`, and `website` fields — same structure as fellows, mapping directly to PersonCard. Plan showed `title`/`affiliation` separately, but `role` is used for direct PersonCard compatibility (e.g., "Professor of History, UC Berkeley"). Four sample speakers included.
+
+- [x] **Step 1: Write speakers.yaml**
 
 ```yaml
 - id: speaker-1
@@ -1190,18 +1185,9 @@ git commit -m "Add sample fellows data for component rendering"
   affiliation: Progress Labs
 ```
 
-- [ ] **Step 2: Verify file created**
+- [x] **Step 2: Verify file created**
 
-```bash
-cat src/data/speakers.yaml
-```
-
-- [ ] **Step 3: Commit**
-
-```bash
-git add src/data/speakers.yaml
-git commit -m "Add sample speakers data for events"
-```
+- [x] **Step 3: Commit**
 
 ---
 
@@ -1209,8 +1195,11 @@ git commit -m "Add sample speakers data for events"
 
 **Files:**
 - Create: `src/pages/fellows.astro`
+- Create: `src/pages/speakers.astro` (added in issue #6 alongside fellows)
 
-- [ ] **Step 1: Write fellows.astro**
+> **Implemented in PR (issue #6).** Both fellows and speakers pages created. YAML is loaded via Vite's `?raw` import (embedded at build time) and parsed with `js-yaml` — direct file `import` of `.yaml` is not supported by default Vite/Astro, and `readFileSync` with `import.meta.url` fails because `import.meta.url` resolves to the compiled `dist/` path at generation time. Uses global `.card-grid` CSS class consistent with the rest of the site.
+
+- [x] **Step 1: Write fellows.astro**
 
 ```astro
 ---
@@ -1242,18 +1231,9 @@ import { fellows } from '../data/fellows.yaml';
 </style>
 ```
 
-- [ ] **Step 2: Verify file created**
+- [x] **Step 2: Verify file created**
 
-```bash
-cat src/pages/fellows.astro
-```
-
-- [ ] **Step 3: Commit**
-
-```bash
-git add src/pages/fellows.astro
-git commit -m "Create fellows page rendering from YAML data"
-```
+- [x] **Step 3: Commit**
 
 ---
 
