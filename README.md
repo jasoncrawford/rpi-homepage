@@ -17,6 +17,18 @@ npm run preview  # preview the built site locally
 
 ```
 src/
-  pages/         # Astro pages (.astro files)
-docs/            # Project documentation and design specs
+  pages/             # Astro pages (.astro files)
+  layouts/
+    Base.astro       # Main layout: header, nav, footer, SEO metadata
+    BlogPost.astro   # Blog post layout: date, author, body
+  content/
+    pages/           # Static content pages (.md)
+    blog/            # Blog posts (.md)
+  data/              # Structured data files (.yaml)
+  components/        # Reusable Astro components
+  assets/
+    images/          # Site images
+public/
+  styles.css         # Global CSS
+docs/                # Project documentation and design specs
 ```
