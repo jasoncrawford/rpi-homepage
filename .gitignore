@@ -5,3 +5,6 @@ node_modules/
 .env.*
 !.env.example
 repl.log
+
+# Local Netlify folder
+.netlify
