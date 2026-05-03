@@ -966,7 +966,9 @@ export const collections = { pages, blog };
 **Files:**
 - Create: `src/content/pages/about.md`, `src/content/pages/support.md`
 
-- [ ] **Step 1: Write about.md**
+> **Implemented across PR #18 (issue #4) and PR #19 (issue #5).** `about.md` was created in issue #4 alongside the content collection config. `support.md` was added in issue #5 with `title`, `description`, and `order` frontmatter. Both render via `[slug].astro`.
+
+- [x] **Step 1: Write about.md**
 
 ```markdown
 ---
@@ -997,7 +999,7 @@ We offer several programs focused on advancing progress studies as a discipline 
 Have questions? [Contact us](mailto:contact@rootsofprogress.org)
 ```
 
-- [ ] **Step 2: Write support.md**
+- [x] **Step 2: Write support.md**
 
 ```markdown
 ---
@@ -1030,13 +1032,13 @@ Interested in volunteering? [Get in touch](mailto:contact@rootsofprogress.org)
 Roots of Progress is a 501(c)(3) nonprofit organization.
 ```
 
-- [ ] **Step 3: Verify files created**
+- [x] **Step 3: Verify files created**
 
 ```bash
 wc -l src/content/pages/*.md
 ```
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add src/content/pages/about.md src/content/pages/support.md
@@ -1050,7 +1052,9 @@ git commit -m "Add sample pages (About, Support) for testing"
 **Files:**
 - Create: `src/content/blog/first-post.md`, `src/content/blog/second-post.md`
 
-- [ ] **Step 1: Write first-post.md**
+> **Implemented across PR #18 (issue #4) and PR #19 (issue #5).** `welcome.md` (serving as the first post) was created in issue #4. `progress-conference-2026.md` (serving as the second post) was added in issue #5. Filenames differ from the plan but the frontmatter schema and rendered routes are equivalent.
+
+- [x] **Step 1: Write first-post.md**
 
 ```markdown
 ---
@@ -1081,7 +1085,7 @@ Our new static site approach provides:
 We'll be continuously improving this site. Stay tuned for updates on our programs and initiatives.
 ```
 
-- [ ] **Step 2: Write second-post.md**
+- [x] **Step 2: Write second-post.md**
 
 ```markdown
 ---
@@ -1108,13 +1112,13 @@ We're assembling an impressive lineup of thinkers, scientists, and entrepreneurs
 [Learn more and apply →](/programs/)
 ```
 
-- [ ] **Step 3: Verify files created**
+- [x] **Step 3: Verify files created**
 
 ```bash
 ls -la src/content/blog/
 ```
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add src/content/blog/
