@@ -1,0 +1,2107 @@
+[
+  {
+    "url": "https://rootsofprogress.org/",
+    "path": "index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "80d78a1f7eb606d1fcf0c5f1cd3f31b162bda07b8b8efb88065d896676ef09df",
+    "fetchedAt": "2026-05-03T18:48:22.335Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/how-does-progress-happen",
+    "path": "how-does-progress-happen/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "2944ac29a4642f446d9d07f669bd079c8ab8bb6e3fe1e443f2cb37173e576613",
+    "fetchedAt": "2026-05-03T18:48:23.741Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/how-can-we-make-the-world-progress-faster-jason-crawford-wants-to-know",
+    "path": "how-can-we-make-the-world-progress-faster-jason-crawford-wants-to-know/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "0ba93123ab578adbc8c7a48aebc7dfd01355b90cd2524da0769628a0316e8af9",
+    "fetchedAt": "2026-05-03T18:48:24.986Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/do-we-need-a-better-understanding-of-progress",
+    "path": "do-we-need-a-better-understanding-of-progress/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "d1661a5a1ab6266b11b6538098ffb88c9d03e08b2d618429d36fe4d85d8f97a3",
+    "fetchedAt": "2026-05-03T18:48:26.236Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/one-week-left-to-apply-for-the-roots-of-progress-blog-building-intensive",
+    "path": "one-week-left-to-apply-for-the-roots-of-progress-blog-building-intensive/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "c1d874bbcead1f029428dbc225026e5ed06e847636234abaee35141ccfcb46c8",
+    "fetchedAt": "2026-05-03T18:48:27.509Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/announcing-the-2024-roots-of-progress-blog-building-intensive",
+    "path": "announcing-the-2024-roots-of-progress-blog-building-intensive/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "38868ac01a8a07a0f8afd74c4eaa9edc1ccfde568f73e40819ba1195a77951e6",
+    "fetchedAt": "2026-05-03T18:48:28.786Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/reason-magazine-progress-rediscovered",
+    "path": "reason-magazine-progress-rediscovered/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "b0a79df81cb6679c048e46784295ea9e6ba42e997eab42eb0018ca4132f6817c",
+    "fetchedAt": "2026-05-03T18:48:30.066Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/progress-studies-as-a-moral-imperative",
+    "path": "progress-studies-as-a-moral-imperative/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "17d5ebfe715da322a145c4a0363ca60818689e050f40f85f7dbafbb4a26e73a1",
+    "fetchedAt": "2026-05-03T18:48:31.327Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/we-need-a-new-philosophy-of-progress",
+    "path": "we-need-a-new-philosophy-of-progress/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "8563d0531659895ce58599f7ab40ec2d384d323ab359b8f9c2ae6a18ba958f99",
+    "fetchedAt": "2026-05-03T18:48:32.579Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/progress-conference-2024-toward-abundant-futures",
+    "path": "progress-conference-2024-toward-abundant-futures/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "9ef3597434650dd247d8cb293134674ab4bd055e95292f89349fc37510226373",
+    "fetchedAt": "2026-05-03T18:48:33.754Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/new-name-and-logo-announcement",
+    "path": "new-name-and-logo-announcement/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "843d29798c07eea34352d33eb6b4eb407d59321dab6a8a5d6010a9a5a3b60c6d",
+    "fetchedAt": "2026-05-03T18:48:34.909Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/the-techno-humanist-manifesto",
+    "path": "the-techno-humanist-manifesto/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "c7d5729a5f228c62cb29b6ab8b72084c07cc3f77cec7222c36e4ed6a95ab2d81",
+    "fetchedAt": "2026-05-03T18:48:36.060Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/progress-humanism-agency-intellectual-core",
+    "path": "progress-humanism-agency-intellectual-core/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "a37ca7ba870383db3bf7881505e3666c7e9f82928dfbaab46908ac3c6bf6d994",
+    "fetchedAt": "2026-05-03T18:48:37.317Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/jason-carman-celine-halioua-cate-hall-lynne-kiesling-and-hannu-rajaniemi-to-speak-at-progress-conference-2024",
+    "path": "jason-carman-celine-halioua-cate-hall-lynne-kiesling-and-hannu-rajaniemi-to-speak-at-progress-conference-2024/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "8639309c96c212d12505520f06009888cc490efacef40841dce4be6f2e1c9ccf",
+    "fetchedAt": "2026-05-03T18:48:38.493Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/introducing-the-2024-blog-building-intensive-fellows",
+    "path": "introducing-the-2024-blog-building-intensive-fellows/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "3021565ea256389d43b76c07607564b6fa40d69a713137aaf98692b2f472f056",
+    "fetchedAt": "2026-05-03T18:48:39.661Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/progress-conference-reflections-and-2025-plans-were-hiring",
+    "path": "progress-conference-reflections-and-2025-plans-were-hiring/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "faf3af7c69a7e0426efc38608d0fe001efa15778f61e985e5a70a6bd1d4b6764",
+    "fetchedAt": "2026-05-03T18:48:40.848Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/blog-building-2024-lookback",
+    "path": "blog-building-2024-lookback/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "514fe8bd330e5198ae0ecb65dad631255004e4ca060548e52488e9e08cb53910",
+    "fetchedAt": "2026-05-03T18:48:42.018Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/announcing-progress-conference-2025",
+    "path": "announcing-progress-conference-2025/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "61d72bf80d6117b1ec3da42c34d7a8d1a0ce653ac1d15b1e7ce5ec4d278ec1e9",
+    "fetchedAt": "2026-05-03T18:48:43.181Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/save-the-date-progress-conference-2025",
+    "path": "save-the-date-progress-conference-2025/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "305feb822ce0566d1c1363b1229daed61aed7094ee6f36773602b64595e9f1c0",
+    "fetchedAt": "2026-05-03T18:48:44.336Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/announcing-the-2025-roots-of-progress-blog-building-intensive",
+    "path": "announcing-the-2025-roots-of-progress-blog-building-intensive/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "149e2665183b5881e08223db9dbd6ca72ba0f9ed1706c139fb1a61424b2a4eb7",
+    "fetchedAt": "2026-05-03T18:48:45.494Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/write-about-agriculture-or-health-longevity-and-biotech",
+    "path": "write-about-agriculture-or-health-longevity-and-biotech/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "0bb560863804bc6985d7d81cd89248099281f3315e937dc9af3711e47dcef705",
+    "fetchedAt": "2026-05-03T18:48:46.653Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/more-great-speakers-join-progress-conference-2025",
+    "path": "more-great-speakers-join-progress-conference-2025/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "a4be81e8f2d0850d9b4800a388e1cff9dfa98cd4de6220cbad535b1e488051e8",
+    "fetchedAt": "2026-05-03T18:48:47.801Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/reflections-on-pc25",
+    "path": "reflections-on-pc25/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "79b07ecf06dd0fe4221446b7a2ffe5d626f9b65195430aa947f71dab5d2433f8",
+    "fetchedAt": "2026-05-03T18:48:48.960Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/announcing-progress-in-medicine-a-high-school-summer-career-exploration-program",
+    "path": "announcing-progress-in-medicine-a-high-school-summer-career-exploration-program/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "b6c9fa337e2bf1e90da45c11f6f904ecb57420fdc0e2b721a6a84ee7355acc0b",
+    "fetchedAt": "2026-05-03T18:48:50.122Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/save-the-date-progress-conference-2026",
+    "path": "save-the-date-progress-conference-2026/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "0b2ee6d8eadeb6f6e46fa8f5045ca3259efaf51d7354c8ee6a3880f691351f5c",
+    "fetchedAt": "2026-05-03T18:48:51.268Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/announcing-progress-conference-2026",
+    "path": "announcing-progress-conference-2026/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "f6df0e1256c7373a125a01c4aea6f2fdf464e7fc534ebd508b44bf869aeff396",
+    "fetchedAt": "2026-05-03T18:48:52.426Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/e404",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:48:53.730Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/subscribe",
+    "path": "subscribe/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "a8e8b13e631b296659445c2e549c0062d4ae33df2e641ec783ea543a96a5194e",
+    "fetchedAt": "2026-05-03T18:48:55.059Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/privacy-policy",
+    "path": "privacy-policy/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "f0fc7623411edf4e5b563c7b2e5f62a48a90f36dcb43ea7fe1d767dffae5c8dd",
+    "fetchedAt": "2026-05-03T18:48:56.204Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/cookie-policy",
+    "path": "cookie-policy/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "b7b5081558eea5f8e8c609d4911fd42703875b827ec7cd9b64a4f8f558660d8f",
+    "fetchedAt": "2026-05-03T18:48:57.349Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/announcements",
+    "path": "announcements/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "049fdd6eaaec3f748a436e0b32c0bb8acee54d352c0601d140fb57268fdbd1c6",
+    "fetchedAt": "2026-05-03T18:48:58.524Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/essays",
+    "path": "essays/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "f9d987e363e0e2158f060c8e87da31902799cca2c88c07b86e5b63884db73f33",
+    "fetchedAt": "2026-05-03T18:48:59.663Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellows-writing",
+    "path": "fellows-writing/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "fbbd45e94d57516faeaff3f0b4231ff2138b0a96286b7b316e2bf36148ec7d02",
+    "fetchedAt": "2026-05-03T18:49:00.817Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/manifesto",
+    "path": "manifesto/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "1b127db169990ad725d178878df0e573888d53ad367b08aee1cb4b4e1af8b1ef",
+    "fetchedAt": "2026-05-03T18:49:02.045Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellowship-2024",
+    "path": "fellowship-2024/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "88bf1385c6fa2dd28dad1fdfb4f760dfa755344175ab64afd58e91da0b128cb0",
+    "fetchedAt": "2026-05-03T18:49:03.293Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/support",
+    "path": "support/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "7a77f9d82127e42e57d9cb7bb964cecc26ee4c51f3af966ba684e078874a9e4a",
+    "fetchedAt": "2026-05-03T18:49:04.453Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellows",
+    "path": "fellows/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "f9b626bcb6e69de6e9f6478aa374577022bb80102e74db793fbf2851b00dcbf6",
+    "fetchedAt": "2026-05-03T18:49:05.870Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/about",
+    "path": "about/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "d3984b1d48edf8518999d8ce98bc1e92a68fab2e1f3164f8c9b153aed01d10d5",
+    "fetchedAt": "2026-05-03T18:49:07.054Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/conference-2024",
+    "path": "conference-2024/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "661230b1439ce9b8da722bdba4e1ff856f4602d789578c926cf59000f513e6f9",
+    "fetchedAt": "2026-05-03T18:49:08.260Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/conference-2025",
+    "path": "conference-2025/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "22c533d9b53ce2c16c3c57ccf87047897e6d4fe0a92dec8088074e448a7aaf48",
+    "fetchedAt": "2026-05-03T18:49:09.459Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/progress-in-medicine",
+    "path": "progress-in-medicine/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "66dde2caf4693c68b2dfe888cb642ff6d7aaee71e2dd795a0aebaf2ced8a033e",
+    "fetchedAt": "2026-05-03T18:49:10.890Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/conference",
+    "path": "conference/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "c84042d143a7f4e9837754ccdedc772c88a6ec648efc64eea7424f2b900fe3da",
+    "fetchedAt": "2026-05-03T18:49:12.076Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellowship-2",
+    "path": "fellowship-2/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "06abda02d2af9d2b2f176c9091860462f5fc6584a04f6fceacf103f7d344eaf8",
+    "fetchedAt": "2026-05-03T18:49:13.230Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellowship-2025",
+    "path": "fellowship-2025/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "7bec3b4ef14370434ef85d9235b10f924aed7acd05413bd59bad3c267bf57d21",
+    "fetchedAt": "2026-05-03T18:49:14.452Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellowship",
+    "path": "fellowship/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "a1cc586cdf33cc9d45f5330412e672fbcd58f892ac8cdf114e1f7de002d1b9cc",
+    "fetchedAt": "2026-05-03T18:49:15.673Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/member/yel-alonzo",
+    "path": "member/yel-alonzo/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "31283bd3250d983be83e5b8cd47f1452818dddfd4d46fd1668c8d2a092b8954e",
+    "fetchedAt": "2026-05-03T18:49:17.034Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/member/heike-larson",
+    "path": "member/heike-larson/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "3839939c9b9795457fd165e27b06393b3c1aff040a800269f00757c4a7dbbb69",
+    "fetchedAt": "2026-05-03T18:49:18.188Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/member/emma-mcaleavy",
+    "path": "member/emma-mcaleavy/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "062bd00226f5b21387b58118279bb78c2718d1062688610ad225bdb8b6529d3d",
+    "fetchedAt": "2026-05-03T18:49:19.332Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/member/ben-thomas",
+    "path": "member/ben-thomas/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "1d6c5cca9307a460b93b3be0873ad922436a038bf355dc73c96f93b54129ffe0",
+    "fetchedAt": "2026-05-03T18:49:20.498Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/member/jason-crawford",
+    "path": "member/jason-crawford/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "56788e0e947d841fa40987e87ee0227c7692d9e097bff8a82a67a973b6935d7d",
+    "fetchedAt": "2026-05-03T18:49:21.632Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/member/mike-riggs",
+    "path": "member/mike-riggs/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "97b620785aff2b2e19c4992b63bad5c6ad1f5d2cec962f6004df85a04adfb5c3",
+    "fetchedAt": "2026-05-03T18:49:22.805Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/blake-scholl",
+    "path": "advisory/blake-scholl/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "6c84467531fde20122ec5f7b5731184967b3e7f045cb19e84c221e66cf1a83ec",
+    "fetchedAt": "2026-05-03T18:49:23.986Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/bob-mcgrew",
+    "path": "advisory/bob-mcgrew/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "857f7202db6a9b9542cab8bfe28799fdd5afb86b6c74b76d9bab2e968cba214b",
+    "fetchedAt": "2026-05-03T18:49:25.138Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/ela-madej",
+    "path": "advisory/ela-madej/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "57f7a3be2304e38472ff1910eb9ee0c19fa6a021a097fe7fe412ed3a7e70e467",
+    "fetchedAt": "2026-05-03T18:49:26.285Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/holden-karnofsky",
+    "path": "advisory/holden-karnofsky/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "3437f31d039a931197ec3c5418068a19d7c832487018e66d97b126b05330bc6f",
+    "fetchedAt": "2026-05-03T18:49:27.433Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/max-roser",
+    "path": "advisory/max-roser/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "8636682cca6c906653f19006d759c3f2de0132c61b6bc49bc3bc5d9296a8837e",
+    "fetchedAt": "2026-05-03T18:49:28.595Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/chandler-tuttle",
+    "path": "advisory/chandler-tuttle/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "59bff490dc2b7d54b342e750ebb86cdecd218f99cfec5f3e1052c18174fc9173",
+    "fetchedAt": "2026-05-03T18:49:29.734Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/emma-mcaleavy",
+    "path": "advisory/emma-mcaleavy/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "ff9ad53baed94f19bfe9e1f6695faa483eed755e75a59a849b5dcfad4ca00912",
+    "fetchedAt": "2026-05-03T18:49:30.888Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/mike-riggs",
+    "path": "advisory/mike-riggs/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "b1f165c6026b6378be5d5a7fd132f729e48001b19655ed670b03b1ecda2e4af7",
+    "fetchedAt": "2026-05-03T18:49:32.030Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/patrick-collison",
+    "path": "advisory/patrick-collison/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "b9db35007dba5bb83289b7b574132b67d8cc49f9e4ee9da80cce6a30c972c034",
+    "fetchedAt": "2026-05-03T18:49:33.173Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/eli-dourado",
+    "path": "advisory/eli-dourado/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "cf51b7ae061dc5af4b44ec8930f97b12a4e2d61b7ae79a1c0ddb6013722dbe2f",
+    "fetchedAt": "2026-05-03T18:49:34.329Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/tyler-cowen",
+    "path": "advisory/tyler-cowen/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "b1115230ed6c228517f97c0fc72e81224323838690d638a5c4fb6b49f9cb8066",
+    "fetchedAt": "2026-05-03T18:49:35.479Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/andrej-karpathy",
+    "path": "advisory/andrej-karpathy/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "45933810755ee2cb58427281aebb83fc4fa3181383a26da63518b988c8b4cb01",
+    "fetchedAt": "2026-05-03T18:49:36.631Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/delian-asparouhov",
+    "path": "advisory/delian-asparouhov/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "faeed7cd297485c85176eba773a79155b764b9ec252772588d992c2b0591a3cd",
+    "fetchedAt": "2026-05-03T18:49:37.779Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/kanjun-qiu",
+    "path": "advisory/kanjun-qiu/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "9dfee226dcebe1b23962b628a287c8f6830bc82714aa2d687876534919e1d12c",
+    "fetchedAt": "2026-05-03T18:49:38.916Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/timothy-b-lee",
+    "path": "advisory/timothy-b-lee/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "a0d168638ea923d306923d16d5625b8248ee1d8b7a8ea95e6fc5b780a56a704f",
+    "fetchedAt": "2026-05-03T18:49:40.066Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/rob-tracinski",
+    "path": "advisory/rob-tracinski/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "62827b2dea0454c67ce6283bd1716a49101e90df83d4f70590238cabc43e5052",
+    "fetchedAt": "2026-05-03T18:49:41.233Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/shreeda-segan",
+    "path": "advisory/shreeda-segan/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "bda8d0787532d691e49b22f3100fe2b78e25138ba6a639fd0d282427bc0ac62b",
+    "fetchedAt": "2026-05-03T18:49:42.368Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/noah-smith",
+    "path": "advisory/noah-smith/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "8493d2581b490e19c4762ba6673148e4dee88b82d144dd8a93f1610d2f648199",
+    "fetchedAt": "2026-05-03T18:49:43.519Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/tomas-pueyo",
+    "path": "advisory/tomas-pueyo/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "54ce4621bf77b0963cd619c395731fd4ea42b7c1bf9ccef590d848fa86255792",
+    "fetchedAt": "2026-05-03T18:49:44.669Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/saloni-dattani",
+    "path": "advisory/saloni-dattani/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "f3ac3e2e890ad28c9aa7be996543e5636377e5e5a5ceb43aff42f57f9f4d3d72",
+    "fetchedAt": "2026-05-03T18:49:45.829Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/john-wilbanks",
+    "path": "advisory/john-wilbanks/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "bfd9f1f7021cf29c120226ae922027368b60f5d38adbb5b18101d12ae84c9586",
+    "fetchedAt": "2026-05-03T18:49:46.989Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/greg-lukianoff",
+    "path": "advisory/greg-lukianoff/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "ec7e60cabd56f9245026a8816d553f1b0b351787ffbfacdfe38bfdf03b2c6af9",
+    "fetchedAt": "2026-05-03T18:49:48.149Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/alex-kustov",
+    "path": "advisory/alex-kustov/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "91257b864fdd691d5a1073a995da303482fbd815390d647b389d207f8524279d",
+    "fetchedAt": "2026-05-03T18:49:49.298Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/brendan-mccord",
+    "path": "advisory/brendan-mccord/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "81038724d3f1fe0ef761366a7cb8212e1103b05880cffe74a228fd71a046c442",
+    "fetchedAt": "2026-05-03T18:49:50.442Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/kevin-esvelt",
+    "path": "advisory/kevin-esvelt/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "985ac9ca2de2db64dc73f5ba613b4e007aae031c91b3736046b153e7f6fbef19",
+    "fetchedAt": "2026-05-03T18:49:51.574Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/alice-evans",
+    "path": "advisory/alice-evans/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "74a99a17ba22efa861a7864c6a44b5016394f91e8bf71ba130e6e02d31548d2b",
+    "fetchedAt": "2026-05-03T18:49:52.714Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/virginia-postrel",
+    "path": "advisory/virginia-postrel/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "fe1d13ca9c142b4589b18ffe3c8e1c0c6b5c9332046058645eb6c8dba7949e4a",
+    "fetchedAt": "2026-05-03T18:49:53.840Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/elle-griffin",
+    "path": "advisory/elle-griffin/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "36a24caefd4446cd08d1aa67d5ca6705bc85b31ec57c333f7e8039e942cf074a",
+    "fetchedAt": "2026-05-03T18:49:55.006Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory/brian-potter",
+    "path": "advisory/brian-potter/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "76535ea94bcba7bf375f487e735050cf5a71addbb67a11997e87bb1c67935da0",
+    "fetchedAt": "2026-05-03T18:49:56.155Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/brian-balkus",
+    "path": "fellow/brian-balkus/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e523c9d9ba26fbe581cd9a899ec1569f0a05a4e76d32b7230cc61ab55861a629",
+    "fetchedAt": "2026-05-03T18:49:57.301Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/paige-lambermont",
+    "path": "fellow/paige-lambermont/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "3671aca254ff03c5a3acbf446b516cea00dfda17194fb6f80cd2330f640c4369",
+    "fetchedAt": "2026-05-03T18:49:58.447Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/karthik-tadepalli",
+    "path": "fellow/karthik-tadepalli/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "43794afc2b30ca04a4b2f92f3e840aac0bba1c68737b702da8df7859b54de5cb",
+    "fetchedAt": "2026-05-03T18:49:59.603Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/ariel-patton",
+    "path": "fellow/ariel-patton/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "23a215c7d2c911c6a80007c5fcc1f802e4ae28b75fde4895ca48782324a33c60",
+    "fetchedAt": "2026-05-03T18:50:00.755Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/laura-mazer",
+    "path": "fellow/laura-mazer/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "6126e19bc0b0346c3e0858dc69287e77b8b6f1cb5ec4e02f7312d72cd5f7ba5f",
+    "fetchedAt": "2026-05-03T18:50:01.945Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/sean-oneill-mcpartlin",
+    "path": "fellow/sean-oneill-mcpartlin/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "7d2ded47da520702a3d5783fe5981b421fa8711f7f15ece532f0d9693e1c1f3b",
+    "fetchedAt": "2026-05-03T18:50:03.103Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/pouya-nikmand",
+    "path": "fellow/pouya-nikmand/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "70cfe914357c9524f7b73f4977ae08245ad130c5c429bc836cf24ad1a6ba13b0",
+    "fetchedAt": "2026-05-03T18:50:04.288Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/etienne-fortier-dubois",
+    "path": "fellow/etienne-fortier-dubois/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "1b34f8ab07425bfc2e12e8238ff534948ed73902f3275cb6fd1ff44d7995c71a",
+    "fetchedAt": "2026-05-03T18:50:05.445Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/nehal-udyavar",
+    "path": "fellow/nehal-udyavar/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "51291d98ec35ada729105ebc8e92cafc2e62b05267357caca045764aa6bcdd5d",
+    "fetchedAt": "2026-05-03T18:50:06.621Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/anton-leicht",
+    "path": "fellow/anton-leicht/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "4775608ce2978be0ce72028678a685ac7c28dc81ae57e9d10a154debe5843aa1",
+    "fetchedAt": "2026-05-03T18:50:07.777Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/ibis-slade",
+    "path": "fellow/ibis-slade/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "1c9a5f08667db6577dd3e037efcd9566d36477e5629ed70b7bad17a63a311b69",
+    "fetchedAt": "2026-05-03T18:50:08.921Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/afra-wang",
+    "path": "fellow/afra-wang/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "a125dff18868ca4158b417581602dc7b0ebc1ad14b82e0c4d3127b53018bfd6c",
+    "fetchedAt": "2026-05-03T18:50:10.096Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/andrew-burleson",
+    "path": "fellow/andrew-burleson/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "1a5f798549e335adcf2bd3b2ec586e4a6d90513b5394ff2ba6386eb448db6fba",
+    "fetchedAt": "2026-05-03T18:50:11.263Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/steven-adler",
+    "path": "fellow/steven-adler/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "8cd2cda2b8ae369030e2a6d84303fec9021a7a0116ff21f5c3d2c08cc0154337",
+    "fetchedAt": "2026-05-03T18:50:12.422Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/venkatesh-ranjan",
+    "path": "fellow/venkatesh-ranjan/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "951e81cad9d360ed254aa580e273fe33361c45f0206095b3d479f1ac3565a1e1",
+    "fetchedAt": "2026-05-03T18:50:13.579Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/benedict-springbett",
+    "path": "fellow/benedict-springbett/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "2e835e88e86ead7b9f321314ecc229643c4bfd19643d2708cb10449d7364af49",
+    "fetchedAt": "2026-05-03T18:50:14.750Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/lesley-gao",
+    "path": "fellow/lesley-gao/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "2920718782cc9dc9aec168df2eadd559b607d3fff78225ea2a2d1f0a5d8f5dc5",
+    "fetchedAt": "2026-05-03T18:50:15.918Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/kelly-vedi",
+    "path": "fellow/kelly-vedi/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "8f15d8c7ff167416d5e730b655bf55e62f25e73db33d371984ed1fa75b399421",
+    "fetchedAt": "2026-05-03T18:50:17.053Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/hiya-jain",
+    "path": "fellow/hiya-jain/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3ae2a7b6209005b7ccb55d4a251be9da589a2142022a5c6847a438c39a58b37",
+    "fetchedAt": "2026-05-03T18:50:18.201Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/sam-enright",
+    "path": "fellow/sam-enright/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "81d648330f870eca398543d9e24cd74bd629083de494be09c5c48f01e85bda90",
+    "fetchedAt": "2026-05-03T18:50:19.346Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/elizabeth-van-nostrand",
+    "path": "fellow/elizabeth-van-nostrand/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "a8fa063d3cd048c591e90d759ff72f9de722f606fa69264388174a3987909417",
+    "fetchedAt": "2026-05-03T18:50:20.499Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/adam-kroetsch",
+    "path": "fellow/adam-kroetsch/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "cbd8eae56c9d4b49ff8cb766dd1944990b25c1fb9cdcf7ce5d1caec17766f8ba",
+    "fetchedAt": "2026-05-03T18:50:21.660Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/deric-tilson",
+    "path": "fellow/deric-tilson/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "2cbf3731def79734a795cc8ddfb320ce028eb8e4f01be5b1b48754694c25ee4d",
+    "fetchedAt": "2026-05-03T18:50:22.810Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/alex-kustov",
+    "path": "fellow/alex-kustov/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "df771987e4abae8919402c3f911f662b5f84a8aa0d3845efbecfc258e7c961a3",
+    "fetchedAt": "2026-05-03T18:50:24.078Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/allison-lehman",
+    "path": "fellow/allison-lehman/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "20d0f4e20bcc98bd3c962fd5361111ebe75bed9ed2c23bc6e18f2c15112bf754",
+    "fetchedAt": "2026-05-03T18:50:25.241Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/abby-shalekbriski",
+    "path": "fellow/abby-shalekbriski/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "907d370ea91d841b904ba02161f1d4f2b63a1f80e48c1d41362d9e602f042a9a",
+    "fetchedAt": "2026-05-03T18:50:26.395Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/smrithi-sunil",
+    "path": "fellow/smrithi-sunil/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "1a0ea0f48a735a7e69e7467edd5ccfec9ba750b1792b25e5c33b11d575076e80",
+    "fetchedAt": "2026-05-03T18:50:27.549Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/ben-james",
+    "path": "fellow/ben-james/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "55140b24ac89e6e804f2f6a5165e87c5aec69650459402f068a228142c6d7405",
+    "fetchedAt": "2026-05-03T18:50:28.708Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/dominik-hermle",
+    "path": "fellow/dominik-hermle/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "72a0d087f36fa76acad28d42836054d4961f37cdc24d6b082b96fd85e488a88a",
+    "fetchedAt": "2026-05-03T18:50:29.849Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/duncan-mcclements",
+    "path": "fellow/duncan-mcclements/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "5fbbef649ae374a5493492dd07f59349ddd243f850d100831aabfa458a314672",
+    "fetchedAt": "2026-05-03T18:50:31.096Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/jannik-reigl",
+    "path": "fellow/jannik-reigl/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "dda8ab2a106db79b614b34ca6f8d3f5c675e9c23d59c0ead65cb6e9f850a9694",
+    "fetchedAt": "2026-05-03T18:50:32.255Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/jeff-fong",
+    "path": "fellow/jeff-fong/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "b471d4f9e946980ea5ca47b2ed2589ceaf7898c69d119df147e27cb22856d24d",
+    "fetchedAt": "2026-05-03T18:50:33.407Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/jonah-messinger",
+    "path": "fellow/jonah-messinger/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "eaef97c7d3f7bd4785eb76340dbce5e85d8c58feab051d614267231e3b7f2071",
+    "fetchedAt": "2026-05-03T18:50:34.552Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/jordan-mcgillis",
+    "path": "fellow/jordan-mcgillis/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e8a32aaa96a23b0769542b2247f4ceaf1c2c69bd45aa1c71a5129c5d6b0bf80c",
+    "fetchedAt": "2026-05-03T18:50:35.700Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/julius-simonelli",
+    "path": "fellow/julius-simonelli/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "5d3a6d3b6cbbd0fa0f960baef67adb6f89a80fb132450723aed0ab9643bbccdb",
+    "fetchedAt": "2026-05-03T18:50:36.851Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/lauren-gilbert",
+    "path": "fellow/lauren-gilbert/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "b777072585d708bdf10d984eb03702cbe1df374c64f3f8d100cbaca7f24e1b95",
+    "fetchedAt": "2026-05-03T18:50:38.003Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/quade-macdonald",
+    "path": "fellow/quade-macdonald/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "017afcfe8b6cc98f2c164415ee49e5f24793b7be6d107940a44e6b883b1b958a",
+    "fetchedAt": "2026-05-03T18:50:39.173Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/robert-long",
+    "path": "fellow/robert-long/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "55605946099349650686379fb42e4837c7e5902b64df2c5e33220f89400bc905",
+    "fetchedAt": "2026-05-03T18:50:40.417Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/rob-lheureux",
+    "path": "fellow/rob-lheureux/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "2c4efe27464551ba9d820584c1ae7611976811479bcd041a54ab97bf493023ce",
+    "fetchedAt": "2026-05-03T18:50:41.607Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/rosie-campbell",
+    "path": "fellow/rosie-campbell/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "7e32d1e52c6c4eb537d72190c734a5bfff1d3600396d14f6f39ff9a6d5c586b5",
+    "fetchedAt": "2026-05-03T18:50:42.832Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/ruxandra-teslo",
+    "path": "fellow/ruxandra-teslo/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e31bf5064701f81309d5389133cd6fba8d380dfe3dc5a1feb4e222cebc0fc76d",
+    "fetchedAt": "2026-05-03T18:50:43.988Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/steve-newman",
+    "path": "fellow/steve-newman/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "facdb63fe5c263d0cebc6b10eafcd066a500a44f512df6b6a33e609532d11450",
+    "fetchedAt": "2026-05-03T18:50:45.137Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/mary-hui",
+    "path": "fellow/mary-hui/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "80caf48a592600e5325181b25a8a48e09f7629a50af77021c8f7a6db23b5de88",
+    "fetchedAt": "2026-05-03T18:50:46.374Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/niko-mccarty",
+    "path": "fellow/niko-mccarty/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "021610f958e96e1e3ae1d8a9454ab014d24d9c5463d16afe8158ac39e5ec03de",
+    "fetchedAt": "2026-05-03T18:50:47.518Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/sarah-constantin",
+    "path": "fellow/sarah-constantin/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "4242b6c48b0ed965baf1c042e2ee56181236971c18df74c117e860ee056e8da2",
+    "fetchedAt": "2026-05-03T18:50:48.679Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/dynomight",
+    "path": "fellow/dynomight/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "93d532f5b79e0e1ef1337c591eb5fdeea75b6f7750155dc3e402e2dedc1f264f",
+    "fetchedAt": "2026-05-03T18:50:49.832Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/sean-fleming",
+    "path": "fellow/sean-fleming/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "24d4cc6a8595836bcf6b3c7bb30bb3cf1d74e8d1542590fda9f2e9377c5b7689",
+    "fetchedAt": "2026-05-03T18:50:50.985Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/andrew-miller",
+    "path": "fellow/andrew-miller/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "ff5657e272023c6ad76a80ee43c4f619b3d914cf05a920d57dfa979f6ce56441",
+    "fetchedAt": "2026-05-03T18:50:52.130Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/dean-ball",
+    "path": "fellow/dean-ball/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "28789192bb7d6ca3dbe66152a632f84e8c0b33812c8c9016272034f55b662140",
+    "fetchedAt": "2026-05-03T18:50:53.441Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/kevin-kohler",
+    "path": "fellow/kevin-kohler/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "891db17ea29af293cb1ce4a78c0e36b73cc8aff4e9b801ea22062f0e9960ea99",
+    "fetchedAt": "2026-05-03T18:50:54.708Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/alex-telford",
+    "path": "fellow/alex-telford/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "12f955788cac479b6b6001fe39cca6e487baf9a39fe3683b43cd3b811f366a5e",
+    "fetchedAt": "2026-05-03T18:50:57.131Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/connor-obrien",
+    "path": "fellow/connor-obrien/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "5d686983996ca674004d26ce272921e01a7ed73d92686c61f8875af9101884ad",
+    "fetchedAt": "2026-05-03T18:50:58.337Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/elle-griffin",
+    "path": "fellow/elle-griffin/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "2932a7c4da2f0390f3bb58c25747abb39b61b51c7efd8a59526216b0724c40a6",
+    "fetchedAt": "2026-05-03T18:50:59.574Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/fin-moorhouse",
+    "path": "fellow/fin-moorhouse/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "25a76a3fad8a09c09f98bb9d2f1f3764cadacb86d6b2f362fb1c1a6784f8aeaf",
+    "fetchedAt": "2026-05-03T18:51:00.914Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/florian-metzler",
+    "path": "fellow/florian-metzler/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "1a6c1769b48407f48a5530a18fba88fb95d99bb68aaec724d2a8acd433d50b43",
+    "fetchedAt": "2026-05-03T18:51:02.070Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/grant-dever",
+    "path": "fellow/grant-dever/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "9589dde55f943a0e794294b2c916baccd622c0d8429d110dfd086d8b5ef469c8",
+    "fetchedAt": "2026-05-03T18:51:03.221Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/jacob-rintamaki",
+    "path": "fellow/jacob-rintamaki/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "a7f15066bc85f17fd3cee4965268b02de5054812b11ef27a804312cc87e95cda",
+    "fetchedAt": "2026-05-03T18:51:04.373Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/jenni-morales",
+    "path": "fellow/jenni-morales/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "3b389e2ba5313d465742031b3b0e89ac7792d1bbb480d788f78054141c8e12f2",
+    "fetchedAt": "2026-05-03T18:51:05.542Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/jeremy-cote",
+    "path": "fellow/jeremy-cote/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "fca3142c0ff1f04ff51118b28b88fec4dc48edfd51d90e764024f90e4ab5edeb",
+    "fetchedAt": "2026-05-03T18:51:06.817Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/laura-london",
+    "path": "fellow/laura-london/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "d88a750e49a1bdbbdb231dd7ace32172e9391ba89e1d18a5ef6d7aa707c6c018",
+    "fetchedAt": "2026-05-03T18:51:07.981Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/maarten-boudry",
+    "path": "fellow/maarten-boudry/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "1a219c8623d8d4915a3a32aa316f57672fccf4b7f3348fe2b1fa3cbf462b99e9",
+    "fetchedAt": "2026-05-03T18:51:09.141Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/madeline-zimmerman",
+    "path": "fellow/madeline-zimmerman/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "25fc00672c76469db114640cbe05bd9d763ab0db6a104a45751587a6e2d208b9",
+    "fetchedAt": "2026-05-03T18:51:10.350Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/malcolm-cochran",
+    "path": "fellow/malcolm-cochran/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "524ecb75d4ff412daafcbdefcbdd058930e24a2174549a51676a5753069ee208",
+    "fetchedAt": "2026-05-03T18:51:11.615Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/max-tabarrok",
+    "path": "fellow/max-tabarrok/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "f55b7a61ecf26b29cb6836876b6947e250120b2585acffa58d97ff8022ef509a",
+    "fetchedAt": "2026-05-03T18:51:12.768Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/ryan-puzycki",
+    "path": "fellow/ryan-puzycki/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "dfab2ce920ff32fd252777bc247210fbef54a491da881222d12c2c58a091ff56",
+    "fetchedAt": "2026-05-03T18:51:13.973Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/tina-marsh-dalton",
+    "path": "fellow/tina-marsh-dalton/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "7c826cc4682021e0c5741e1e88636110280bb365b37abc80080e308a7d511b15",
+    "fetchedAt": "2026-05-03T18:51:15.127Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/raiany-romanni",
+    "path": "fellow/raiany-romanni/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "25ab39e703092b58de272cdaaf8f301ac9d5abbea15277dc4d1edc70f7f9941f",
+    "fetchedAt": "2026-05-03T18:51:16.360Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/heidi-huang",
+    "path": "fellow/heidi-huang/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "4188524d0c6c6c5053739b255cb6bbf2e79b20da59e698bf2c5f7bb57f196a3b",
+    "fetchedAt": "2026-05-03T18:51:17.517Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/michael-hill",
+    "path": "fellow/michael-hill/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "90b008881ad5d39bb3d6576d59defcf5eed62fad6ebab03c7bdf7493af1e0afb",
+    "fetchedAt": "2026-05-03T18:51:18.671Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/tim-durham",
+    "path": "fellow/tim-durham/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "477036e3179c05a82057f5d12903a2ab3e57e92d0944966417516364a354c5d1",
+    "fetchedAt": "2026-05-03T18:51:19.833Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/grant-mulligan",
+    "path": "fellow/grant-mulligan/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "324edbb52da630c167ef3a5ff5aaa8b8f637b5e81558e1950648640ba55e926b",
+    "fetchedAt": "2026-05-03T18:51:20.979Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/byron-cohen",
+    "path": "fellow/byron-cohen/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "650662c4f3ac85dc0cf93a9fe8fc1f49e846ac386c57d72110516716f9f7d996",
+    "fetchedAt": "2026-05-03T18:51:23.340Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/rhishi-pethe",
+    "path": "fellow/rhishi-pethe/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "340b50c4824d6b3cfb5e883ca1c1024798343f66e0172122814084ea510076f2",
+    "fetchedAt": "2026-05-03T18:51:24.512Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/colleen-smith",
+    "path": "fellow/colleen-smith/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "cb34db1341dc41a69f3c993df66cc2ce97d5bc7d7ea491d66d9d118c7adbf252",
+    "fetchedAt": "2026-05-03T18:51:25.677Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/category/announcements",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:27.034Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/category/essays",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:28.230Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/category/featured",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:29.432Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/category/press",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:30.629Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/tag/biotech",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:32.020Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/tag/career-search",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:33.277Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/tag/college-prep",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:34.472Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/tag/high-school",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:35.693Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/tag/medicine",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:36.938Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/tag/summer-program",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:38.147Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory_cat/industry-experts",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:39.390Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory_cat/other-near-peer-mentors",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:40.774Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory_cat/other-program-advisors",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:41.998Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory_cat/other-team",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:43.215Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory_cat/progress-intellectuals-and-writers",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:44.434Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory_cat/roots-of-progress-institute",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:45.630Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/advisory_cat/writing-audience-building-guides",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetchedAt": "2026-05-03T18:51:46.814Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/year/2023",
+    "path": "year/2023/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "80d78a1f7eb606d1fcf0c5f1cd3f31b162bda07b8b8efb88065d896676ef09df",
+    "fetchedAt": "2026-05-03T18:51:48.120Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/year/2024",
+    "path": "year/2024/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "80d78a1f7eb606d1fcf0c5f1cd3f31b162bda07b8b8efb88065d896676ef09df",
+    "fetchedAt": "2026-05-03T18:51:49.387Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/year/2025",
+    "path": "year/2025/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "80d78a1f7eb606d1fcf0c5f1cd3f31b162bda07b8b8efb88065d896676ef09df",
+    "fetchedAt": "2026-05-03T18:51:50.682Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/oembed/1.0/embed",
+    "path": null,
+    "status": 400,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "c60318e008622908e7ad93856ef72695fcee8cc0eb1ad03b28516d9efbfad817",
+    "fetchedAt": "2026-05-03T18:51:51.793Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "e14aec2f3c286bc9a493a7c102b4e469eb2bd25839d3d8dee51de5f1ed8267a6",
+    "fetchedAt": "2026-05-03T18:51:52.922Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/2",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "d2cd1047dac47d583d314e90b7def5ccba674a2bb6b33d2cde52b17535d9e4ac",
+    "fetchedAt": "2026-05-03T18:51:54.034Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/progress-humanism-agency",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:51:55.172Z",
+    "note": "redirects to https://blog.rootsofprogress.org/progress-humanism-agency (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/570",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "73049057f9362b9ab5526c1f0178c7c155867b4b86666e659964f41b50f68b98",
+    "fetchedAt": "2026-05-03T18:51:56.304Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/574",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "7edf9a30fd11d509ba1a389cb9235e5d9f46f84dfb303ac8f1271b63d5ad7e9c",
+    "fetchedAt": "2026-05-03T18:51:57.458Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/578",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "699d9cf6dd035d3934fa7a46a3a1415d86df7d4c84613ece2833c2cca5133830",
+    "fetchedAt": "2026-05-03T18:51:58.595Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/538",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "7b594d743bdd9ce1d9e5227d591e07bdd6221ddd6d5ca516ec0a35c8b4133be0",
+    "fetchedAt": "2026-05-03T18:51:59.733Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/solutionism-on-ai-safety",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:52:00.790Z",
+    "note": "redirects to https://blog.rootsofprogress.org/solutionism-on-ai-safety (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/543",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "7fb32838b3169517d944a5d47fefec284ea64c93572af10b81061e7e89c579b2",
+    "fetchedAt": "2026-05-03T18:52:02.075Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/progress-studies-a-moral-imperative",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:52:03.128Z",
+    "note": "redirects to https://blog.rootsofprogress.org/progress-studies-a-moral-imperative (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/a-new-philosophy-of-progress",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:52:04.205Z",
+    "note": "redirects to https://blog.rootsofprogress.org/a-new-philosophy-of-progress (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/113",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "1d172ba028158bdd5e0e056fb79602a119bdb3860b02aabf5cf705eb5e39c9b6",
+    "fetchedAt": "2026-05-03T18:52:05.506Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/546",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "8af34f9b20f633000aac2172c3f14b135885e23f2dbc6fed943ce10aa204faf8",
+    "fetchedAt": "2026-05-03T18:52:06.658Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/smart-rich-and-free",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:52:07.741Z",
+    "note": "redirects to https://blog.rootsofprogress.org/smart-rich-and-free (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/the-beginning",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:52:08.799Z",
+    "note": "redirects to https://blog.rootsofprogress.org/the-beginning (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/the-idea-of-progress",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:52:09.862Z",
+    "note": "redirects to https://blog.rootsofprogress.org/the-idea-of-progress (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/books/the-rise-and-fall-of-american-growth",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:52:10.922Z",
+    "note": "redirects to https://blog.rootsofprogress.org/books/the-rise-and-fall-of-american-growth (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/problem-solution-history",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:52:11.980Z",
+    "note": "redirects to https://blog.rootsofprogress.org/problem-solution-history (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/enlightenment-now",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:52:13.041Z",
+    "note": "redirects to https://blog.rootsofprogress.org/enlightenment-now (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/555",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "9d8e9d4ff0cee0281d4167d4a5ada3a1aa25dc2aaf790cd9c08139929feec401",
+    "fetchedAt": "2026-05-03T18:52:14.176Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/the-baconian-program",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:52:15.241Z",
+    "note": "redirects to https://blog.rootsofprogress.org/the-baconian-program (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/devanney-on-the-nuclear-flop",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:52:16.305Z",
+    "note": "redirects to https://blog.rootsofprogress.org/devanney-on-the-nuclear-flop (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/713",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "036833c6329b51cec5640ff9fe3fc10a581163e26b3f817055b72f527df6c98c",
+    "fetchedAt": "2026-05-03T18:52:17.441Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/697",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "10e47edbfcc33a7104d178139790de14bf858d5fa902c8eea09e95d00bb84391",
+    "fetchedAt": "2026-05-03T18:52:18.556Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/759",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "10b1ddb54d92667997c557a0cfd27f22d7cfa97c987ee8702f5853fbe539a330",
+    "fetchedAt": "2026-05-03T18:52:19.679Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/95",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "57f93caead7f11c4877808d9304d0a7bf47449083bea8727f008190e3d2c32ae",
+    "fetchedAt": "2026-05-03T18:52:20.797Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/descriptive-vs-prescriptive-optimism",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:52:21.861Z",
+    "note": "redirects to https://blog.rootsofprogress.org/descriptive-vs-prescriptive-optimism (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/summary-the-rise-and-fall-of-american-growth",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:52:22.930Z",
+    "note": "redirects to https://blog.rootsofprogress.org/summary-the-rise-and-fall-of-american-growth (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/side-effects-of-technology",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:52:24.007Z",
+    "note": "redirects to https://blog.rootsofprogress.org/side-effects-of-technology (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/798",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "cbf6d60bf9749aa22c319163d670f2ff5d958f5fee1915b04fe84910e44870f4",
+    "fetchedAt": "2026-05-03T18:52:25.135Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/998",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "b233f0baaff58a48b254769204c89e4408e1b7372553e2ae6a10ceed795ccc4f",
+    "fetchedAt": "2026-05-03T18:52:26.263Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellowship/fellows",
+    "path": "fellowship/fellows/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "f9b626bcb6e69de6e9f6478aa374577022bb80102e74db793fbf2851b00dcbf6",
+    "fetchedAt": "2026-05-03T18:52:27.895Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/1155",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "5605b848e00e936b099f33dc0d33d5e91b2f9fd9b04ae8d65785197985a20c9d",
+    "fetchedAt": "2026-05-03T18:52:29.060Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/1317",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "553a9fa7b419d168e5ffa79bd5c9d974080bc0bdfa93e43f2f25bd0faaec8225",
+    "fetchedAt": "2026-05-03T18:52:30.204Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/1655",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "cb69b77057e83ecc07cdc035ca61e7aec8ca6b12900c49a19ac182fce7863093",
+    "fetchedAt": "2026-05-03T18:52:31.343Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/1405",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "32c7f8b91075060ff12293d071580c3baca2d855e84b06284a82eccd3f31a111",
+    "fetchedAt": "2026-05-03T18:52:32.465Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/1846",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "9f6c216d1530db1e85d56d93bd1cb5b0ebbc46b4aa0761feaac265dd49ab05a3",
+    "fetchedAt": "2026-05-03T18:52:33.595Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/1864",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "cad9767b95b98e561e3b652c5ceb0415933cf6fdbad435801229917265231a08",
+    "fetchedAt": "2026-05-03T18:52:34.753Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/1993",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "5df0b1575161eb4252d7409abede251766385d8ee98d84f7edbf4521fd4f3e3e",
+    "fetchedAt": "2026-05-03T18:52:35.877Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/2384",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "af7ec4a75fe5203a15002a08327abdef039dfe3774219b67db8e27982e2e2719",
+    "fetchedAt": "2026-05-03T18:52:37.096Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/2647",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "76a4ffc76fc188f9dd8c28275a1a80f43ab10ebd811dc4879166f7726e772e61",
+    "fetchedAt": "2026-05-03T18:52:38.216Z"
+  },
+  {
+    "url": "http://rootsofprogress.org/progress-in-medicine",
+    "path": "progress-in-medicine/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "66dde2caf4693c68b2dfe888cb642ff6d7aaee71e2dd795a0aebaf2ced8a033e",
+    "fetchedAt": "2026-05-03T18:52:39.574Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/2737",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "051c43091f30e25f89008ac0b9f5ecc297775ca4fc6c5a0e27f6162c02f4c5db",
+    "fetchedAt": "2026-05-03T18:52:40.703Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/posts/3025",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "64c927203e9361a63ba611d813d3e22bbcbe1ad2d316fe7f337061425b5ee160",
+    "fetchedAt": "2026-05-03T18:52:41.868Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/81",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "99f6f258e2450ed53804cb233e8455e3e7c317b81589f2aa20a7b0f5b4ab0e33",
+    "fetchedAt": "2026-05-03T18:52:42.999Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/149",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "276079c270f3335e9f03c6e31bc31522d14ff2c0c76f48437ef479e28486d669",
+    "fetchedAt": "2026-05-03T18:52:44.123Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/151",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "9bfdd3f87bdb43da614d54b78fb692bf6ce776b1cd3d73bc978517e299bf7dfc",
+    "fetchedAt": "2026-05-03T18:52:45.233Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/110",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "2f1045ee71621a9ea07c41165952a7d40e72e73aad072222803f50237ef1cc45",
+    "fetchedAt": "2026-05-03T18:52:46.357Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/127",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "473363df11670a77fa318a517dce52c8fd5c2ebbaa78e332089f8cba64467ba2",
+    "fetchedAt": "2026-05-03T18:52:47.479Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/2271",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "0f573e8adc49cd827c538bcfc08be08500341eb0f927b2f86a22fca1cd230294",
+    "fetchedAt": "2026-05-03T18:52:48.602Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/742",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "bd11421510418c035aaa7a45c4d867cd5819784a7c772249f25604a196ebcf9f",
+    "fetchedAt": "2026-05-03T18:52:49.716Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/813",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "9929803eda21cf45d1521748e16a0daf913c14bda1867838230893ee2bbdd538",
+    "fetchedAt": "2026-05-03T18:52:50.870Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/a-thriving-progress-movement",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:52:51.930Z",
+    "note": "redirects to https://blog.rootsofprogress.org/a-thriving-progress-movement (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/bibliography",
+    "path": null,
+    "status": 301,
+    "contentType": "",
+    "sha256": null,
+    "fetchedAt": "2026-05-03T18:52:52.977Z",
+    "note": "redirects to https://blog.rootsofprogress.org/bibliography (blocked subdomain)"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/122",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "bd8fae029355d4975ddac3f67329e7e0d8158be88fd33ee83415071b2bd5c4bc",
+    "fetchedAt": "2026-05-03T18:52:54.095Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/2269",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "f2873bcb06e77b32b92c9caf155060252790c598754ae082dc6c73e69bc41454",
+    "fetchedAt": "2026-05-03T18:52:55.278Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/89",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "b7f5628fbf4f0d00a242a0788bb06b9154a922236ef26c0ad77d52f00bfa47b0",
+    "fetchedAt": "2026-05-03T18:52:56.391Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/1641",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "ab156c33d7e8488f03a44af77a4d068d9301107f811c2aaed46a0d2f97df877c",
+    "fetchedAt": "2026-05-03T18:52:57.501Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/2717",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "fd7da2ab9523dbf059a293e7b8c97b9722950e9222d1bbab81e78756c91b8124",
+    "fetchedAt": "2026-05-03T18:52:58.637Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/2463",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "da0ef56d00f9f2cda70d0567979eb10b3b1c6c1e3f7e69bd986df8ff0445714b",
+    "fetchedAt": "2026-05-03T18:52:59.756Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/amesh-adalja",
+    "path": "expert/amesh-adalja/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "1b35207848595fa4c46ff6cf35a876bfccd2e1079a9c30f284fd70620a319ffd",
+    "fetchedAt": "2026-05-03T18:53:00.901Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/celine-halioua",
+    "path": "expert/celine-halioua/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "065edebddcc8d1d393dda9016cb52152baeaa9b391b4fc70ae1f545984190e62",
+    "fetchedAt": "2026-05-03T18:53:02.129Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/jared-seehafer",
+    "path": "expert/jared-seehafer/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "82cdc61072a545a6bd46c8ca2a0abeaf9b757bd043e9e5a3d5b1f16ac53640be",
+    "fetchedAt": "2026-05-03T18:53:03.259Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/jake-swett",
+    "path": "expert/jake-swett/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "347653b18754f5b781baecacc6fde3ddeb083141b0ba1d46e78533b09fd60ecf",
+    "fetchedAt": "2026-05-03T18:53:04.414Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/vassilis-alexopoulos",
+    "path": "expert/vassilis-alexopoulos/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "f10f7079153bbad01e5f703fd353c4ffab474d183af1ef8e7f07a176a9248549",
+    "fetchedAt": "2026-05-03T18:53:05.572Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/leon-han",
+    "path": "expert/leon-han/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "1470f2fe2e90c0d11dfefeacb5998ed83e05fceeb61362dc9281ef0cdc887081",
+    "fetchedAt": "2026-05-03T18:53:06.720Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/2540",
+    "path": "expert/2540/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "fb1551c190c0f31bfdf1f4e73a47d5b0894bae002cc102899b9f25d525778565",
+    "fetchedAt": "2026-05-03T18:53:07.865Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/heidi-huang",
+    "path": "expert/heidi-huang/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "61bbea40f98a9de1244a837a0ba2f94722d508995cc20d73478443a7878d527c",
+    "fetchedAt": "2026-05-03T18:53:09.007Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/grace-klaris",
+    "path": "expert/grace-klaris/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "885953c6bdeddb3a8c4cd275163fd9415b1abf6ca6621aa777c6da96e5557ba2",
+    "fetchedAt": "2026-05-03T18:53:10.158Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/gavriel-kleinwaks",
+    "path": "expert/gavriel-kleinwaks/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "2c5337aa8a1e0219135ecfc4720bbbc4161ed7723548f8f122f6728925396cb3",
+    "fetchedAt": "2026-05-03T18:53:11.300Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/adam-kroetsch",
+    "path": "expert/adam-kroetsch/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "2fca40eba4c8fe0ba27e407ace3dcbe0bb8e04130927b7432df618b81548f566",
+    "fetchedAt": "2026-05-03T18:53:12.465Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/akash-kulgod",
+    "path": "expert/akash-kulgod/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "10ac171b407b1d6a317195de93c3a2fb90223a7931618aec4392f37aa7959875",
+    "fetchedAt": "2026-05-03T18:53:13.605Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/hannah-m-hamlin",
+    "path": "expert/hannah-m-hamlin/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "8c4ee79dd84220d95fd29a7c5868bc7302f8d4d831865652dedb9642bcf516bd",
+    "fetchedAt": "2026-05-03T18:53:14.751Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/fred-milgrim",
+    "path": "expert/fred-milgrim/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "344095ffb018f8450e499faf0383702d4c1f467f0fd7b6451c8beaf7f7af41e7",
+    "fetchedAt": "2026-05-03T18:53:15.905Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/kristen-shea",
+    "path": "expert/kristen-shea/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "367c2e5674d736ca8ce8c180f76b00cb6eb5da25a55bef6ef4809b6461b26c5b",
+    "fetchedAt": "2026-05-03T18:53:17.066Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/abigail-thomas",
+    "path": "expert/abigail-thomas/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "1759881518c5ba2921f0548ff159464a7f04433bf2599382ff0c8957137fd6d1",
+    "fetchedAt": "2026-05-03T18:53:18.197Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/jason-crawford",
+    "path": "expert/jason-crawford/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "91484fecf203f4241b2c26f1e0d1dc1a365131de13cba919b7eace9ac5b73482",
+    "fetchedAt": "2026-05-03T18:53:19.364Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/test-person",
+    "path": "expert/test-person/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "35dc7b7c83c34c3dde74fac2633cfa845c47b97a2b108eced3da5d0fd8fc722d",
+    "fetchedAt": "2026-05-03T18:53:20.531Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/laura-mazer",
+    "path": "expert/laura-mazer/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "8d729244a465eb7bc7143c8b3b287a27467b4040887167a3e2acc8f5af9c6542",
+    "fetchedAt": "2026-05-03T18:53:21.670Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/expert/mike-riggs",
+    "path": "expert/mike-riggs/index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "f136ea6cdace6c9f3b292e9b585e5ed2d020017b451d301c65a2d57d931699aa",
+    "fetchedAt": "2026-05-03T18:53:22.823Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/3052",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "dc60a2bc3b54e05660e31e4a3744a04c9c7b963b3c5f418cb07a3d9d6f6cf965",
+    "fetchedAt": "2026-05-03T18:53:23.932Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/2765",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "2acaf749be18e2a93e33fdcd29a58aad5e592a6bca27d1b1e8fc821ff6fe66aa",
+    "fetchedAt": "2026-05-03T18:53:25.050Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/1473",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "735eed1bc3a36f4e282a897d4cec6d9ed05e6f8bd0ee6a717bde7f64e3c688f1",
+    "fetchedAt": "2026-05-03T18:53:26.167Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/api/wp/v2/pages/2803",
+    "path": null,
+    "status": 200,
+    "contentType": "application/json; charset=UTF-8",
+    "sha256": "d5ba163bc61db6ac64dfb970ce14efdeefb769a3358cec51d11743b789bfbe05",
+    "fetchedAt": "2026-05-03T18:53:27.299Z"
+  },
+  {
+    "url": "https://rootsofprogress.org/fellow/dynomight.net",
+    "path": null,
+    "status": 404,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "e1760ce05876a947bae5a12dd585958cbc0d1aed4c1446b82345fd064721d189",
+    "fetchedAt": "2026-05-03T18:53:28.440Z"
+  },
+  {
+    "url": "http://rootsofprogress.org",
+    "path": "index.html",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "sha256": "80d78a1f7eb606d1fcf0c5f1cd3f31b162bda07b8b8efb88065d896676ef09df",
+    "fetchedAt": "2026-05-03T18:53:29.729Z"
+  }
+]

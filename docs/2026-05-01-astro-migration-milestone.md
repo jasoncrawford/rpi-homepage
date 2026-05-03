@@ -10,6 +10,8 @@ type: milestone
 
 Migrate Roots of Progress nonprofit website from WordPress to Astro static site, eliminating security vulnerabilities, enabling team-friendly maintenance via Claude Code, and establishing a foundation for eventual Decap CMS layer (Phase 2).
 
+**Scope:** `rootsofprogress.org` only. `blog.rootsofprogress.org` and `newsletter.rootsofprogress.org` are separate sites and are not part of this migration.
+
 ## Definition of Done
 
 - All WordPress content migrated to markdown/YAML files in git
@@ -89,7 +91,7 @@ The original 10-issue plan was restructured after issues #1–#6 (foundation) me
 - #6 Data-Driven Components & Pages
 
 **v2 plan — capture-first, no LLM in content path:**
-- **Phase A — Mechanical Capture:** #27 (crawl HTML), #28 (download images)
+- **Phase A — Mechanical Capture:** #27 (crawl HTML — PR #33 open), #28 (download images)
 - **Phase B — Design System:** #29 (extract tokens), #30 (rebuild Base + CSS)
 - **Phase C — Page-Type Components:** #31 (inventory) + one issue per page type discovered
 - **Phase D — Page-by-Page Reproduction:** filed after C1 inventory lands; one issue per page group; can run in parallel
@@ -137,7 +139,7 @@ No fixed deadline, but targeting completion in order of dependency (estimated ~2
 
 ---
 
-**Status:** Ready for issue creation
+**Status:** Phase A in progress — PR #33 (A1 crawl) open for review
 
 **Assigned to:** Brunel (implementation via 10 PR-sized issues)
 
