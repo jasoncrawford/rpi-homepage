@@ -1,5 +1,7 @@
 # WordPress to Astro Migration — Implementation Plan (v2)
 
+> **Canonical work list lives in GitHub issues.** This document describes the strategy and phase structure, but the authoritative, up-to-date task list is the open issues in milestone "WordPress to Astro Migration" on github.com/jasoncrawford/rpi-homepage. The plan is evolving — new issues (e.g. A3 image consolidation, C2+ per-page-type components, D-page reproduction issues) are filed as we learn from each phase. If this document and the issue list disagree, **the issue list wins**.
+>
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 >
 > **READ THIS FIRST:** `verbatim-content-extraction` skill. Any LLM-mediated tool (WebFetch, asking Claude to "convert this HTML to markdown", etc.) silently paraphrases content. The migration must be **mechanical** — direct HTTP, library-based HTML→markdown, no LLM in the content path.
