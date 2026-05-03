@@ -1,0 +1,202 @@
+---
+export interface ExpertLink {
+  label: string;
+  url: string;
+}
+
+export interface Expert {
+  id: string;
+  name: string;
+  position: string;
+  imageUrl: string;
+  imageAlt?: string;
+  bioLines: string[];
+  popupBioTitle?: string;
+  popupBioLines?: string[];
+  links: ExpertLink[];
+}
+
+export interface Props {
+  headline: string;
+  description: string;
+  experts: Expert[];
+}
+
+const { headline, description, experts } = Astro.props;
+
+const separatorSvg = `<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="15" cy="15" r="7" fill="#5F6E60"/>
+  <circle cx="15" cy="15" r="4" fill="#FFFCF2"/>
+</svg>`;
+
+const arrowSvg = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+const backArrowSvg = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13 7H1M1 7L7 1M1 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+---
+
+<section class="fellows alt popups" data-view>
+  <div class="container">
+    <div class="acc-sep">
+      <span></span>
+      <Fragment set:html={separatorSvg} />
+      <span></span>
+    </div>
+
+    <div class="content">
+      <div class="grid">
+        <div class="col-6-md">
+          <div class="max t--fadedown">
+            <h2>{headline}</h2>
+          </div>
+        </div>
+        <div class="col-6-md">
+          <div class="text t--fadedown t--delay_250">
+            <p set:html={description} />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="acc">
+      <div class="row">
+        <div class="team-a a">
+          <div class="grid">
+            {experts.map((expert) => (
+              <div class="col-6-sm col-4-md" id={expert.id}>
+                <div class="block alt">
+                  <div class="info">
+                    <h4>{expert.name}</h4>
+                    <div class="position">{expert.position}</div>
+                  </div>
+                  <div class="thumb">
+                    <img
+                      src={expert.imageUrl}
+                      alt={expert.imageAlt || expert.name}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="inside">
+                    <div class="bio">
+                      {expert.bioLines.map((line) => (
+                        <p>{line}</p>
+                      ))}
+                    </div>
+                  </div>
+                  <div class="links">
+                    {expert.links.slice(0, -1).map((link) => (
+                      <a href={link.url} target="_blank" rel="noopener noreferrer">
+                        <div>{link.label}</div>
+                        <Fragment set:html={arrowSvg} />
+                      </a>
+                    ))}
+                    {expert.links.length > 0 && (
+                      <a
+                        href="#"
+                        class="learn-more-btn"
+                        data-expert={expert.id}
+                        data-popup={`popup-${expert.id}`}
+                      >
+                        <div>Learn more</div>
+                        <Fragment set:html={arrowSvg} />
+                      </a>
+                    )}
+                  </div>
+                </div>
+
+                <div class="popup" id={`popup-${expert.id}`}>
+                  <div class="container">
+                    <div class="grid">
+                      <div class="col">
+                        <div class="stick">
+                          <a href="#" class="back close-popup" data-popup={`popup-${expert.id}`}>
+                            <Fragment set:html={backArrowSvg} />
+                            Back
+                          </a>
+                          <div class="block">
+                            <div class="thumb">
+                              <img
+                                src={expert.imageUrl}
+                                alt={expert.imageAlt || expert.name}
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="name">{expert.name}</div>
+                        <div class="details">
+                          <div class="location">{expert.position}</div>
+                        </div>
+                        <div class="block">
+                          <div class="inside">
+                            {expert.popupBioTitle && (
+                              <div class="bio-title">{expert.popupBioTitle}</div>
+                            )}
+                            <div class="bio">
+                              {(expert.popupBioLines || expert.bioLines).map((line) => (
+                                <p>{line}</p>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                        <div class="links">
+                          {expert.links.slice(0, -1).map((link) => (
+                            <a href={link.url} target="_blank" rel="noopener noreferrer">
+                              <div>{link.label}</div>
+                              <Fragment set:html={arrowSvg} />
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function initExpertPopups() {
+    const learnMoreBtns = document.querySelectorAll<HTMLAnchorElement>('.learn-more-btn');
+    const closeBtns = document.querySelectorAll<HTMLAnchorElement>('.close-popup');
+
+    learnMoreBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const popupId = btn.dataset.popup;
+        if (!popupId) return;
+        const popup = document.getElementById(popupId);
+        if (popup) {
+          popup.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    closeBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const popupId = btn.dataset.popup;
+        if (!popupId) return;
+        const popup = document.getElementById(popupId);
+        if (popup) {
+          popup.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initExpertPopups);
+</script>

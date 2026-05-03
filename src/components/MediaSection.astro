@@ -1,0 +1,27 @@
+---
+export interface Props {
+  imageUrl: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageAlt?: string;
+}
+
+const { imageUrl, imageWidth = 1824, imageHeight = 656, imageAlt = "" } = Astro.props;
+---
+
+<section class="media" data-view>
+  <div class="bg-wrap-75">
+    <div class="bg">
+      <div class="parallax">
+        <img
+          width={imageWidth}
+          height={imageHeight}
+          src={imageUrl}
+          alt={imageAlt}
+          decoding="async"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+export interface Props {
+  text: string;
+  linkLabel?: string;
+  linkUrl?: string;
+  variant?: "default" | "single" | "uneven";
+}
+
+const { text, linkLabel, linkUrl, variant = "default" } = Astro.props;
+const sectionClass = ["newsletter", variant !== "default" ? variant : ""].filter(Boolean).join(" ");
+---
+
+<section class={sectionClass}>
+  <div class="container">
+    <div class="grid">
+      <div class="col-6-sm">
+        <div class="text">{text}</div>
+      </div>
+      {linkLabel && linkUrl && (
+        <div class="col-6-sm">
+          <a href={linkUrl}>{linkLabel}</a>
+        </div>
+      )}
+    </div>
+  </div>
+</section>

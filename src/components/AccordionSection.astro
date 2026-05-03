@@ -1,0 +1,95 @@
+---
+export interface AccordionItem {
+  title: string;
+  contentHtml: string;
+}
+
+export interface Props {
+  items: AccordionItem[];
+  variant?: string;
+}
+
+const { items, variant = "acco alt fellow" } = Astro.props;
+const sectionClass = ["text", variant].filter(Boolean).join(" ");
+
+const separatorSvg = `<svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="15" cy="10" r="5" fill="#5F6E60"/>
+</svg>`;
+---
+
+<section class={sectionClass} data-view>
+  <div class="container">
+    <div class="grid">
+      <div class="col-24-sm">
+        {items.map((item, i) => (
+          <div class="acc">
+            <div class="row" id={`acc-row-${i}`}>
+              <div class="q" data-acc={`acc-row-${i}`}>
+                <h2>{item.title}</h2>
+              </div>
+              <div class="a">
+                <div class="inside">
+                  <div class="grid">
+                    <div class="col-24-sm">
+                      <div class="separator top">
+                        <span></span>
+                        <Fragment set:html={separatorSvg} />
+                        <span></span>
+                      </div>
+                      <div class="text">
+                        <Fragment set:html={item.contentHtml} />
+                      </div>
+                      <div class="separator bottom">
+                        <span></span>
+                        <Fragment set:html={separatorSvg} />
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  .text.acco.alt.fellow .acc .separator {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    clear: both;
+  }
+  .text.acco.alt.fellow .acc .separator.top { margin-bottom: 30px; }
+  .text.acco.alt.fellow .acc .separator.bottom { margin-top: 30px; }
+  .text.acco.alt.fellow .acc .separator span {
+    background: #EDEADE;
+    display: block;
+    height: 1px;
+    width: 50%;
+  }
+  .text.acco.alt.fellow .acc .separator svg { margin: 0 20px; }
+
+  .text.acco.alt.fellow .acc .row { cursor: pointer; }
+  .text.acco.alt.fellow .acc .row .q { position: relative; padding: 20px 0; }
+  .text.acco.alt.fellow .acc .row .q h2 { margin: 0; }
+  .text.acco.alt.fellow .acc .row:not(.open) .a { display: none; }
+</style>
+
+<script>
+  function initAccordions() {
+    const rows = document.querySelectorAll<HTMLElement>('.text.acco.alt.fellow .acc .row');
+    rows.forEach((row) => {
+      const q = row.querySelector<HTMLElement>('.q');
+      if (!q) return;
+      q.addEventListener('click', () => {
+        row.classList.toggle('open');
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initAccordions);
+</script>

@@ -1,0 +1,223 @@
+---
+import RPILayout from "../../layouts/RPILayout.astro";
+import MediaSection from "../../components/MediaSection.astro";
+import NewsletterSection from "../../components/NewsletterSection.astro";
+import TextSection from "../../components/TextSection.astro";
+import ExpertGrid from "../../components/ExpertGrid.astro";
+import AgendaSection from "../../components/AgendaSection.astro";
+import VideoSection from "../../components/VideoSection.astro";
+import AccordionSection from "../../components/AccordionSection.astro";
+
+const experts = [
+  {
+    id: "amesh-adalja",
+    name: "Amesh Adalja",
+    position: "Senior Scholar at Johns Hopkins University; Critical Care, Emergency Medicine, and Infectious Disease physician at the University of Pittsburgh",
+    imageUrl: "https://rootsofprogress.org/wp-content/uploads/2025/12/Amesh-headshot.png",
+    imageAlt: "Amesh Adalja",
+    bioLines: [
+      "Protecting the world from the next infectious threat",
+      "Pittsburgh, PA",
+      "B.S., Industrial Management, Carnegie Mellon; M.D. American University of the Caribbean",
+    ],
+    popupBioTitle: "Protecting the world from the next infectious threat",
+    popupBioLines: [
+      "Dr. Adalja is a recognized expert in infectious disease, pandemic preparedness, and biosecurity. He serves as a Senior Scholar at the Johns Hopkins Center for Health Security.",
+      "He has been involved in responding to major public health events including Ebola, COVID-19, and monkeypox.",
+    ],
+    links: [
+      { label: "Amesh's LinkedIn", url: "https://www.linkedin.com/in/amesh/" },
+    ],
+  },
+  {
+    id: "laura-mazer",
+    name: "Laura Mazer",
+    position: "Surgeon, medical educator, and author of the Substack 'Anatomists'",
+    imageUrl: "https://rootsofprogress.org/wp-content/uploads/2025/12/Laura-Mazer-headshot.png",
+    imageAlt: "Laura Mazer",
+    bioLines: [
+      "Understanding how surgery transformed medicine",
+      "San Francisco, CA",
+      "M.D., UCSF; residency in General Surgery",
+    ],
+    popupBioTitle: "Understanding how surgery transformed medicine",
+    popupBioLines: [
+      "Laura Mazer is a trained surgeon and medical educator who writes a Substack on the history of medicine called Anatomists.",
+      "She is passionate about helping the next generation of physicians understand the historical context behind modern medicine.",
+    ],
+    links: [
+      { label: "Laura's Substack", url: "https://anatomists.substack.com/" },
+    ],
+  },
+  {
+    id: "balaji-srinivasan",
+    name: "Balaji Srinivasan",
+    position: "Author of 'The Network State'; former CTO of Coinbase, General Partner at a16z",
+    imageUrl: "https://rootsofprogress.org/wp-content/uploads/2025/12/Balaji-headshot.png",
+    imageAlt: "Balaji Srinivasan",
+    bioLines: [
+      "How technology is reshaping health and society",
+      "San Francisco, CA",
+      "B.S./M.S. Electrical Engineering, Ph.D. Chemical Engineering, Stanford",
+    ],
+    popupBioTitle: "How technology is reshaping health and society",
+    popupBioLines: [
+      "Balaji is an entrepreneur, investor, and thinker at the intersection of technology, biotechnology, and society.",
+      "He co-founded Counsyl (acquired by Myriad Genetics) and serves as an advisor to numerous biotech and health startups.",
+    ],
+    links: [
+      { label: "Balaji on Twitter/X", url: "https://x.com/balajis" },
+    ],
+  },
+];
+
+const accordionItems = [
+  {
+    title: "A deeper understanding of careers in medicine and related fields",
+    contentHtml: `
+      <p>Our course leader, Laura Mazer, is a trained surgeon and medical educator who writes a Substack on the history of medicine. She has designed this program to give you a panoramic view of what it means to work at the frontier of human health.</p>
+      <ul>
+        <li>The origins of public health</li>
+        <li>Infectious diseases and the progress in antibiotics and vaccines</li>
+        <li>The biology of cancer with advancements in diagnosis, treatment, and prevention</li>
+        <li>The history of surgery and modern surgical techniques</li>
+        <li>Longevity science and the biology of aging</li>
+        <li>Mental health, neuroscience, and the mind-body connection</li>
+      </ul>
+    `,
+  },
+  {
+    title: "How to think like a scientist and communicate like a leader",
+    contentHtml: `
+      <p>Great progress in medicine requires not just scientific expertise but the ability to communicate findings, lead teams, and advocate for change. You will develop:</p>
+      <ul>
+        <li>Scientific reasoning and evidence evaluation</li>
+        <li>Written and verbal communication skills</li>
+        <li>Critical thinking about complex health policy questions</li>
+        <li>Leadership skills for interdisciplinary teams</li>
+      </ul>
+    `,
+  },
+  {
+    title: "What it takes to succeed in a health-related career",
+    contentHtml: `
+      <p>You'll hear directly from practitioners across multiple fields — surgeons, researchers, public health officials, biotech founders, and policy experts — about what their careers are really like, how they got there, and what skills they needed along the way.</p>
+    `,
+  },
+];
+---
+
+<RPILayout
+  title="Progress in Medicine — Demo"
+  description="Demo of the program-landing page template, rendering the Progress in Medicine page."
+>
+  <!-- 1. Hero / media section -->
+  <MediaSection
+    imageUrl="https://api.rootsofprogress.org/u/2025/11/Teens-with-surgery-robot-v3.png"
+    imageWidth={1824}
+    imageHeight={656}
+    imageAlt="Students exploring medicine"
+  />
+
+  <!-- 2. Newsletter CTA -->
+  <NewsletterSection
+    text="2026 program is filled &amp; applications are closed."
+    linkLabel="Sign up for the RPI newsletter & receive info about the 2027 program"
+    linkUrl="https://rootsofprogress.org/subscribe/"
+  />
+
+  <!-- 3. Program intro text section -->
+  <TextSection
+    headline="Progress in Medicine 2026"
+    bodyHtml="<p><strong>A Summer Career Exploration Program for High School Students</strong></p>
+      <p>Progress in Medicine is a 6-week online program for high school students in grades 9–12 who are curious about careers in medicine, biotech, health, and longevity.</p>
+      <p>You'll work with expert advisors, explore the history and future of medicine, and develop the skills to think and communicate like a scientist and leader.</p>"
+  />
+
+  <!-- 4. Tinted background text section -->
+  <TextSection
+    headline="Who is this for?"
+    bodyHtml="<p>This program is designed for high school students who are:</p>
+      <ul>
+        <li>Curious about medicine, biology, public health, or biotechnology</li>
+        <li>Eager to learn from leading practitioners and researchers</li>
+        <li>Ready to commit to 6 weeks of live Zoom sessions and independent study</li>
+        <li>Looking for a rigorous, intellectually stimulating summer experience</li>
+      </ul>"
+    background="#EDEADE"
+  />
+
+  <!-- 5. Another newsletter CTA -->
+  <NewsletterSection
+    text="Applications for the 2026 cohort are now closed."
+    linkLabel="Join the waitlist for 2027"
+    linkUrl="https://rootsofprogress.org/subscribe/"
+  />
+
+  <!-- 6. Expert advisors grid (section.fellows.alt.popups) -->
+  <ExpertGrid
+    headline="Expert advisors"
+    description="Leaders and experts who can share decades of experience and provide insight on who succeeds in their fields, how, and why. <b>Click on &ldquo;Learn more&rdquo;</b> to read about their unique missions and the paths they took to get there."
+    experts={experts}
+  />
+
+  <!-- 7. Newsletter -->
+  <NewsletterSection
+    text="Want to learn more about this program?"
+    linkLabel="Subscribe to the RPI newsletter"
+    linkUrl="https://rootsofprogress.org/subscribe/"
+  />
+
+  <!-- 8. Agenda section — weekly programming -->
+  <AgendaSection
+    headline="Weekly programming and sessions"
+    description="Live Zoom sessions: 1–3 pm PT / 4–6 pm ET, Monday – Thursday. No live sessions Fridays: time to read, reflect, write, and engage in the discussion board."
+    scheduleImageUrl="https://api.rootsofprogress.org/u/2025/12/PiM-WeeklyProgramming.svg"
+    scheduleImageAlt="Weekly programming schedule"
+    scheduleImageWidth={1315}
+    scheduleImageHeight={556}
+  />
+
+  <!-- 9. Tinted text section about program structure -->
+  <TextSection
+    headline="Six weeks of deep exploration"
+    bodyHtml="<p>Each week of the program focuses on a different area of medicine and health. You will move from foundational concepts to cutting-edge research, always grounded in historical context.</p>
+      <p>The program culminates in a written essay using the 10-hour essay method — a structured process for developing and communicating complex ideas.</p>"
+    background="#EDEADE"
+  />
+
+  <!-- 10. Video section -->
+  <VideoSection
+    headline="Program overview video"
+    title="Meet your instructor"
+    embedUrl="https://www.youtube-nocookie.com/embed/fnVzcbLWFZE?si=B--WTQHomNeRJOdB"
+    watchUrl="https://www.youtube.com/watch?v=fnVzcbLWFZE"
+    excerpt="Laura Mazer shares why she's excited about this program and what you'll learn during the six weeks. Watch this 5-minute video to get a better feel for the experience."
+    sideLinks={[{ label: "Read Laura's Substack", url: "https://anatomists.substack.com/" }]}
+  />
+
+  <!-- 11. Newsletter -->
+  <NewsletterSection
+    text="Stay updated on future cohorts."
+    linkLabel="Subscribe to the RPI newsletter"
+    linkUrl="https://rootsofprogress.org/subscribe/"
+  />
+
+  <!-- 12. Accordion — what you will learn (section.text.acco.alt.fellow) -->
+  <AccordionSection items={accordionItems} />
+
+  <!-- 13. Green CTA section -->
+  <TextSection
+    headline="Apply for the 2027 cohort"
+    bodyHtml="<p>Applications for the 2027 program will open in early 2027. Sign up for the RPI newsletter to be the first to know when they open.</p>
+      <p><a href='https://rootsofprogress.org/subscribe/' class='btn'>Get notified</a></p>"
+    variant="green"
+  />
+
+  <!-- 14. Final newsletter CTA -->
+  <NewsletterSection
+    text="Questions? Email us at programs@rootsofprogress.org"
+    linkLabel="Learn about all RPI programs"
+    linkUrl="https://rootsofprogress.org/programs/"
+  />
+</RPILayout>

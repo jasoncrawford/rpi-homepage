@@ -1,0 +1,30 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const { title, description = "Roots of Progress Institute", image } = Astro.props;
+const pageTitle = title === "Roots of Progress" ? title : `${title} | Roots of Progress`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    {image && <meta property="og:image" content={image} />}
+
+    <link rel="stylesheet" href="/rpi-theme.css" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
