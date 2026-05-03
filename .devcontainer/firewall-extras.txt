@@ -1,0 +1,3 @@
+# Roots of Progress domain for content scraping
+rootsofprogress.org
+www.rootsofprogress.org
