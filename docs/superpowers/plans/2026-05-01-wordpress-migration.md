@@ -1244,48 +1244,19 @@ import { fellows } from '../data/fellows.yaml';
 **Files:**
 - None (build artifacts)
 
-- [ ] **Step 1: Run dev server**
+> **Implemented in PR #23 (issue #7).** `npm run build` produces 38 pages with no errors. Dev server port is 4321 (Astro default), not 3000 as originally noted.
 
-```bash
-npm run dev
-```
+- [x] **Step 1: Run dev server**
 
-Expected: Server starts on `http://localhost:3000`, with hot reload enabled.
+- [x] **Step 2: Verify site loads (manual step)**
 
-- [ ] **Step 2: Verify site loads (manual step)**
+- [x] **Step 3: Stop dev server**
 
-Open browser to `http://localhost:3000` and check:
-- Homepage loads
-- Navigation works
-- About page loads via `/about/`
-- Support page loads via `/support/`
-- Blog post loads via `/blog/first-post/`
-- Fellows page loads via `/fellows/`
+- [x] **Step 4: Run build**
 
-- [ ] **Step 3: Stop dev server**
+- [x] **Step 5: Verify build output**
 
-Press `Ctrl+C` in terminal.
-
-- [ ] **Step 4: Run build**
-
-```bash
-npm run build
-```
-
-Expected: Creates `dist/` folder with static HTML files, no errors.
-
-- [ ] **Step 5: Verify build output**
-
-```bash
-ls -la dist/ | head -20
-find dist -name "*.html" | head -10
-```
-
-Expected: HTML files for all pages in dist/.
-
-- [ ] **Step 6: No commit needed**
-
-(Build artifacts are temporary, not committed)
+- [x] **Step 6: No commit needed**
 
 ---
 
@@ -1294,37 +1265,15 @@ Expected: HTML files for all pages in dist/.
 ### Task 23: Prepare WordPress content export
 
 **Files:**
-- Create: scripts directory, export lists
+- Create: `scripts/download-images.mjs`
 
-This task is a guide for exporting WordPress content. You'll need to:
+> **Implemented in PR #23 (issue #7).** The page builder plugin stores content in a custom format not reliably exported via XML, so we scraped the rendered live site instead. Used `sitemap.xml` to discover all URLs (25 posts, 21 pages, 74 fellows, 29 advisory profiles), fetched each with the WebFetch tool, and converted HTML to markdown. Profile images were downloaded by extracting `wp-content/uploads` URLs from each profile page via `scripts/download-images.mjs`.
 
-- [ ] **Step 1: Export WordPress posts via XML**
+- [x] **Step 1: Discover content via sitemaps** (used sitemap index → page-sitemap, post-sitemap, fellow-sitemap, advisory-sitemap)
 
-From WordPress admin panel:
-1. Go to **Tools > Export**
-2. Select **All content**
-3. Download the XML file as `wp-export.xml`
-4. Save to root of project: `/Users/jason/projects/rpi-homepage/wp-export.xml`
+- [x] **Step 2: Scrape rendered pages** (fetched each URL with WebFetch tool)
 
-Expected: XML file with all posts, pages, metadata
-
-- [ ] **Step 2: Create extraction script plan**
-
-We'll use Claude Code to help convert the WordPress XML to markdown files. The process:
-1. Parse XML file
-2. For each post/page:
-   - Extract title, content, date, author, featured image
-   - Convert HTML content to markdown
-   - Create frontmatter with metadata
-   - Save as `src/content/blog/[slug].md` or `src/content/pages/[slug].md`
-
-- [ ] **Step 3: Download WordPress images**
-
-1. Use WordPress admin or FTP to access `/wp-content/uploads/`
-2. Download all images
-3. Organize into `src/assets/images/` with structure like: `src/assets/images/2024/post-slug/image.jpg`
-
-**Note:** This will be handled with Claude Code assistance.
+- [x] **Step 3: Download profile images** (`node scripts/download-images.mjs` — downloads 103 images to `src/assets/images/`)
 
 ---
 
@@ -1333,53 +1282,13 @@ We'll use Claude Code to help convert the WordPress XML to markdown files. The p
 **Files:**
 - Modify: `src/content/blog/`
 
-This is a template task. For each WordPress blog post:
+> **Implemented in PR #23 (issue #7).** 24 blog posts scraped from rootsofprogress.org/post-sitemap.xml (2019–2026). Posts where the full text was not on the RPI site (external articles syndicated from BBC, Vox, Reason) received brief excerpt entries with links to the original. Sample posts `welcome.md` and `progress-conference-2026.md` were replaced with real content.
 
-- [ ] **Step 1: Convert post to markdown**
+- [x] **Step 1: Convert posts to markdown**
 
-Using Claude Code to assist:
-- Extract content from WordPress export
-- Convert HTML to clean markdown
-- Create proper YAML frontmatter
-- Preserve metadata (date, author, categories)
+- [x] **Step 2: Test blog posts render**
 
-Example result: `src/content/blog/conference-2026-dates.md`
-
-```markdown
----
-title: "Progress Conference 2026: Dates Announced"
-date: 2026-05-20
-author: "Jason Crawford"
-description: "The Roots of Progress Conference 2026 will be held October 8-11 in Berkeley"
-tags: ["conference", "announcement"]
----
-
-# Progress Conference 2026: Dates Announced
-
-Join us for the inaugural Roots of Progress Conference...
-```
-
-- [ ] **Step 2: Test blog post renders**
-
-```bash
-npm run dev
-# Visit http://localhost:3000/blog/conference-2026-dates/
-```
-
-Verify:
-- Title displays correctly
-- Content renders properly
-- Metadata displays
-- Links work
-
-- [ ] **Step 3: Commit batch of posts**
-
-```bash
-git add src/content/blog/
-git commit -m "Migrate blog posts from WordPress: [list of post titles]"
-```
-
-**This task will be repeated for each batch of WordPress posts.**
+- [x] **Step 3: Commit batch of posts**
 
 ---
 
@@ -1388,13 +1297,13 @@ git commit -m "Migrate blog posts from WordPress: [list of post titles]"
 **Files:**
 - Modify: `src/content/pages/`
 
-Similar to blog posts, migrate each main page (About, Programs, Support, etc.):
+> **Implemented in PR #23 (issue #7).** Eight content pages created or updated with real content: `about.md`, `conference.md`, `essays.md`, `fellowship.md`, `manifesto.md`, `progress-in-medicine.md`, `subscribe.md`, `support.md`. Sample content in `about.md` and `support.md` was replaced.
 
-- [ ] **Step 1: Convert page to markdown**
+- [x] **Step 1: Convert pages to markdown**
 
-- [ ] **Step 2: Test page renders**
+- [x] **Step 2: Test pages render**
 
-- [ ] **Step 3: Commit pages**
+- [x] **Step 3: Commit pages**
 
 ---
 
@@ -1405,7 +1314,9 @@ Similar to blog posts, migrate each main page (About, Programs, Support, etc.):
 **Files:**
 - Create: `src/pages/blog/index.astro`
 
-- [ ] **Step 1: Create blog index**
+> **Implemented in PR #23 (issue #7).** Blog listing page created at `/blog/`, sorted newest-first. Uses global CSS classes (`.blog-list`, `.blog-preview`, `.blog-meta`, `.blog-description`, `.read-more`) defined in `public/styles.css`. Scoped styles from the plan example were not used — consistent with the rest of the codebase.
+
+- [x] **Step 1: Create blog index**
 
 ```astro
 ---
@@ -1468,27 +1379,11 @@ const posts = (await getCollection('blog')).sort(
 </style>
 ```
 
-- [ ] **Step 2: Verify file created**
+- [x] **Step 2: Verify file created**
 
-```bash
-cat src/pages/blog/index.astro | head -40
-```
+- [x] **Step 3: Test locally**
 
-- [ ] **Step 3: Test locally**
-
-```bash
-npm run dev
-# Visit http://localhost:3000/blog/
-```
-
-Verify all posts listed, newest first.
-
-- [ ] **Step 4: Commit**
-
-```bash
-git add src/pages/blog/index.astro
-git commit -m "Add blog listing page with post previews"
-```
+- [x] **Step 4: Commit**
 
 ---
 
@@ -1497,7 +1392,9 @@ git commit -m "Add blog listing page with post previews"
 **Files:**
 - Create: `src/pages/programs.astro`
 
-- [ ] **Step 1: Write programs.astro**
+> **Implemented in PR #23 (issue #7).** Programs page created at `/programs/` with real content for Conference 2026, Blog-Building Intensive Fellowship, and Progress in Medicine. Uses `EventCard` for the program summary cards and links to the individual content pages for each program. Uses global CSS classes (`.programs-list`, `.program-detail`) consistent with the rest of the codebase.
+
+- [x] **Step 1: Write programs.astro**
 
 ```astro
 ---
@@ -1569,19 +1466,9 @@ const programs = [
 </style>
 ```
 
-- [ ] **Step 2: Test locally**
+- [x] **Step 2: Test locally**
 
-```bash
-npm run dev
-# Visit http://localhost:3000/programs/
-```
-
-- [ ] **Step 3: Commit**
-
-```bash
-git add src/pages/programs.astro
-git commit -m "Add programs page with conference, fellowship, medicine sections"
-```
+- [x] **Step 3: Commit**
 
 ---
 
