@@ -1,3 +1,53 @@
+/* ===== Web Fonts ===== */
+@font-face {
+  font-family: "F37";
+  src: url("/fonts/F37Grotesc-Book.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: "F37";
+  src: url("/fonts/F37Grotesc-BookItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: "F37";
+  src: url("/fonts/F37Grotesc-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: "F37";
+  src: url("/fonts/F37Grotesc-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: "Palast";
+  src: url("/fonts/Palast-Web-Display-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: "Palast";
+  src: url("/fonts/Palast-Web-Display-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* ===== Reset & Base ===== */
 *, *::before, *::after {
   box-sizing: border-box;
