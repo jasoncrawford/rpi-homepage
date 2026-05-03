@@ -7,11 +7,22 @@ Static site for [rootsofprogress.org](https://rootsofprogress.org), built with [
 **Requirements:** Node.js 20+
 
 ```bash
-npm install
+npm install      # also installs Chromium for visual-diff (via postinstall)
 npm run dev      # start dev server at http://localhost:4321
 npm run build    # build to dist/
 npm run preview  # preview the built site locally
 ```
+
+### Visual diff
+
+Before merging any PR that touches a page or component, take screenshots to compare local vs. live:
+
+```bash
+npm run visual-diff -- /          # homepage
+npm run visual-diff -- /about/    # any path
+```
+
+This saves PNGs to `tmp/visual-diff/`. See [docs/visual-diff.md](docs/visual-diff.md) for details.
 
 ## Project structure
 
