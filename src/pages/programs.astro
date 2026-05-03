@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+import EventCard from '../components/EventCard.astro';
+
+const programs = [
+  {
+    title: 'Progress Conference 2026',
+    date: 'October 8–11, 2026',
+    location: 'Berkeley, CA',
+    description:
+      'Annual four-day conference bringing together 400 leaders from technology, policy, academia, and culture to advance human progress.',
+    link: '/conference/',
+  },
+  {
+    title: 'Blog-Building Intensive Fellowship',
+    date: 'July 27 – October 2, 2026',
+    description:
+      'A 10-week online fellowship for writers passionate about progress studies. Free program with retreat and conference included.',
+    link: '/fellowship/',
+  },
+  {
+    title: 'Progress in Medicine',
+    date: 'June–July 2026',
+    location: 'Online + Stanford University',
+    description:
+      'Summer career exploration program for high school students interested in medicine, biotechnology, health policy, and longevity fields.',
+    link: '/progress-in-medicine/',
+  },
+];
+---
+
+<Base
+  title="Programs"
+  description="Explore Roots of Progress Institute programs: Conference, Fellowship, and Progress in Medicine."
+>
+  <h1>Programs</h1>
+  <p>
+    The Roots of Progress Institute runs programs to advance progress studies as a discipline and
+    build the community of people working to accelerate human advancement.
+  </p>
+
+  <div class="programs-list">
+    {programs.map((program) => <EventCard {...program} />)}
+  </div>
+
+  <section id="conference" class="program-detail">
+    <h2>Progress Conference</h2>
+    <p>
+      The annual Progress Conference connects builders, researchers, policymakers, and students
+      focused on human advancement. In four years, the conference has grown from 200 attendees
+      (2024) to over 350 (2025), with 400 expected in 2026.
+    </p>
+    <a href="/conference/" class="btn">Learn more about the Conference →</a>
+  </section>
+
+  <section id="fellowship" class="program-detail">
+    <h2>Blog-Building Intensive Fellowship</h2>
+    <p>
+      The Blog-Building Intensive accelerates careers of writers focused on progress studies.
+      74 fellows have completed the program across four cohorts, producing over 150 essays and
+      launching careers in writing, policy, and research.
+    </p>
+    <a href="/fellowship/" class="btn">Learn more about the Fellowship →</a>
+  </section>
+
+  <section id="progress-in-medicine" class="program-detail">
+    <h2>Progress in Medicine</h2>
+    <p>
+      A summer career exploration program for high school students. Students spend five weeks
+      online and one week at Stanford University, exploring the history of medical progress and
+      meeting professionals in medicine and biotech.
+    </p>
+    <a href="/progress-in-medicine/" class="btn">Learn more about Progress in Medicine →</a>
+  </section>
+</Base>

@@ -1,19 +1,144 @@
-- name: Dr. Sarah Chen
-  role: Professor of History, UC Berkeley
-  bio: Dr. Chen explores how societies have navigated major technological transitions, focusing on energy, transportation, and communication.
-  website: https://sarahchen.example.com
+- name: Patrick Collison
+  role: Founder & CEO, Stripe
+  bio: Patrick Collison is the founder and CEO of Stripe, one of the world's leading financial infrastructure companies.
+  website: https://patrickcollison.com/
 
-- name: David Hoffman
-  role: Technology Entrepreneur & Investor
-  bio: David has founded three technology companies and actively invests in frontier science. He writes and speaks on innovation policy and the future of research.
-  website: https://davidhoffman.example.com
+- name: Tyler Cowen
+  role: Author, Stubborn Attachments
+  bio: Tyler Cowen is an economist, professor at George Mason University, and author of Stubborn Attachments and many other books on progress and economics.
+  website: https://tylercowen.com/
 
-- name: Prof. Elena Rodriguez
-  role: Director, Progress Studies Lab
-  bio: Prof. Rodriguez studies the economic and social conditions that produce scientific and technological breakthroughs across different eras and regions.
-  website: https://elenarod.example.com
+- name: Max Roser
+  role: Founder & Executive Co-Director, Our World in Data
+  bio: Max Roser founded Our World in Data, a research publication making data-driven research on global change accessible to everyone.
+  website: https://maxroser.com/
 
-- name: James Okafor
-  role: Senior Fellow, Future of Science Initiative
-  bio: James focuses on how research funding structures and incentive systems shape the kinds of science that get done and who does it.
-  website: https://jamesokafor.example.com
+- name: Andrej Karpathy
+  role: AI Researcher (Former Director of AI, Tesla & OpenAI)
+  bio: Andrej Karpathy is a leading AI researcher who previously led AI at Tesla and worked at OpenAI.
+  website: https://karpathy.ai/
+
+- name: Virginia Postrel
+  role: Author, The Future and Its Enemies
+  bio: Virginia Postrel is a journalist and author who writes on culture, economics, and the politics of the future.
+  website: https://vpostrel.com/
+
+- name: Noah Smith
+  role: Writer, Noahpinion
+  bio: Noah Smith is an economist and widely-read writer covering economics, technology, and policy at Noahpinion.
+  website: https://noahpinion.substack.com/
+
+- name: Eli Dourado
+  role: Head of Strategic Investments, Astera Institute
+  bio: Eli Dourado works on technology policy and economic growth, focused on enabling more rapid progress.
+  website: https://elidourado.com/
+
+- name: Alice Evans
+  role: Researcher & Author, The Great Gender Divergence
+  bio: Alice Evans is a researcher and writer studying global gender and societal change.
+  website: https://rootsofprogress.org/advisory/alice-evans/
+
+- name: Blake Scholl
+  role: Founder & CEO, Boom Supersonic
+  bio: Blake Scholl founded Boom Supersonic to bring supersonic commercial aviation back to the world.
+  website: https://rootsofprogress.org/advisory/blake-scholl/
+
+- name: Holden Karnofsky
+  role: Visiting Scholar, Carnegie Endowment for International Peace
+  bio: Holden Karnofsky writes Cold Takes on transformative AI and long-run future prospects.
+  website: https://cold-takes.com/
+
+- name: Brian Potter
+  role: Senior Fellow, Institute for Progress
+  bio: Brian Potter writes Construction Physics, a Substack on the economics and history of the construction industry.
+  website: https://www.construction-physics.com/
+
+- name: Elle Griffin
+  role: Author, The Elysian
+  bio: Elle Griffin writes The Elysian, a publication exploring fiction and the future.
+  website: https://elysian.press/
+
+- name: Greg Lukianoff
+  role: President, FIRE
+  bio: Greg Lukianoff leads the Foundation for Individual Rights and Expression (FIRE), defending free speech and academic freedom.
+  website: https://rootsofprogress.org/advisory/greg-lukianoff/
+
+- name: Saloni Dattani
+  role: Researcher, Our World in Data; Founding Editor, Works in Progress
+  bio: Saloni Dattani is a researcher and science writer focused on global health, disease, and scientific progress.
+  website: https://rootsofprogress.org/advisory/saloni-dattani/
+
+- name: Tomas Pueyo
+  role: Writer, Uncharted Territories
+  bio: Tomas Pueyo is a writer on geography, history, and the future of civilization at Uncharted Territories.
+  website: https://unchartedterritories.tomaspueyo.com/
+
+- name: Kevin Esvelt
+  role: Co-Founder, SecureDNA Foundation
+  bio: Kevin Esvelt is a biosecurity researcher and synthetic biology pioneer, known for gene drive research and DNA screening.
+  website: https://rootsofprogress.org/advisory/kevin-esvelt/
+
+- name: Timothy B. Lee
+  role: Writer, Understanding AI
+  bio: Timothy B. Lee writes Understanding AI, covering the latest developments in artificial intelligence.
+  website: https://www.understandingai.org/
+
+- name: Rob Tracinski
+  role: Writer & Editor
+  bio: Rob Tracinski is a writer and editor focused on ideas, culture, and the defense of progress.
+  website: https://tracinskiletter.com/
+
+- name: John Wilbanks
+  role: Head of Data, Astera Institute
+  bio: John Wilbanks works on open science, data sharing, and innovation infrastructure at the Astera Institute.
+  website: https://rootsofprogress.org/advisory/john-wilbanks/
+
+- name: Bob McGrew
+  role: VP of Research, OpenAI
+  bio: Bob McGrew leads research at OpenAI, focused on developing safe and beneficial AI systems.
+  website: https://rootsofprogress.org/advisory/bob-mcgrew/
+
+- name: Delian Asparouhov
+  role: Co-founder & President, Varda Space Industries
+  bio: Delian Asparouhov co-founded Varda Space Industries to manufacture materials in microgravity.
+  website: https://rootsofprogress.org/advisory/delian-asparouhov/
+
+- name: Kanjun Qiu
+  role: CEO, Imbue
+  bio: Kanjun Qiu leads Imbue, working to build AI systems that can reason and take action in the world.
+  website: https://rootsofprogress.org/advisory/kanjun-qiu/
+
+- name: Ela Madej
+  role: Founding Partner, Fifty Years
+  bio: Ela Madej is a founding partner at Fifty Years, a venture fund backing science-based startups solving big problems.
+  website: https://rootsofprogress.org/advisory/ela-madej/
+
+- name: Alex Kustov
+  role: Associate Professor, University of Notre Dame
+  bio: Alex Kustov is a political scientist researching immigration policy and public opinion.
+  website: https://rootsofprogress.org/advisory/alex-kustov/
+
+- name: Brendan McCord
+  role: Founder & Chair, The Cosmos Institute
+  bio: Brendan McCord founded The Cosmos Institute to advance humanity's understanding of intelligence and consciousness.
+  website: https://rootsofprogress.org/advisory/brendan-mccord/
+
+- name: Shreeda Segan
+  role: Writer & Editor
+  bio: Shreeda Segan is a writer and editor covering technology, culture, and human progress.
+  website: https://shreedasegan.com/
+
+- name: Chandler Tuttle
+  role: Co-founder & CEO, Freethink Media
+  bio: Chandler Tuttle co-founded Freethink Media, which produces video journalism about innovation and progress.
+  website: https://www.freethink.com/
+
+- name: Emma McAleavy
+  role: Program Manager, Roots of Progress Institute
+  bio: Emma McAleavy manages RPI's fellowship programs and has been published in the New York Times, Boston Globe, and Outside.
+  website: https://rootsofprogress.org/advisory/emma-mcaleavy/
+
+- name: Mike Riggs
+  role: Developmental Editor, Roots of Progress Institute
+  bio: Mike Riggs is a developmental editor who coaches RPI fellows on writing craft. Former deputy managing editor at Reason magazine.
+  website: https://rootsofprogress.org/advisory/mike-riggs/

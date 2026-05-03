@@ -1,14 +1,207 @@
-- name: Jane Smith
-  role: Research Fellow
-  bio: Jane researches the history of technological innovation in 19th-century America, with a focus on how institutional conditions shaped invention rates.
-  website: https://janesmith.example.com
+# 2025 Cohort
+- name: Steven Adler
+  role: 2025 Fellow
+  bio: AI safety researcher focused on responsible AI development, based in San Francisco.
+  website: https://rootsofprogress.org/fellow/steven-adler/
 
-- name: Marcus Johnson
-  role: Writing Fellow
-  bio: Marcus is writing a book on the history of nuclear energy and its relationship to broader attitudes about technological risk and progress.
-  website: https://marcusjohnson.example.com
+- name: Andrew Burleson
+  role: 2025 Fellow
+  bio: Urban planning advocate and cofounder at Strong Towns, based in Denver.
+  website: https://rootsofprogress.org/fellow/andrew-burleson/
 
-- name: Dr. Priya Patel
-  role: Innovation Fellow
-  bio: Priya studies how regulatory environments in academic medicine affect the speed at which new drugs and treatments reach patients.
-  website: https://priyapatel.example.com
+- name: Byron Cohen
+  role: 2025 Fellow
+  bio: Pandemic preparedness and biotechnology policy expert, based in Washington D.C.
+  website: https://rootsofprogress.org/fellow/byron-cohen/
+
+- name: Tim Durham
+  role: 2025 Fellow
+  bio: Agricultural specialist who operates Deer Run Farm, based in Roanoke.
+  website: https://rootsofprogress.org/fellow/tim-durham/
+
+- name: Sam Enright
+  role: 2025 Fellow
+  bio: Writer on economics and progress studies for Ireland, based in Dublin.
+  website: https://rootsofprogress.org/fellow/sam-enright/
+
+- name: Étienne Fortier-Dubois
+  role: 2025 Fellow
+  bio: Writer on AI evaluations and technology, based in Montreal.
+  website: https://rootsofprogress.org/fellow/etienne-fortier-dubois/
+
+- name: Lesley Gao
+  role: 2025 Fellow
+  bio: Industrial renewal and manufacturing advocate, based in San Francisco.
+  website: https://rootsofprogress.org/fellow/lesley-gao/
+
+- name: Michael Hill
+  role: 2025 Fellow
+  bio: Development economics and UK policy researcher, based in London.
+  website: https://rootsofprogress.org/fellow/michael-hill/
+
+- name: Heidi Huang
+  role: 2025 Fellow
+  bio: Aging biology research advocate, based in Boston, MA.
+  website: https://rootsofprogress.org/fellow/heidi-huang/
+
+- name: Hiya Jain
+  role: 2025 Fellow
+  bio: Scientific history writer, based in Ahmedabad, India.
+  website: https://rootsofprogress.org/fellow/hiya-jain/
+
+- name: Adam Kroetsch
+  role: 2025 Fellow
+  bio: Biomedical innovation and health policy researcher, based in San Francisco.
+  website: https://rootsofprogress.org/fellow/adam-kroetsch/
+
+- name: Alex Kustov
+  role: 2025 Fellow
+  bio: Political scientist and immigration policy researcher at University of Notre Dame, based in Charlotte, NC.
+  website: https://rootsofprogress.org/fellow/alex-kustov/
+
+- name: Allison Lehman
+  role: 2025 Fellow
+  bio: Agricultural engineering and soil science researcher, based in Minneapolis.
+  website: https://rootsofprogress.org/fellow/allison-lehman/
+
+- name: Anton Leicht
+  role: 2025 Fellow
+  bio: AI policy and institutional governance researcher, based in Berlin.
+  website: https://rootsofprogress.org/fellow/anton-leicht/
+
+- name: Laura Mazer
+  role: 2025 Fellow
+  bio: Surgeon and medical history educator, based in Austin, TX.
+  website: https://rootsofprogress.org/fellow/laura-mazer/
+
+- name: Pouya Nikmand
+  role: 2025 Fellow
+  bio: Writer on freedom and civilization, based in Austin, TX.
+  website: https://rootsofprogress.org/fellow/pouya-nikmand/
+
+- name: Seán O'Neill McPartlin
+  role: 2025 Fellow
+  bio: Housing policy lead at Progress Ireland, based in Dublin.
+  website: https://rootsofprogress.org/fellow/sean-oneill-mcpartlin/
+
+- name: Ariel Patton
+  role: 2025 Fellow
+  bio: Agriculture technology and bioengineering researcher, based in San Francisco, CA.
+  website: https://rootsofprogress.org/fellow/ariel-patton/
+
+- name: Rhishi Pethe
+  role: 2025 Fellow
+  bio: Food and agriculture technology writer, based in San Francisco.
+  website: https://rootsofprogress.org/fellow/rhishi-pethe/
+
+- name: Venkatesh Ranjan
+  role: 2025 Fellow
+  bio: Molecular biophysics and progress engineering researcher, based in Phoenix, AZ.
+  website: https://rootsofprogress.org/fellow/venkatesh-ranjan/
+
+- name: Abby ShalekBriski
+  role: 2025 Fellow
+  bio: Agricultural economics researcher, based in Raleigh, NC.
+  website: https://rootsofprogress.org/fellow/abby-shalekbriski/
+
+- name: Ibis Slade
+  role: 2025 Fellow
+  bio: Philosophy and cultural progress writer, based in Austin, TX.
+  website: https://rootsofprogress.org/fellow/ibis-slade/
+
+- name: Colleen Smith
+  role: 2025 Fellow
+  bio: Emergency medicine physician and healthcare innovation advocate, based in New York.
+  website: https://rootsofprogress.org/fellow/colleen-smith/
+
+- name: Benedict Springbett
+  role: 2025 Fellow
+  bio: Urbanism and city development writer, based in London.
+  website: https://rootsofprogress.org/fellow/benedict-springbett/
+
+- name: Smrithi Sunil
+  role: 2025 Fellow
+  bio: Brain health research scientist, based in Madison, Wisconsin.
+  website: https://rootsofprogress.org/fellow/smrithi-sunil/
+
+- name: Karthik Tadepalli
+  role: 2025 Fellow
+  bio: Technology policy researcher for developing nations, based in San Francisco.
+  website: https://rootsofprogress.org/fellow/karthik-tadepalli/
+
+- name: Deric Tilson
+  role: 2025 Fellow
+  bio: Energy economics and nuclear commercialization researcher, based in Washington, DC.
+  website: https://rootsofprogress.org/fellow/deric-tilson/
+
+- name: Nehal Udyavar
+  role: 2025 Fellow
+  bio: Biotechnology education and accessibility advocate, based in Toronto.
+  website: https://rootsofprogress.org/fellow/nehal-udyavar/
+
+- name: Elizabeth Van Nostrand
+  role: 2025 Fellow
+  bio: Interdisciplinary science researcher, based in San Francisco.
+  website: https://rootsofprogress.org/fellow/elizabeth-van-nostrand/
+
+- name: Kelly Vedi
+  role: 2025 Fellow
+  bio: Youth apprenticeship programs advocate, based in Orlando.
+  website: https://rootsofprogress.org/fellow/kelly-vedi/
+
+- name: Afra Wang
+  role: 2025 Fellow
+  bio: Writer on technology progress across US-China contexts, based in San Francisco/London.
+  website: https://rootsofprogress.org/fellow/afra-wang/
+
+# 2024 Cohort (selected)
+- name: Brian Balkus
+  role: 2024 Fellow
+  bio: Writer at Palladium Magazine and progress studies thinker.
+  website: https://rootsofprogress.org/fellow/brian-balkus/
+
+- name: Paige Lambermont
+  role: 2024 Fellow
+  bio: Energy policy researcher.
+  website: https://rootsofprogress.org/fellow/paige-lambermont/
+
+- name: Elle Griffin
+  role: 2024 Fellow
+  bio: Author of The Elysian with over 10,000 Substack subscribers.
+  website: https://elysian.press/
+
+- name: Max Tabarrok
+  role: 2024 Fellow
+  bio: Writer on policy and progress topics.
+  website: https://rootsofprogress.org/fellow/max-tabarrok/
+
+- name: Dean Ball
+  role: 2024 Fellow
+  bio: AI policy researcher.
+  website: https://rootsofprogress.org/fellow/dean-ball/
+
+- name: Ruxandra Teslo
+  role: 2024 Fellow
+  bio: Biotech and longevity researcher.
+  website: https://rootsofprogress.org/fellow/ruxandra-teslo/
+
+- name: Niko McCarty
+  role: 2024 Fellow
+  bio: Biotechnology writer.
+  website: https://rootsofprogress.org/fellow/niko-mccarty/
+
+# 2023 Cohort (selected)
+- name: Sarah Constantin
+  role: 2023 Fellow
+  bio: Writer on progress, science, and technology.
+  website: https://rootsofprogress.org/fellow/sarah-constantin/
+
+- name: Fin Moorhouse
+  role: 2023 Fellow
+  bio: Researcher and writer on progress and existential risk.
+  website: https://rootsofprogress.org/fellow/fin-moorhouse/
+
+- name: Jordan McGillis
+  role: 2023 Fellow
+  bio: Energy policy writer.
+  website: https://rootsofprogress.org/fellow/jordan-mcgillis/
