@@ -139,7 +139,7 @@ No fixed deadline, but targeting completion in order of dependency (estimated ~2
 
 ---
 
-**Status:** Phase B in progress — B1 complete (merged PR #35), B2 (#30) next; Phase C in progress — C1 inventory in review (PR #37); C2–C12 to file after merge
+**Status:** See issue breakdown above (checkmarks = merged). Each PR updates only its own bullet; this line is not touched by implementing PRs.
 
 **Assigned to:** Brunel (implementation via 10 PR-sized issues)
 
