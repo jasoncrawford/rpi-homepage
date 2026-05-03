@@ -19,6 +19,8 @@ npm run preview  # preview the built site locally
 src/
   pages/
     index.astro        # Homepage: hero, mission, programs, latest news, CTA
+    fellows.astro      # Fellows page: renders PersonCard grid from data/fellows.yaml
+    speakers.astro     # Speakers page: renders PersonCard grid from data/speakers.yaml
     [slug].astro       # Dynamic route for content/pages collection
     blog/
       [slug].astro     # Dynamic route for content/blog collection
@@ -46,3 +48,5 @@ docs/                  # Project documentation and design specs
 **New page:** create `src/content/pages/<slug>.md` with `title` (and optionally `description`) in frontmatter. It will be served at `/<slug>/`.
 
 **New blog post:** create `src/content/blog/<slug>.md` with `title`, `date`, and optionally `author` and `description` in frontmatter. It will be served at `/blog/<slug>/`. The homepage automatically shows the three most recent posts.
+
+**Fellows/speakers data:** edit `src/data/fellows.yaml` or `src/data/speakers.yaml`. Each entry supports `name`, `role`, `bio`, `image`, and `website` — these map directly to `PersonCard` props. To add a new data-driven page for a different collection, create a `src/data/<collection>.yaml` file and a `src/pages/<collection>.astro` that imports the YAML with `?raw` and parses it with `js-yaml`.
