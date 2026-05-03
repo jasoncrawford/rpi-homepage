@@ -209,6 +209,166 @@ blockquote {
   color: #1a5fa8;
 }
 
+/* ===== Card Grid ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* ===== HeroSection ===== */
+.hero-section {
+  background: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ===== PersonCard ===== */
+.person-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.person-card-image {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.person-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.person-card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.person-card-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 0.25rem;
+}
+
+.person-card-role {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1a5fa8;
+  margin-bottom: 0.75rem;
+}
+
+.person-card-bio {
+  font-size: 0.9375rem;
+  color: #444;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.person-card-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1a5fa8;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.person-card-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== EventCard ===== */
+.event-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.event-card-date {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1a5fa8;
+}
+
+.event-card-location {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.event-card-location::before {
+  content: "·";
+  margin-right: 0.75rem;
+  color: #ccc;
+}
+
+.event-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 0.75rem;
+}
+
+.event-card-description {
+  font-size: 0.9375rem;
+  color: #444;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.event-card-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1a5fa8;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.event-card-link:hover {
+  text-decoration: underline;
+}
+
 /* ===== Responsive ===== */
 
 /* Tablet */
@@ -216,6 +376,11 @@ blockquote {
   h1 { font-size: 1.875rem; }
   h2 { font-size: 1.5rem; }
   h3 { font-size: 1.25rem; }
+
+  .hero-title { font-size: 2.25rem; }
+  .hero-section { padding: 3rem 1.25rem; }
+
+  .card-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
 
   .header-inner {
     flex-wrap: wrap;
@@ -235,6 +400,11 @@ blockquote {
 /* Mobile */
 @media (max-width: 480px) {
   h1 { font-size: 1.625rem; }
+
+  .hero-title { font-size: 1.875rem; }
+  .hero-section { padding: 2.5rem 1rem; }
+
+  .card-grid { grid-template-columns: 1fr; }
 
   .header-inner {
     flex-direction: column;

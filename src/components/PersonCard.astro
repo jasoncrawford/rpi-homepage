@@ -1,0 +1,29 @@
+---
+export interface Props {
+  name: string;
+  role?: string;
+  bio?: string;
+  image?: string;
+  website?: string;
+}
+
+const { name, role, bio, image, website } = Astro.props;
+---
+
+<div class="person-card">
+  {image && (
+    <div class="person-card-image">
+      <img src={image} alt={name} />
+    </div>
+  )}
+  <div class="person-card-body">
+    <h3 class="person-card-name">{name}</h3>
+    {role && <p class="person-card-role">{role}</p>}
+    {bio && <p class="person-card-bio">{bio}</p>}
+    {website && (
+      <a href={website} class="person-card-link" target="_blank" rel="noopener noreferrer">
+        Website →
+      </a>
+    )}
+  </div>
+</div>

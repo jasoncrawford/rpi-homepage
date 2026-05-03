@@ -559,7 +559,9 @@ git commit -m "Add global CSS styles for layouts, typography, navigation"
 **Files:**
 - Create: `src/components/PersonCard.astro`
 
-- [ ] **Step 1: Write PersonCard.astro**
+> **Implemented in PR #15.** Actual implementation uses global CSS classes in `public/styles.css` (consistent with the rest of the codebase) rather than scoped `<style>` blocks. Props: `name` (required), `role`, `bio`, `image`, `website` (all optional except name).
+
+- [x] **Step 1: Write PersonCard.astro**
 
 ```astro
 ---
@@ -620,13 +622,13 @@ const { name, role, bio, image, website } = Astro.props;
 </style>
 ```
 
-- [ ] **Step 2: Verify file created**
+- [x] **Step 2: Verify file created**
 
 ```bash
 head -30 src/components/PersonCard.astro
 ```
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add src/components/PersonCard.astro
@@ -640,7 +642,9 @@ git commit -m "Create PersonCard component for rendering person profiles"
 **Files:**
 - Create: `src/components/HeroSection.astro`
 
-- [ ] **Step 1: Write HeroSection.astro**
+> **Implemented in PR #15.** Uses global CSS. Props: `title` (required), `subtitle` (optional). The `image` background prop from the plan example was not included — the issue spec only called for title and subtitle; a background image can be added later if needed.
+
+- [x] **Step 1: Write HeroSection.astro**
 
 ```astro
 ---
@@ -697,13 +701,13 @@ const { title, subtitle, image } = Astro.props;
 </style>
 ```
 
-- [ ] **Step 2: Verify file created**
+- [x] **Step 2: Verify file created**
 
 ```bash
 head -30 src/components/HeroSection.astro
 ```
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add src/components/HeroSection.astro
@@ -717,7 +721,9 @@ git commit -m "Create HeroSection component for page headers"
 **Files:**
 - Create: `src/components/EventCard.astro`
 
-- [ ] **Step 1: Write EventCard.astro**
+> **Implemented in PR #15.** Uses global CSS. Props: `title` (required), `date` (required, ISO string — auto-formatted for display), `location`, `description`, `link` (all optional). The `linkText` prop from the plan example was omitted per issue scope; link label is hardcoded as "Learn more →".
+
+- [x] **Step 1: Write EventCard.astro**
 
 ```astro
 ---
@@ -776,13 +782,13 @@ const { title, date, location, description, link, linkText = "Learn more" } = As
 </style>
 ```
 
-- [ ] **Step 2: Verify file created**
+- [x] **Step 2: Verify file created**
 
 ```bash
 head -30 src/components/EventCard.astro
 ```
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add src/components/EventCard.astro
