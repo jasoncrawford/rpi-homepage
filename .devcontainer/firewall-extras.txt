@@ -1,3 +1,7 @@
 # Roots of Progress domain for content scraping
 rootsofprogress.org
 www.rootsofprogress.org
+
+# Playwright Chromium download (used by scripts/visual-diff.mjs via `playwright install chromium`)
+cdn.playwright.dev
+playwright.azureedge.net
