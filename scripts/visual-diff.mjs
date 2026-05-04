@@ -20,7 +20,11 @@ import { chromium } from 'playwright';
 
 const LIVE_BASE = 'https://rootsofprogress.org';
 const LOCAL_PORT = 4321;
-const LOCAL_BASE = `http://localhost:${LOCAL_PORT}`;
+const LOCAL_HOST = '127.0.0.1';
+// Use 127.0.0.1 explicitly (not "localhost") so we never depend on whether
+// the OS resolves localhost to ::1 or 127.0.0.1. In Linux containers with
+// IPv6 firewalled, a "localhost" → ::1 lookup hangs silently.
+const LOCAL_BASE = `http://${LOCAL_HOST}:${LOCAL_PORT}`;
 const OUT_DIR = 'tmp/visual-diff';
 const VIEWPORTS = {
   desktop: { width: 1280, height: 800 },
@@ -73,8 +77,10 @@ async function main() {
   const slug = pathToSlug(urlPath);
   const skipLive = isDemo(urlPath);
 
-  // Start astro dev server
-  const devServer = spawn('npx', ['astro', 'dev', '--port', String(LOCAL_PORT)], {
+  // Start astro dev server. --host 127.0.0.1 forces IPv4 binding; without it
+  // Vite calls listen('localhost', ...) and Node may resolve to ::1, which
+  // means nothing is listening on 127.0.0.1 — see LOCAL_BASE comment above.
+  const devServer = spawn('npx', ['astro', 'dev', '--port', String(LOCAL_PORT), '--host', LOCAL_HOST], {
     stdio: ['ignore', 'pipe', 'pipe'],
     detached: false,
   });
