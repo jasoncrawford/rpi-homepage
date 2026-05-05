@@ -6,9 +6,10 @@ export interface Props {
   title: string;
   description?: string;
   image?: string;
+  transparent?: boolean;
 }
 
-const { title, description = "Roots of Progress Institute", image } = Astro.props;
+const { title, description = "Roots of Progress Institute", image, transparent = false } = Astro.props;
 const pageTitle = title === "Roots of Progress" ? title : `${title} | Roots of Progress`;
 ---
 
@@ -148,6 +149,12 @@ const pageTitle = title === "Roots of Progress" ? title : `${title} | Roots of P
     </footer>
 
     <script>
+      function setVh() {
+        document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+      }
+      setVh();
+      window.addEventListener('resize', setVh, { passive: true });
+
       const header = document.querySelector('header') as HTMLElement;
       const menuBtn = document.querySelector('header .menu') as HTMLElement;
 
