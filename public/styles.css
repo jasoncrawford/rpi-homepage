@@ -507,10 +507,6 @@ footer .logo svg {
   height: auto;
 }
 
-footer .logo + .grid {
-  width: calc(100% - 80px);
-}
-
 footer .container > .grid {
   padding-left: 128px;
 }
@@ -1052,12 +1048,8 @@ footer .links a {
     width: 68px !important;
   }
 
-  footer .logo + .grid {
-    width: calc(100% - 90px);
-  }
-
   footer .container > .grid {
-    padding-left: 80px;
+    padding-left: 65px;
   }
 
   footer .menu li {
@@ -1098,6 +1090,10 @@ footer .links a {
   header .logo svg {
     width: 100%;
     height: auto;
+  }
+
+  footer .logo + .grid {
+    width: calc(100% - 80px);
   }
 
   footer .container > .grid {

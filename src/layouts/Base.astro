@@ -165,6 +165,16 @@ const pageTitle = title === "Roots of Progress" ? title : `${title} | Roots of P
         });
       });
 
+      const lastEl = document.querySelector('header nav li.last') as HTMLElement;
+      document.querySelectorAll<HTMLElement>('header nav li.drop').forEach(drop => {
+        drop.addEventListener('mouseenter', () => {
+          const ul = drop.querySelector('ul') as HTMLElement;
+          if (lastEl && ul) {
+            lastEl.style.height = ul.getBoundingClientRect().height + 10 + 'px';
+          }
+        });
+      });
+
       window.addEventListener('scroll', () => {
         header.classList.toggle('scroll', window.scrollY > 0);
       }, { passive: true });
