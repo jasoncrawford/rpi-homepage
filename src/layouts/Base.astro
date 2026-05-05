@@ -104,15 +104,29 @@ const pageTitle = title === "Roots of Progress" ? title : `${title} | Roots of P
         </a>
         <div class="grid">
           <div class="col-12-sm">
-            <ul class="menu grid vcenter-xs">
-              <li><a href="/about/">About</a></li>
-              <li><a href="/essays/">Essays</a></li>
-              <li><a href="/announcements/">Announcements</a></li>
-              <li><a href="/subscribe/">Subscribe</a></li>
-              <li><a href="/support/">Support</a></li>
-              <li><a href="https://newsletter.rootsofprogress.org/">Substack</a></li>
-              <li><a href="https://blog.rootsofprogress.org/writing">Original blog</a></li>
-            </ul>
+            <div class="grid vcenter-xs hspace-between-xs nowrap">
+              <ul class="menu grid vcenter-xs">
+                <li><a href="/about/">About</a></li>
+                <li><a href="/essays/">Essays</a></li>
+                <li><a href="/announcements/">Announcements</a></li>
+                <li><a href="/subscribe/">Subscribe</a></li>
+                <li><a href="/support/">Support</a></li>
+                <li><a href="https://newsletter.rootsofprogress.org/">Substack</a></li>
+                <li><a href="https://blog.rootsofprogress.org/writing">Original blog</a></li>
+              </ul>
+              <ul class="social grid vcenter-xs nowrap">
+                <li>
+                  <a href="https://www.linkedin.com/company/rootsofprogress/" target="_blank" rel="noopener noreferrer">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_476_155)"><path d="M20.0203 0.210449H2.12522C1.26799 0.210449 0.574829 0.887207 0.574829 1.72393V19.6929C0.574829 20.5296 1.26799 21.2104 2.12522 21.2104H20.0203C20.8776 21.2104 21.5748 20.5296 21.5748 19.697V1.72393C21.5748 0.887207 20.8776 0.210449 20.0203 0.210449ZM6.8051 18.1056H3.68792V8.08135H6.8051V18.1056ZM5.24651 6.71553C4.24573 6.71553 3.43772 5.90752 3.43772 4.91084C3.43772 3.91416 4.24573 3.10615 5.24651 3.10615C6.24319 3.10615 7.0512 3.91416 7.0512 4.91084C7.0512 5.90342 6.24319 6.71553 5.24651 6.71553ZM18.4699 18.1056H15.3569V13.2329C15.3569 12.0722 15.3364 10.5751 13.7367 10.5751C12.1166 10.5751 11.8705 11.8425 11.8705 13.1509V18.1056H8.76155V8.08135H11.7475V9.45127H11.7885C12.2028 8.66377 13.2199 7.83115 14.7334 7.83115C17.8875 7.83115 18.4699 9.90654 18.4699 12.6054V18.1056Z" fill="#FFFCF2"/></g><defs><clipPath id="clip0_476_155"><rect width="21" height="21" fill="white" transform="translate(0.574829 0.210449)"/></clipPath></defs></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/intent/follow?screen_name=rootsofprogress" target="_blank" rel="noopener noreferrer">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_476_157)"><path d="M16.7467 1.87695H19.6985L13.2497 9.24751L20.8362 19.2772H14.896L10.2435 13.1942L4.91989 19.2772H1.96631L8.86394 11.3935L1.58618 1.87695H7.67715L11.8827 7.43699L16.7467 1.87695ZM15.7107 17.5104H17.3463L6.7884 3.55094H5.03321L15.7107 17.5104Z" fill="#FFFCF2"/></g><defs><clipPath id="clip0_476_157"><rect width="21" height="21" fill="white" transform="translate(0.71106 0.210449)"/></clipPath></defs></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="grid vend-xs bottom">
@@ -122,21 +136,7 @@ const pageTitle = title === "Roots of Progress" ? title : `${title} | Roots of P
           <div class="col-4-sm"></div>
           <div class="col-4-sm">
             <div class="text-right">
-              <div class="grid vcenter-xs hend-sm nowrap footer-byline">
-                <p>Designed by <a href="https://and-now.co.uk/" target="_blank" rel="noopener noreferrer">And&mdash;Now</a></p>
-                <ul class="social grid vcenter-xs nowrap">
-                  <li>
-                    <a href="https://www.linkedin.com/company/rootsofprogress/" target="_blank" rel="noopener noreferrer">
-                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_476_155)"><path d="M20.0203 0.210449H2.12522C1.26799 0.210449 0.574829 0.887207 0.574829 1.72393V19.6929C0.574829 20.5296 1.26799 21.2104 2.12522 21.2104H20.0203C20.8776 21.2104 21.5748 20.5296 21.5748 19.697V1.72393C21.5748 0.887207 20.8776 0.210449 20.0203 0.210449ZM6.8051 18.1056H3.68792V8.08135H6.8051V18.1056ZM5.24651 6.71553C4.24573 6.71553 3.43772 5.90752 3.43772 4.91084C3.43772 3.91416 4.24573 3.10615 5.24651 3.10615C6.24319 3.10615 7.0512 3.91416 7.0512 4.91084C7.0512 5.90342 6.24319 6.71553 5.24651 6.71553ZM18.4699 18.1056H15.3569V13.2329C15.3569 12.0722 15.3364 10.5751 13.7367 10.5751C12.1166 10.5751 11.8705 11.8425 11.8705 13.1509V18.1056H8.76155V8.08135H11.7475V9.45127H11.7885C12.2028 8.66377 13.2199 7.83115 14.7334 7.83115C17.8875 7.83115 18.4699 9.90654 18.4699 12.6054V18.1056Z" fill="#FFFCF2"/></g><defs><clipPath id="clip0_476_155"><rect width="21" height="21" fill="white" transform="translate(0.574829 0.210449)"/></clipPath></defs></svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://x.com/intent/follow?screen_name=rootsofprogress" target="_blank" rel="noopener noreferrer">
-                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_476_157)"><path d="M16.7467 1.87695H19.6985L13.2497 9.24751L20.8362 19.2772H14.896L10.2435 13.1942L4.91989 19.2772H1.96631L8.86394 11.3935L1.58618 1.87695H7.67715L11.8827 7.43699L16.7467 1.87695ZM15.7107 17.5104H17.3463L6.7884 3.55094H5.03321L15.7107 17.5104Z" fill="#FFFCF2"/></g><defs><clipPath id="clip0_476_157"><rect width="21" height="21" fill="white" transform="translate(0.71106 0.210449)"/></clipPath></defs></svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              <p>Designed by <a href="https://and-now.co.uk/" target="_blank" rel="noopener noreferrer">And&mdash;Now</a></p>
               <ul class="links grid hend-sm">
                 <li><a href="/privacy-policy/">Privacy Policy</a></li>
                 <li><a href="/cookie-policy/">Cookie Policy</a></li>

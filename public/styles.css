@@ -371,12 +371,6 @@ header .logo {
   z-index: 2;
   display: block;
   border: 0;
-  width: 184px;
-}
-
-header .logo svg {
-  width: 100%;
-  height: auto;
 }
 
 header .logo svg path {
@@ -461,12 +455,10 @@ header nav li ul {
   width: 250px;
   display: none;
   background: var(--Cream);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 header nav li ul a {
   padding: 10px 21px;
-  font-size: 14px;
 }
 
 /* ===== Header — open state (mobile menu) ===== */
@@ -563,11 +555,6 @@ footer .menu a:first-child {
 
 footer .social {
   width: auto !important;
-  margin-left: 16px;
-}
-
-footer .footer-byline {
-  margin-bottom: 4px;
 }
 
 footer .social li + li {
@@ -976,10 +963,6 @@ footer .links a {
 
 /* ===== Mobile Nav (max-width: 1023px) ===== */
 @media (max-width: 1023px) {
-  header .logo {
-    width: 184px;
-  }
-
   header .menu {
     display: block;
     position: relative;
@@ -1086,6 +1069,10 @@ footer .links a {
     padding-left: 0;
   }
 
+  footer .social {
+    margin-top: 25px;
+  }
+
   footer .bottom {
     padding-top: 0;
   }
@@ -1104,6 +1091,15 @@ footer .links a {
 
 /* Footer full-width on small screens */
 @media (max-width: 767px) {
+  header .logo {
+    width: 184px;
+  }
+
+  header .logo svg {
+    width: 100%;
+    height: auto;
+  }
+
   footer .container > .grid {
     padding-left: 0;
     width: 100%;
@@ -1119,5 +1115,12 @@ footer .links a {
 
   footer .menu li + li {
     margin-left: 0;
+  }
+
+  footer .social {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    margin-top: 0;
   }
 }
