@@ -10,6 +10,9 @@
  *   - Local:  http://localhost:4321<path>  (always)
  *   - Live:   https://rootsofprogress.org<path>  (skipped for /demo/... paths)
  *
+ * For non-demo paths, also produces a pixel-diff overlay PNG per viewport
+ * (red highlights on the local screenshot wherever it disagrees with live).
+ *
  * Saves PNGs to tmp/visual-diff/ and prints the paths.
  */
 
@@ -17,6 +20,8 @@ import fs from 'fs/promises';
 import path from 'path';
 import { spawn } from 'child_process';
 import { chromium } from 'playwright';
+import { PNG } from 'pngjs';
+import pixelmatch from 'pixelmatch';
 
 const LIVE_BASE = 'https://rootsofprogress.org';
 const LOCAL_PORT = 4321;
@@ -51,14 +56,50 @@ async function waitForDevServer(url) {
   throw new Error(`Dev server at ${url} did not become ready within ${DEV_READY_TIMEOUT_MS}ms`);
 }
 
-async function screenshot(browser, url, slug, label, viewport) {
+async function screenshot(browser, url, slug, label, viewport, size) {
   const ctx = await browser.newContext({ viewport });
   const page = await ctx.newPage();
   await page.goto(url, { waitUntil: 'networkidle' });
-  const outPath = path.join(OUT_DIR, `${slug}-${label}-${Object.keys(VIEWPORTS).find(k => VIEWPORTS[k] === viewport)}.png`);
+  const outPath = path.join(OUT_DIR, `${slug}-${label}-${size}.png`);
   await page.screenshot({ path: outPath, fullPage: true });
   await ctx.close();
   return outPath;
+}
+
+// Pad PNG to (width, height) on a white background so pixelmatch can compare
+// images of different heights (full-page screenshots routinely differ).
+// PNG.sync.read returns a plain object (not a PNG instance), so we copy the
+// raw RGBA buffer row-by-row instead of using PNG.bitblt.
+function padTo(png, width, height) {
+  if (png.width === width && png.height === height) return png;
+  const out = new PNG({ width, height });
+  out.data.fill(0xff);
+  const rowBytes = png.width * 4;
+  for (let y = 0; y < png.height; y++) {
+    png.data.copy(out.data, y * width * 4, y * rowBytes, (y + 1) * rowBytes);
+  }
+  return out;
+}
+
+async function diffPNGs(localPath, livePath, diffPath) {
+  const [localBuf, liveBuf] = await Promise.all([
+    fs.readFile(localPath),
+    fs.readFile(livePath),
+  ]);
+  const local = PNG.sync.read(localBuf);
+  const live = PNG.sync.read(liveBuf);
+  const width = Math.max(local.width, live.width);
+  const height = Math.max(local.height, live.height);
+  const a = padTo(local, width, height);
+  const b = padTo(live, width, height);
+  const diff = new PNG({ width, height });
+  const mismatched = pixelmatch(a.data, b.data, diff.data, width, height, {
+    threshold: 0.1,
+    alpha: 0.3,
+    diffColor: [255, 0, 0],
+  });
+  await fs.writeFile(diffPath, PNG.sync.write(diff));
+  return { mismatched, total: width * height };
 }
 
 async function main() {
@@ -102,15 +143,21 @@ async function main() {
     try {
       for (const [size, viewport] of Object.entries(VIEWPORTS)) {
         const localUrl = `${LOCAL_BASE}${urlPath}`;
-        const localPath = await screenshot(browser, localUrl, slug, 'local', viewport);
+        const localPath = await screenshot(browser, localUrl, slug, 'local', viewport, size);
         console.log(`Saved: ${localPath}`);
         saved.push(localPath);
 
         if (!skipLive) {
           const liveUrl = `${LIVE_BASE}${urlPath}`;
-          const livePath = await screenshot(browser, liveUrl, slug, 'live', viewport);
+          const livePath = await screenshot(browser, liveUrl, slug, 'live', viewport, size);
           console.log(`Saved: ${livePath}`);
           saved.push(livePath);
+
+          const diffPath = path.join(OUT_DIR, `${slug}-diff-${size}.png`);
+          const { mismatched, total } = await diffPNGs(localPath, livePath, diffPath);
+          const pct = ((mismatched / total) * 100).toFixed(2);
+          console.log(`Saved: ${diffPath}  (${pct}% mismatch)`);
+          saved.push(diffPath);
         }
       }
     } finally {
