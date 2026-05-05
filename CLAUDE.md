@@ -22,11 +22,13 @@ npm run visual-diff -- /about/     # any path
 npm run visual-diff -- /demo/homepage-demo   # demo route (local only)
 ```
 
-Produces PNGs in `tmp/visual-diff/<slug>-{local,live}-{desktop,mobile}.png`. For `/demo/` paths, only local screenshots are taken.
+Produces PNGs in `tmp/visual-diff/<slug>-{local,live,diff}-{desktop,mobile}.png`. The `diff` PNG highlights every mismatched pixel in red. For `/demo/` paths, only local screenshots are taken (no live, no diff).
 
 ### Verify with Read tool
 
-Use the `Read` tool to view each PNG — Claude can see images. Check:
+Use the `Read` tool to view each PNG — Claude can see images.
+
+**Read the `diff` PNG first.** Red regions are exactly where local and live disagree. That tells you where to look. Then open `local` and `live` side-by-side to see *what* differs there. Check:
 
 - Layout: columns, spacing, and alignment match
 - Typography: font, size, weight, line-height match
