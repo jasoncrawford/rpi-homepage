@@ -1,4 +1,7 @@
 ---
+import HeaderLogo from '../components/HeaderLogo.astro';
+import FooterLogo from '../components/FooterLogo.astro';
+
 export interface Props {
   title: string;
   description?: string;
@@ -23,19 +26,70 @@ const pageTitle = title === "Roots of Progress" ? title : `${title} | Roots of P
     <meta property="og:type" content="website" />
     {image && <meta property="og:image" content={image} />}
 
+    <!-- Font preloads -->
+    <link rel="preload" href="/fonts/F37Grotesc-Book.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/F37Grotesc-BookItalic.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/F37Grotesc-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/F37Grotesc-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/Palast-Web-Display-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/Palast-Web-Display-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="header-inner">
-        <a href="/" class="site-logo">Roots of Progress</a>
-        <nav class="site-nav" aria-label="Main navigation">
-          <a href="/">Home</a>
-          <a href="/about/">About</a>
-          <a href="/blog/">Blog</a>
-          <a href="/programs/">Programs</a>
-          <a href="/support/">Support</a>
-        </nav>
+    <header>
+      <div class="container">
+        <div class="grid vcenter-xs">
+          <div class="col-8-xs col-3-md">
+            <a class="logo" href="/">
+              <HeaderLogo />
+            </a>
+          </div>
+          <div class="col-4-xs col-9-md">
+            <div class="menu"><span></span><span></span><span></span></div>
+            <nav aria-label="Main navigation">
+              <ul class="grid hend-xs">
+                <li class="drop">
+                  <a href="/about/">About
+                    <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.50002 8L-2.54292e-07 1.66869e-07L9 9.53674e-07L4.50002 8Z" fill="#A6C4A7"/></svg>
+                  </a>
+                  <ul>
+                    <li><a href="/about/">About us</a></li>
+                    <li><a href="/announcements/">Announcements</a></li>
+                  </ul>
+                </li>
+                <li class="drop">
+                  <a href="/essays/">Writing
+                    <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.50002 8L-2.54292e-07 1.66869e-07L9 9.53674e-07L4.50002 8Z" fill="#A6C4A7"/></svg>
+                  </a>
+                  <ul>
+                    <li><a href="/essays/">Essays</a></li>
+                    <li><a href="/manifesto/">Manifesto</a></li>
+                    <li><a href="https://newsletter.rootsofprogress.org/">Substack</a></li>
+                  </ul>
+                </li>
+                <li class="drop">
+                  <a href="/about/">Programs
+                    <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.50002 8L-2.54292e-07 1.66869e-07L9 9.53674e-07L4.50002 8Z" fill="#A6C4A7"/></svg>
+                  </a>
+                  <ul>
+                    <li><a href="/conference/">Conference</a></li>
+                    <li><a href="/progress-in-medicine/">Progress in Medicine</a></li>
+                    <li><a href="/fellowship/">Fellowship</a></li>
+                    <li><a href="/fellows/">Fellows</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="/subscribe/">Subscribe</a>
+                </li>
+                <li>
+                  <a href="/support/">Support</a>
+                </li>
+                <li class="last"></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -43,15 +97,87 @@ const pageTitle = title === "Roots of Progress" ? title : `${title} | Roots of P
       <slot />
     </main>
 
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <p>&copy; {new Date().getFullYear()} Roots of Progress Institute. All rights reserved.</p>
-        <ul class="footer-links">
-          <li><a href="https://x.com/rootsofprogress" rel="noopener noreferrer">Twitter</a></li>
-          <li><a href="https://linkedin.com/company/roots-of-progress/" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="mailto:contact@rootsofprogress.org">Contact</a></li>
-        </ul>
+    <footer>
+      <div class="container">
+        <a class="logo" href="/">
+          <FooterLogo />
+        </a>
+        <div class="grid">
+          <div class="col-12-sm">
+            <div class="grid vcenter-xs hspace-between-xs nowrap">
+              <ul class="menu grid vcenter-xs">
+                <li><a href="/about/">About</a></li>
+                <li><a href="/essays/">Essays</a></li>
+                <li><a href="/announcements/">Announcements</a></li>
+                <li><a href="/subscribe/">Subscribe</a></li>
+                <li><a href="/support/">Support</a></li>
+                <li><a href="https://newsletter.rootsofprogress.org/">Substack</a></li>
+                <li><a href="https://blog.rootsofprogress.org/writing">Original blog</a></li>
+              </ul>
+              <ul class="social grid vcenter-xs nowrap">
+                <li>
+                  <a href="https://www.linkedin.com/company/rootsofprogress/" target="_blank" rel="noopener noreferrer">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_476_155)"><path d="M20.0203 0.210449H2.12522C1.26799 0.210449 0.574829 0.887207 0.574829 1.72393V19.6929C0.574829 20.5296 1.26799 21.2104 2.12522 21.2104H20.0203C20.8776 21.2104 21.5748 20.5296 21.5748 19.697V1.72393C21.5748 0.887207 20.8776 0.210449 20.0203 0.210449ZM6.8051 18.1056H3.68792V8.08135H6.8051V18.1056ZM5.24651 6.71553C4.24573 6.71553 3.43772 5.90752 3.43772 4.91084C3.43772 3.91416 4.24573 3.10615 5.24651 3.10615C6.24319 3.10615 7.0512 3.91416 7.0512 4.91084C7.0512 5.90342 6.24319 6.71553 5.24651 6.71553ZM18.4699 18.1056H15.3569V13.2329C15.3569 12.0722 15.3364 10.5751 13.7367 10.5751C12.1166 10.5751 11.8705 11.8425 11.8705 13.1509V18.1056H8.76155V8.08135H11.7475V9.45127H11.7885C12.2028 8.66377 13.2199 7.83115 14.7334 7.83115C17.8875 7.83115 18.4699 9.90654 18.4699 12.6054V18.1056Z" fill="#FFFCF2"/></g><defs><clipPath id="clip0_476_155"><rect width="21" height="21" fill="white" transform="translate(0.574829 0.210449)"/></clipPath></defs></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/intent/follow?screen_name=rootsofprogress" target="_blank" rel="noopener noreferrer">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_476_157)"><path d="M16.7467 1.87695H19.6985L13.2497 9.24751L20.8362 19.2772H14.896L10.2435 13.1942L4.91989 19.2772H1.96631L8.86394 11.3935L1.58618 1.87695H7.67715L11.8827 7.43699L16.7467 1.87695ZM15.7107 17.5104H17.3463L6.7884 3.55094H5.03321L15.7107 17.5104Z" fill="#FFFCF2"/></g><defs><clipPath id="clip0_476_157"><rect width="21" height="21" fill="white" transform="translate(0.71106 0.210449)"/></clipPath></defs></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="grid vend-xs bottom">
+          <div class="col-4-sm">
+            <p><strong>Roots Of Progress Institute &copy; {new Date().getFullYear()}</strong></p>
+          </div>
+          <div class="col-4-sm"></div>
+          <div class="col-4-sm">
+            <div class="text-right">
+              <p>Designed by <a href="https://and-now.co.uk/" target="_blank" rel="noopener noreferrer">And&mdash;Now</a></p>
+              <ul class="links grid hend-sm">
+                <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="/cookie-policy/">Cookie Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <script>
+      const header = document.querySelector('header') as HTMLElement;
+      const menuBtn = document.querySelector('header .menu') as HTMLElement;
+
+      menuBtn?.addEventListener('click', () => {
+        header.classList.toggle('open');
+        document.body.style.overflow = header.classList.contains('open') ? 'hidden' : '';
+      });
+
+      document.querySelectorAll<HTMLElement>('header nav li.drop > a').forEach(link => {
+        link.addEventListener('click', (e) => {
+          if (window.innerWidth <= 1023) {
+            e.preventDefault();
+            link.closest('li')?.classList.toggle('open');
+          }
+        });
+      });
+
+      const lastEl = document.querySelector('header nav li.last') as HTMLElement;
+      document.querySelectorAll<HTMLElement>('header nav li.drop').forEach(drop => {
+        drop.addEventListener('mouseenter', () => {
+          const ul = drop.querySelector('ul') as HTMLElement;
+          if (lastEl && ul) {
+            lastEl.style.height = ul.getBoundingClientRect().height + 10 + 'px';
+          }
+        });
+      });
+
+      window.addEventListener('scroll', () => {
+        header.classList.toggle('scroll', window.scrollY > 0);
+      }, { passive: true });
+    </script>
   </body>
 </html>
