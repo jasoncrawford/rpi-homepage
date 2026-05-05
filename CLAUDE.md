@@ -49,3 +49,30 @@ If there are differences, explain whether they're intentional.
 - Skipping because "it's a small change" — small CSS changes break layouts
 
 See `docs/visual-diff.md` for full details and Chromium install instructions.
+
+## Debugging CSS against the original
+
+`capture/css/global.css` is minified — rules run together. When a CSS value looks wrong, **verify which media query the original rule lives in** before writing your version. A rule inside `@media (max-width:767px)` that you apply at the base level will be wrong on desktop.
+
+Use Python to extract a rule with its surrounding context:
+
+```bash
+python3 << 'EOF'
+with open('capture/css/global.css') as f:
+    content = f.read()
+import re
+for keyword in ['header .logo{', 'footer .logo\\+']:
+    for m in re.finditer(keyword, content):
+        print(content[max(0, m.start()-80):m.start()+200])
+        print()
+EOF
+```
+
+If dynamic behavior (hover effects, scroll handling, height adjustments) differs from the static CSS, fetch the original theme JS:
+
+```bash
+# URL is in capture/html/index.html — look for theme/assets/js/app.js
+curl -s "https://rootsofprogress.org/wp-content/themes/theme/assets/js/app.js?ver=2.0.31" | head -200
+```
+
+The theme JS is the authoritative source for JS-driven behaviors (e.g. `li.last` height set dynamically on dropdown hover).
