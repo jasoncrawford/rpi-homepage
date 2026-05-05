@@ -114,6 +114,8 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "F37", Helvetica, Arial, sans-serif;
   font-size: 17px;
   font-weight: 300;
@@ -369,6 +371,7 @@ header .logo {
   z-index: 2;
   display: block;
   border: 0;
+  width: 184px;
 }
 
 header .logo svg {
@@ -503,7 +506,7 @@ footer .logo {
   left: 38px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  width: 50px;
+  width: 68px;
   border: 0;
 }
 
@@ -560,9 +563,11 @@ footer .menu a:first-child {
 
 footer .social {
   width: auto !important;
-  position: absolute;
-  top: 25px;
-  right: 20px;
+  margin-left: 16px;
+}
+
+footer .footer-byline {
+  margin-bottom: 4px;
 }
 
 footer .social li + li {
@@ -591,12 +596,15 @@ footer .bottom p {
 }
 
 footer .links li + li {
+  border-left: 1px solid var(--Cream);
+  padding-left: 20px;
   margin-left: 20px;
 }
 
 footer .links a {
   font-size: 12px;
   font-weight: 400;
+  text-decoration: underline !important;
 }
 
 /* ===== Main Content ===== */
@@ -1058,15 +1066,15 @@ footer .links a {
     left: 10px;
     -webkit-transform: none;
     transform: none;
-    width: 50px !important;
+    width: 68px !important;
   }
 
   footer .logo + .grid {
-    width: calc(100% - 80px);
+    width: calc(100% - 90px);
   }
 
   footer .container > .grid {
-    padding-left: 65px;
+    padding-left: 80px;
   }
 
   footer .menu li {
@@ -1076,13 +1084,6 @@ footer .links a {
 
   footer .menu a {
     padding-left: 0;
-  }
-
-  footer .social {
-    position: absolute;
-    top: 25px;
-    right: 20px;
-    margin-top: 0;
   }
 
   footer .bottom {
