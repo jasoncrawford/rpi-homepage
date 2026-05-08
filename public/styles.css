@@ -108,6 +108,22 @@ img {
   display: block;
 }
 
+.thumb {
+  position: relative;
+}
+
+.thumb img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 /* ===== Base Styles ===== */
 html {
   background: var(--Cream);
@@ -1118,5 +1134,228 @@ footer .links a {
     top: 25px;
     right: 20px;
     margin-top: 0;
+  }
+}
+
+/* ===== Separator (.sep) ===== */
+.sep {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 60px;
+  margin-top: -20px;
+}
+
+@media (max-width: 767px) {
+  .sep {
+    margin-bottom: 20px;
+  }
+}
+
+.sep.small span {
+  background: #A6C4A7;
+}
+
+.sep.small svg {
+  height: 32px;
+  width: auto;
+}
+
+.sep span {
+  background: #5F6E60;
+  display: block;
+  height: 1px;
+  width: 50%;
+}
+
+.sep svg {
+  margin: 0 20px;
+}
+
+.sep .text {
+  padding: 0 20px;
+  font-family: "Palast", Helvetica, Arial, sans-serif;
+  color: var(--DarkGreen);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .sep .text {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+}
+
+section.separator {
+  padding: 18px 0;
+}
+
+section.separator:first-of-type {
+  margin-top: 110px;
+}
+
+@media (max-width: 767px) {
+  section.separator:first-of-type {
+    margin-top: 80px;
+  }
+  section.separator:first-of-type .sep {
+    margin-bottom: 0;
+  }
+}
+
+section.separator .sep {
+  margin-bottom: 40px;
+}
+
+section.separator .sep span {
+  background: #A6C4A7;
+}
+
+@media (max-width: 767px) {
+  section.separator .sep {
+    margin-bottom: 18px;
+  }
+}
+
+section.separator.light svg path {
+  fill: #EDEADE;
+}
+
+section.separator.light .sep span {
+  background: #EDEADE;
+}
+
+/* ===== Newsletter Banner ===== */
+section.newsletter {
+  background: var(--Red);
+  color: var(--Cream);
+  text-align: center;
+  padding: 22px 0;
+  position: relative;
+}
+
+section.newsletter::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: calc(100% - 38px);
+  background: var(--Cream);
+  width: 1px;
+}
+
+@media (max-width: 767px) {
+  section.newsletter::after {
+    width: 70px;
+    height: 1px !important;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+section.newsletter.single::after {
+  display: none;
+}
+
+section.newsletter.uneven::after {
+  display: none;
+}
+
+section.newsletter.uneven .text {
+  position: relative;
+  padding-right: 12px;
+  margin-right: 15px;
+}
+
+section.newsletter.uneven .text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 23px;
+  background: var(--Cream);
+  width: 1px;
+}
+
+@media (max-width: 1023px) {
+  section.newsletter.uneven .text {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  section.newsletter.uneven .text::after {
+    width: 70px;
+    height: 1px;
+    left: 50%;
+    top: 100%;
+    -webkit-transform: translate(-50%, 15px);
+    transform: translate(-50%, 15px);
+  }
+}
+
+@media (max-width: 767px) {
+  section.newsletter.onright::after {
+    display: none;
+  }
+  section.newsletter.onright [class*="col-6"] + div {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  section.newsletter [class*="col-6"] + div {
+    padding-top: 30px;
+  }
+}
+
+section.newsletter a {
+  color: var(--Cream);
+  border: 0;
+}
+
+@media (min-width: 1025px) {
+  section.newsletter a:hover {
+    color: #f1bbb8;
+  }
+  section.newsletter a:hover svg path {
+    fill: #f1bbb8;
+  }
+}
+
+section.newsletter a span {
+  border-bottom: 1px solid;
+}
+
+section.newsletter a svg {
+  margin-left: 6px;
+}
+
+section.newsletter a svg path {
+  -webkit-transition: fill 0.2s ease;
+  transition: fill 0.2s ease;
+}
+
+@media (max-width: 767px) {
+  section.newsletter a svg {
+    width: 10px;
+    height: auto;
+    margin-left: 5px;
+    margin-top: 4px;
+    position: absolute;
   }
 }

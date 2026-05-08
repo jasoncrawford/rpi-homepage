@@ -8,6 +8,8 @@ export interface PostCard {
   imageAlt?: string;
   external?: boolean;
   readMoreText?: string;
+  loading?: "lazy" | "eager";
+  fetchPriority?: "high" | "auto" | "low";
 }
 
 export interface Props {
@@ -46,7 +48,8 @@ const arrowSvg = `<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xm
               <img
                 src={item.imageSrc}
                 alt={item.imageAlt ?? ""}
-                loading="lazy"
+                loading={item.loading ?? "lazy"}
+                fetchpriority={item.fetchPriority}
                 decoding="async"
               />
             </a>
