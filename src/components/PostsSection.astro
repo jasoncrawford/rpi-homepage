@@ -129,14 +129,9 @@ const bigArrowSvg = `<svg width="11" height="10" viewBox="0 0 11 10" fill="none"
 </section>
 
 <style is:global>
-  section.posts {
-    padding: 60px 0;
-  }
-  @media (max-width: 767px) {
-    section.posts {
-      padding: 36px 0;
-    }
-  }
+  /* No base padding on section.posts — live's posts.css has none.
+     Vertical spacing comes from .inside's margin-bottom: 60px (per card)
+     plus the .headline's margin: 40px 0 60px. */
   section.posts .headline {
     margin: 40px 0 60px;
   }

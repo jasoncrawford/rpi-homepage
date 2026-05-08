@@ -124,6 +124,71 @@ img {
   height: 100%;
 }
 
+/* Card .bottoms row — used in posts, video, etc. (from live global.css) */
+.bottoms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  color: var(--Red);
+  line-height: 1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.bottoms div {
+  padding: 10px 15px;
+  border-right: 1px solid var(--Red);
+}
+
+.bottoms div:first-child {
+  border-left: 1px solid var(--Red);
+}
+
+.bottoms div:last-child {
+  float: right;
+  padding-right: 0;
+  border-right: 0;
+}
+
+.bottoms div:last-child:first-child {
+  border-left: 0;
+}
+
+@media (max-width: 767px) {
+  .bottoms {
+    width: 55%;
+    position: relative;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .bottoms div {
+    width: 100%;
+    border-right: 1px solid var(--Red);
+    border-left: 1px solid var(--Red);
+    padding: 5px;
+  }
+  .bottoms div:last-child {
+    float: none;
+    position: absolute !important;
+    top: 50% !important;
+    left: 100%;
+    -webkit-transform: translateY(-50%) !important;
+    transform: translateY(-50%) !important;
+    width: 90%;
+    border: 0 !important;
+    margin: 0;
+    right: auto !important;
+  }
+  .bottoms div:last-child .btn {
+    padding: 9px !important;
+    width: 95%;
+  }
+}
+
 /* ===== Base Styles ===== */
 html {
   background: var(--Cream);
