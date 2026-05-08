@@ -56,7 +56,7 @@ Full-width parallax hero (`section.main`) with large centered text and a CTA but
 - **PostsSection** (`section.posts`) — 3-up card grid (thumbnail, title, excerpt, CTA); handles essays, announcements, and press; supports `external` links and verbatim `titleHtml` for press items
 - **SupportSection** (`section.support`) — beige-background donation section with decorative SVG illustration and Patreon/PayPal/email links
 
-**Demo page:** `src/pages/demo/homepage-demo.astro` → `/demo/homepage-demo`
+**Page route:** `src/pages/index.astro` → `/`
 
 #### Existing placeholder assessment
 

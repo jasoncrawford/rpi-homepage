@@ -3,6 +3,7 @@ export interface PostCard {
   title: string;
   titleHtml?: string;
   excerpt?: string;
+  excerptHtml?: string;
   href: string;
   imageSrc?: string;
   imageAlt?: string;
@@ -10,18 +11,27 @@ export interface PostCard {
   readMoreText?: string;
   loading?: "lazy" | "eager";
   fetchPriority?: "high" | "auto" | "low";
+  tags?: string[];
+}
+
+export interface FooterLink {
+  text: string;
+  href: string;
+  external?: boolean;
 }
 
 export interface Props {
   headline?: string;
   items: PostCard[];
   background?: string;
+  footerLink?: FooterLink;
 }
 
-const { headline, items, background } = Astro.props;
+const { headline, items, background, footerLink } = Astro.props;
 const style = background ? `background: ${background};` : undefined;
 
 const arrowSvg = `<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 4.96865L10.3555 4.61706L10.7032 4.96865L10.3555 5.32025L10 4.96865ZM9.53572 5.46865L0.25 5.46865L0.25 4.46865L9.53572 4.46865V5.46865ZM6.17693 0.392058L10.3555 4.61706L9.6445 5.32025L5.46593 1.09525L6.17693 0.392058ZM10.3555 5.32025L6.17693 9.54525L5.46593 8.84206L9.6445 4.61706L10.3555 5.32025Z" fill="#FFFCF2"/></svg>`;
+const bigArrowSvg = `<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.75 5.1L10.1055 4.74841L10.4532 5.1L10.1055 5.45159L9.75 5.1ZM9.28572 5.6L-2.56759e-08 5.6L2.56758e-08 4.6L9.28572 4.6V5.6ZM5.92693 0.523405L10.1055 4.74841L9.3945 5.45159L5.21593 1.22659L5.92693 0.523405ZM10.1055 5.45159L5.92693 9.6766L5.21593 8.97341L9.3945 4.74841L10.1055 5.45159Z" fill="#FFFCF2"/></svg>`;
 ---
 
 <section class="posts" style={style} data-view>
@@ -55,22 +65,37 @@ const arrowSvg = `<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xm
             </a>
           )}
           <div class="inside">
-            {item.titleHtml ? (
-              <div class="title mh" set:html={item.titleHtml} />
+            {item.titleHtml && item.external ? (
+              <div class="title mh" data-mh="post-title" set:html={item.titleHtml} />
+            ) : item.titleHtml ? (
+              <a
+                href={item.href}
+                class="title mh"
+                data-mh="post-title"
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noopener" : undefined}
+                set:html={item.titleHtml}
+              />
             ) : (
               <a
                 href={item.href}
                 class="title mh"
+                data-mh="post-title"
                 target={item.external ? "_blank" : undefined}
                 rel={item.external ? "noopener" : undefined}
               >
                 {item.title}
               </a>
             )}
-            {item.excerpt && (
-              <div class="excerpt mh">{item.excerpt}</div>
+            {item.excerptHtml ? (
+              <div class="excerpt mh" data-mh="post-excerpt" set:html={item.excerptHtml} />
+            ) : (
+              <div class="excerpt mh" data-mh="post-excerpt">{item.excerpt ?? ""}</div>
             )}
             <div class={`bottoms${item.external ? " hend-xs" : ""}`}>
+              {item.tags?.map((tag) => (
+                <div>{tag}</div>
+              ))}
               <div>
                 <a
                   class="btn"
@@ -85,6 +110,21 @@ const arrowSvg = `<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xm
         </div>
       ))}
     </div>
+    {footerLink && (
+      <div class="grid t--fadedown t--delay_1000">
+        <div class="col-12-sm">
+          <div class="text-right">
+            <a
+              class="btn big"
+              href={footerLink.href}
+              target={footerLink.external ? "_blank" : undefined}
+              rel={footerLink.external ? "noopener" : undefined}
+              set:html={footerLink.text + " " + bigArrowSvg}
+            />
+          </div>
+        </div>
+      </div>
+    )}
   </div>
 </section>
 
@@ -157,6 +197,11 @@ const arrowSvg = `<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xm
     margin-top: 20px;
     position: relative;
   }
+  @media (min-width: 768px) {
+    section.posts .bottoms div {
+      padding: 5px 10px;
+    }
+  }
   section.posts .bottoms div:last-child {
     position: absolute;
     top: 50%;
@@ -179,4 +224,67 @@ const arrowSvg = `<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xm
   section.posts .bottoms.hend-xs {
     justify-content: flex-end;
   }
+  section.posts .bottoms.hend-xs div:last-child {
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: none;
+    border-left: 0;
+  }
+  @media (max-width: 767px) {
+    section.posts .bottoms.hend-xs {
+      padding-bottom: 35px;
+      width: 50% !important;
+    }
+    section.posts .bottoms.hend-xs div:last-child {
+      width: 108% !important;
+    }
+  }
+  section.posts .text-right {
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
 </style>
+
+<script>
+  // Match heights of [data-mh] elements grouped by section + data-mh value.
+  // Replicates the WordPress theme's jQuery.matchHeight behavior so cards in
+  // the same row line up. Only run on viewports >= 768px since cards stack
+  // vertically below that and don't need height equalization.
+  function matchHeights() {
+    if (window.innerWidth < 768) {
+      // Reset any heights set on smaller viewports.
+      document.querySelectorAll<HTMLElement>('[data-mh]').forEach((el) => {
+        el.style.minHeight = '';
+      });
+      return;
+    }
+    document.querySelectorAll<HTMLElement>('section.posts').forEach((section) => {
+      const groups: Record<string, HTMLElement[]> = {};
+      section.querySelectorAll<HTMLElement>('[data-mh]').forEach((el) => {
+        const key = el.dataset.mh!;
+        (groups[key] = groups[key] || []).push(el);
+      });
+      Object.values(groups).forEach((els) => {
+        els.forEach((el) => (el.style.minHeight = ''));
+        const max = Math.max(...els.map((el) => el.offsetHeight));
+        els.forEach((el) => (el.style.minHeight = `${max}px`));
+      });
+    });
+  }
+  // Wait for fonts before measuring (text height depends on which font renders).
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(matchHeights);
+  } else {
+    window.addEventListener('load', matchHeights);
+  }
+  let resizeTimer: number;
+  window.addEventListener(
+    'resize',
+    () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(matchHeights, 100);
+    },
+    { passive: true }
+  );
+</script>

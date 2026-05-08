@@ -37,21 +37,14 @@ const {
         </svg>
       </div>
       <div class="col-6-md">
-        <h2>{title}</h2>
+        <h2 class="t--fadedown t--delay_250">{title}</h2>
+        <div class="text t--fadedown t--delay_500">
         <p>You can support us monthly through Patreon:</p>
-        <p>
-          <a href={patreonUrl} target="_blank" rel="noopener">
-            <img src="https://rootsofprogress.org/wp-content/themes/theme/assets/img/patreon.png" alt="Patreon" width="120" height="30" loading="lazy" />
-          </a>
-        </p>
-        <p>
-          For a one-time donation, we take <a href={paypalUrl} target="_blank" rel="noopener">PayPal</a>.
-          Or <a href={`mailto:${contactEmail}`}>get in touch</a> to talk about a larger contribution or other payment methods.
-          We are a 501(c)(3) public educational charity; in the US, donations to such organizations are tax-deductible.
-        </p>
-        <p>
-          <a href={moreUrl}>{moreText}</a>
-        </p>
+        <p><a href={patreonUrl} target="_blank" data-nou><img src="https://rootsofprogress.org/wp-content/themes/theme/assets/img/patreon.png" style="height:38px;" alt="Patreon" /></a></p>
+        <p>For a one-time donation, we take <a href={paypalUrl} rel="noopener" target="_blank">PayPal</a>. Or <a href={`mailto:${contactEmail}`}>get in touch</a> to talk about  a larger contribution or other payment methods.</p>
+        <p>We are a 501(c)(3) public educational charity; in the US, donations to  such organizations are tax-deductible. </p>
+        <p><a href={moreUrl}>{moreText}</a></p>
+        </div>
       </div>
     </div>
   </div>
@@ -59,10 +52,9 @@ const {
 
 <style is:global>
   section.support {
-    background: #edeade;
+    background: #EDEADE;
     font-size: 20px;
     font-weight: 400;
-    padding: 60px 0;
   }
   @media (max-width: 1023px) {
     section.support {
@@ -79,7 +71,9 @@ const {
   section.support p {
     line-height: 135%;
   }
-  section.support p + p {
+  section.support p + ol,
+  section.support p + p,
+  section.support p + ul {
     padding-top: 16px;
   }
 </style>
