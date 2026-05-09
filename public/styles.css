@@ -1152,19 +1152,16 @@ footer .links a {
     width: 100%;
     z-index: 9;
     background: var(--Cream);
-    height: calc(100vh - 92px);
+    height: calc(var(--vh, 1vh) * 100 - 92px);
     font-size: 24px;
     opacity: 0;
     pointer-events: none;
     -webkit-transition: opacity 0.25s ease;
     transition: opacity 0.25s ease;
-    overflow-y: auto;
   }
 
   header nav > ul {
     display: block !important;
-    max-width: 520px;
-    margin: 0 auto;
   }
 
   header nav a {
@@ -1175,13 +1172,10 @@ footer .links a {
     position: relative;
     top: -10px;
     width: 100%;
-    box-shadow: none;
-    background: transparent;
   }
 
   header nav li ul a {
     padding: 10px 50px;
-    font-size: 20px;
   }
 
   /* Mobile dropdown open state (via JS) */
@@ -1193,7 +1187,30 @@ footer .links a {
   header nav li.drop.open ul {
     display: block;
   }
+}
 
+/* Mobile portrait — narrower nav padding + smaller header */
+@media (max-width: 767px) {
+  header nav {
+    top: 78px;
+    height: calc(var(--vh, 1vh) * 100 - 78px);
+  }
+  header nav > ul {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 525px) {
+  header nav > ul {
+    max-width: 100%;
+  }
+  header nav a {
+    padding: 35px 20px;
+  }
+}
+
+@media (max-width: 1023px) {
   footer .logo {
     position: relative;
     top: 0;
