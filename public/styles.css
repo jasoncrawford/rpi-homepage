@@ -189,6 +189,68 @@ img {
   }
 }
 
+/* Section headline with horizontal line continuing to the right */
+.headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.headline > :not(span) {
+  padding-right: 20px;
+}
+
+.headline span {
+  background: #EDEADE;
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin-top: 28px;
+}
+
+@media (max-width: 479px) {
+  .headline {
+    display: block;
+    white-space: normal;
+  }
+  .headline span {
+    display: none;
+  }
+}
+
+/* Inline text element overrides (from global.css) */
+mark {
+  background: none;
+  border: 0;
+  color: var(--Red);
+}
+
+b,
+strong {
+  font-weight: 500;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+u {
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a img {
+  display: block;
+}
+
+a * {
+  pointer-events: none;
+}
+
 /* ===== Base Styles ===== */
 html {
   background: var(--Cream);
@@ -301,14 +363,27 @@ h3 {
   font-size: 30px;
   line-height: 125%;
   letter-spacing: -0.03em;
-  color: var(--DarkGreen);
 }
 
 h4 {
   font-weight: 500;
   font-size: 20px;
   line-height: 135%;
-  color: var(--DarkGreen);
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
 }
 
 p {
@@ -326,7 +401,6 @@ em, i {
 /* ===== Links ===== */
 a {
   outline: 0 !important;
-  font-family: "F37", Helvetica, Arial, sans-serif;
   text-decoration: none !important;
   color: var(--Red);
   -webkit-transition: color 0.2s ease, border 0.2s ease;
