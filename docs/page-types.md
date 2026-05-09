@@ -49,12 +49,18 @@ Full-width parallax hero (`section.main`) with large centered text and a CTA but
 
 #### Components needed
 
-- **HomepageHero** — full-width parallax section with centered CTA text
-- Additional sections visible in the full scrolled capture (requires visual review)
+- **HomepageHero** (`section.main`) — full-width parallax hero with `.bg-wrap` + `.parallax` layers, scroll-triggered animations, and text overlaid on the right half
+- **NewsletterBanner** (`section.newsletter`) — red CTA banner with left-side HTML text and arrow-link button on the right
+- **TextSection** (`section.text`) — two-column layout with named slots (`full`, `left`, `right`) for flexible prose content
+- **VideoSection** (`section.video`) — 60/40 split with iframe embed left and title + excerpt + tags + CTA button right
+- **PostsSection** (`section.posts`) — 3-up card grid (thumbnail, title, excerpt, CTA); handles essays, announcements, and press; supports `external` links and verbatim `titleHtml` for press items
+- **SupportSection** (`section.support`) — beige-background donation section with decorative SVG illustration and Patreon/PayPal/email links
+
+**Page route:** `src/pages/index.astro` → `/`
 
 #### Existing placeholder assessment
 
-`HeroSection.astro` — **rework**: current placeholder is a simple title/subtitle block; needs the parallax scroll behavior, `.bg-wrap` layering, and animation classes matching the original.
+`HomepageHero.astro` — **created** as a new file in C12 (not a rework of HeroSection.astro, which is left in place for use by other C-issues). All other components above are new; no prior placeholders existed for them.
 
 ---
 

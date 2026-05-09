@@ -6,9 +6,10 @@ Static Astro site migrating rootsofprogress.org from WordPress. See `docs/superp
 
 ## Non-negotiables
 
-1. **No LLM in the content path.** Use `verbatim-content-extraction` skill for any content migration. WebFetch and asking Claude to "convert HTML" silently paraphrase content.
+1. **No LLM in the content path.** Use `verbatim-content-extraction` skill for any content migration — including SVGs. WebFetch and asking Claude to "convert HTML" or "copy this SVG" silently paraphrase content. For SVGs specifically: extract via curl + DOM parse, save under `src/components/svg/*.svg.html`, and inject with `?raw` imports — never hand-copy SVG path data into a string literal.
 2. **Visual diff before merging any page or component PR.** See workflow below.
 3. **No invented pages or copy.** Every page must trace back to `capture/manifest.json`.
+4. **Don't invent CSS rules.** Every rule in `public/styles.css` and component `<style is:global>` blocks must trace back to `capture/css/`. If a rule isn't in the captured CSS, don't add it — even if "it makes things look right." (Past bug: invented `section.posts { padding: 60px 0 }` added 360 px of cumulative offset across the page.)
 
 ## Visual diff — required on every page/component PR
 
@@ -19,10 +20,9 @@ Any PR that ships a page or page-section component must include a visual compari
 ```bash
 npm run visual-diff -- /           # homepage
 npm run visual-diff -- /about/     # any path
-npm run visual-diff -- /demo/homepage-demo   # demo route (local only)
 ```
 
-Produces PNGs in `tmp/visual-diff/<slug>-{local,live,diff}-{desktop,mobile}.png`. The `diff` PNG highlights every mismatched pixel in red. For `/demo/` paths, only local screenshots are taken (no live, no diff).
+Produces PNGs in `tmp/visual-diff/<slug>-{local,live,diff}-{desktop,mobile}.png`. The `diff` PNG highlights every mismatched pixel in red. For `/demo/...` paths (local-only routes), only the local screenshots are taken — no live, no diff.
 
 ### Verify with Read tool
 

@@ -108,6 +108,149 @@ img {
   display: block;
 }
 
+.thumb {
+  position: relative;
+}
+
+.thumb img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Card .bottoms row — used in posts, video, etc. (from live global.css) */
+.bottoms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  color: var(--Red);
+  line-height: 1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.bottoms div {
+  padding: 10px 15px;
+  border-right: 1px solid var(--Red);
+}
+
+.bottoms div:first-child {
+  border-left: 1px solid var(--Red);
+}
+
+.bottoms div:last-child {
+  float: right;
+  padding-right: 0;
+  border-right: 0;
+}
+
+.bottoms div:last-child:first-child {
+  border-left: 0;
+}
+
+@media (max-width: 767px) {
+  .bottoms {
+    width: 55%;
+    position: relative;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .bottoms div {
+    width: 100%;
+    border-right: 1px solid var(--Red);
+    border-left: 1px solid var(--Red);
+    padding: 5px;
+  }
+  .bottoms div:last-child {
+    float: none;
+    position: absolute !important;
+    top: 50% !important;
+    left: 100%;
+    -webkit-transform: translateY(-50%) !important;
+    transform: translateY(-50%) !important;
+    width: 90%;
+    border: 0 !important;
+    margin: 0;
+    right: auto !important;
+  }
+  .bottoms div:last-child .btn {
+    padding: 9px !important;
+    width: 95%;
+  }
+}
+
+/* Section headline with horizontal line continuing to the right */
+.headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.headline > :not(span) {
+  padding-right: 20px;
+}
+
+.headline span {
+  background: #EDEADE;
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin-top: 28px;
+}
+
+@media (max-width: 479px) {
+  .headline {
+    display: block;
+    white-space: normal;
+  }
+  .headline span {
+    display: none;
+  }
+}
+
+/* Inline text element overrides (from global.css) */
+mark {
+  background: none;
+  border: 0;
+  color: var(--Red);
+}
+
+b,
+strong {
+  font-weight: 500;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+u {
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a img {
+  display: block;
+}
+
+a * {
+  pointer-events: none;
+}
+
 /* ===== Base Styles ===== */
 html {
   background: var(--Cream);
@@ -220,14 +363,27 @@ h3 {
   font-size: 30px;
   line-height: 125%;
   letter-spacing: -0.03em;
-  color: var(--DarkGreen);
 }
 
 h4 {
   font-weight: 500;
   font-size: 20px;
   line-height: 135%;
-  color: var(--DarkGreen);
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
 }
 
 p {
@@ -245,7 +401,6 @@ em, i {
 /* ===== Links ===== */
 a {
   outline: 0 !important;
-  font-family: "F37", Helvetica, Arial, sans-serif;
   text-decoration: none !important;
   color: var(--Red);
   -webkit-transition: color 0.2s ease, border 0.2s ease;
@@ -997,19 +1152,16 @@ footer .links a {
     width: 100%;
     z-index: 9;
     background: var(--Cream);
-    height: calc(100vh - 92px);
+    height: calc(var(--vh, 1vh) * 100 - 92px);
     font-size: 24px;
     opacity: 0;
     pointer-events: none;
     -webkit-transition: opacity 0.25s ease;
     transition: opacity 0.25s ease;
-    overflow-y: auto;
   }
 
   header nav > ul {
     display: block !important;
-    max-width: 520px;
-    margin: 0 auto;
   }
 
   header nav a {
@@ -1020,13 +1172,10 @@ footer .links a {
     position: relative;
     top: -10px;
     width: 100%;
-    box-shadow: none;
-    background: transparent;
   }
 
   header nav li ul a {
     padding: 10px 50px;
-    font-size: 20px;
   }
 
   /* Mobile dropdown open state (via JS) */
@@ -1038,7 +1187,30 @@ footer .links a {
   header nav li.drop.open ul {
     display: block;
   }
+}
 
+/* Mobile portrait — narrower nav padding + smaller header */
+@media (max-width: 767px) {
+  header nav {
+    top: 78px;
+    height: calc(var(--vh, 1vh) * 100 - 78px);
+  }
+  header nav > ul {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 525px) {
+  header nav > ul {
+    max-width: 100%;
+  }
+  header nav a {
+    padding: 35px 20px;
+  }
+}
+
+@media (max-width: 1023px) {
   footer .logo {
     position: relative;
     top: 0;
@@ -1118,5 +1290,228 @@ footer .links a {
     top: 25px;
     right: 20px;
     margin-top: 0;
+  }
+}
+
+/* ===== Separator (.sep) ===== */
+.sep {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 60px;
+  margin-top: -20px;
+}
+
+@media (max-width: 767px) {
+  .sep {
+    margin-bottom: 20px;
+  }
+}
+
+.sep.small span {
+  background: #A6C4A7;
+}
+
+.sep.small svg {
+  height: 32px;
+  width: auto;
+}
+
+.sep span {
+  background: #5F6E60;
+  display: block;
+  height: 1px;
+  width: 50%;
+}
+
+.sep svg {
+  margin: 0 20px;
+}
+
+.sep .text {
+  padding: 0 20px;
+  font-family: "Palast", Helvetica, Arial, sans-serif;
+  color: var(--DarkGreen);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .sep .text {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+}
+
+section.separator {
+  padding: 18px 0;
+}
+
+section.separator:first-of-type {
+  margin-top: 110px;
+}
+
+@media (max-width: 767px) {
+  section.separator:first-of-type {
+    margin-top: 80px;
+  }
+  section.separator:first-of-type .sep {
+    margin-bottom: 0;
+  }
+}
+
+section.separator .sep {
+  margin-bottom: 40px;
+}
+
+section.separator .sep span {
+  background: #A6C4A7;
+}
+
+@media (max-width: 767px) {
+  section.separator .sep {
+    margin-bottom: 18px;
+  }
+}
+
+section.separator.light svg path {
+  fill: #EDEADE;
+}
+
+section.separator.light .sep span {
+  background: #EDEADE;
+}
+
+/* ===== Newsletter Banner ===== */
+section.newsletter {
+  background: var(--Red);
+  color: var(--Cream);
+  text-align: center;
+  padding: 22px 0;
+  position: relative;
+}
+
+section.newsletter::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: calc(100% - 38px);
+  background: var(--Cream);
+  width: 1px;
+}
+
+@media (max-width: 767px) {
+  section.newsletter::after {
+    width: 70px;
+    height: 1px !important;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+section.newsletter.single::after {
+  display: none;
+}
+
+section.newsletter.uneven::after {
+  display: none;
+}
+
+section.newsletter.uneven .text {
+  position: relative;
+  padding-right: 12px;
+  margin-right: 15px;
+}
+
+section.newsletter.uneven .text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 23px;
+  background: var(--Cream);
+  width: 1px;
+}
+
+@media (max-width: 1023px) {
+  section.newsletter.uneven .text {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  section.newsletter.uneven .text::after {
+    width: 70px;
+    height: 1px;
+    left: 50%;
+    top: 100%;
+    -webkit-transform: translate(-50%, 15px);
+    transform: translate(-50%, 15px);
+  }
+}
+
+@media (max-width: 767px) {
+  section.newsletter.onright::after {
+    display: none;
+  }
+  section.newsletter.onright [class*="col-6"] + div {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  section.newsletter [class*="col-6"] + div {
+    padding-top: 30px;
+  }
+}
+
+section.newsletter a {
+  color: var(--Cream);
+  border: 0;
+}
+
+@media (min-width: 1025px) {
+  section.newsletter a:hover {
+    color: #f1bbb8;
+  }
+  section.newsletter a:hover svg path {
+    fill: #f1bbb8;
+  }
+}
+
+section.newsletter a span {
+  border-bottom: 1px solid;
+}
+
+section.newsletter a svg {
+  margin-left: 6px;
+}
+
+section.newsletter a svg path {
+  -webkit-transition: fill 0.2s ease;
+  transition: fill 0.2s ease;
+}
+
+@media (max-width: 767px) {
+  section.newsletter a svg {
+    width: 10px;
+    height: auto;
+    margin-left: 5px;
+    margin-top: 4px;
+    position: absolute;
   }
 }

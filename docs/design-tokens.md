@@ -11,7 +11,7 @@ These four colors are defined as CSS custom properties in `global.css` and used 
 | Token | Hex | CSS Variable | Usage |
 |-------|-----|--------------|-------|
 | Cream | `#FFFCF2` | `--Cream` | Page background, header/nav background, light card bg |
-| Dark Green | `#5F6E60` | `--DarkGreen` | H1–H4 color, footer background, nav links, logo SVG |
+| Dark Green | `#5F6E60` | `--DarkGreen` | H1–H2 color, footer background, nav links, logo SVG (h3/h4 inherit Charcoal) |
 | Red (accent) | `#B92D24` | `--Red` | Links, CTAs, buttons, mark, newsletter banner |
 | Charcoal | `#2C2626` | `--Charcoal` | Body text, some secondary text |
 

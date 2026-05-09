@@ -6,9 +6,10 @@ export interface Props {
   title: string;
   description?: string;
   image?: string;
+  transparent?: boolean;
 }
 
-const { title, description = "Roots of Progress Institute", image } = Astro.props;
+const { title, description = "Roots of Progress Institute", image, transparent = false } = Astro.props;
 const pageTitle = title === "Roots of Progress" ? title : `${title} | Roots of Progress`;
 ---
 
@@ -37,7 +38,7 @@ const pageTitle = title === "Roots of Progress" ? title : `${title} | Roots of P
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <header>
+    <header class:list={[{ transparent }]}>
       <div class="container">
         <div class="grid vcenter-xs">
           <div class="col-8-xs col-3-md">
@@ -93,7 +94,7 @@ const pageTitle = title === "Roots of Progress" ? title : `${title} | Roots of P
       </div>
     </header>
 
-    <main id="main-content">
+    <main>
       <slot />
     </main>
 
@@ -148,6 +149,12 @@ const pageTitle = title === "Roots of Progress" ? title : `${title} | Roots of P
     </footer>
 
     <script>
+      function setVh() {
+        document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+      }
+      setVh();
+      window.addEventListener('resize', setVh, { passive: true });
+
       const header = document.querySelector('header') as HTMLElement;
       const menuBtn = document.querySelector('header .menu') as HTMLElement;
 

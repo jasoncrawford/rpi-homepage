@@ -1,0 +1,232 @@
+---
+export interface Props {
+  background?: string;
+  dataView?: boolean;
+}
+
+const { background, dataView = true } = Astro.props;
+const style = background ? `background:${background}` : undefined;
+---
+
+<section class="text" style={style} data-view={dataView || undefined}>
+  <div class="container">
+    <div class="grid">
+      <slot name="full" />
+      <div class="col-6-md">
+        <slot name="left" />
+      </div>
+      <div class="col-6-md">
+        <slot name="right" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  section.text {
+    padding: 60px 0;
+  }
+  section.text:first-of-type {
+    padding-top: 150px;
+  }
+  @media (max-width: 1023px) {
+    section.text [class*="col-6"] + div {
+      padding-top: 20px;
+    }
+  }
+  @media (max-width: 767px) {
+    section.text {
+      padding: 36px 0;
+    }
+    section.text:first-child {
+      padding-top: 90px;
+    }
+  }
+  section.text .max {
+    max-width: 600px;
+    position: relative;
+  }
+  section.text .max h1 em,
+  section.text .max h1 i,
+  section.text .max h2 em,
+  section.text .max h2 i {
+    font-style: normal;
+    font-weight: 300;
+    color: var(--Charcoal);
+  }
+  section.text .max h1 + h2,
+  section.text .max h2 + h2 {
+    padding-top: 0;
+    margin-top: -10px;
+  }
+  @media (max-width: 767px) {
+    section.text .max h2 {
+      line-height: 120%;
+    }
+  }
+  section.text .max h3 b,
+  section.text .max h3 strong {
+    color: var(--DarkGreen);
+    font-weight: 300;
+  }
+  section.text h1 {
+    font-size: 46px;
+    font-family: "Palast", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+  }
+  @media (max-width: 767px) {
+    section.text h1 {
+      font-size: 40px;
+    }
+  }
+  section.text h2,
+  section.text h3,
+  section.text h4 {
+    padding-bottom: 14px;
+  }
+  section.text h3 em,
+  section.text h3 i {
+    font-style: normal;
+    color: var(--Red);
+    font-weight: 300;
+  }
+  section.text h3 b,
+  section.text h3 strong {
+    font-weight: 300;
+    color: var(--DarkGreen);
+  }
+  @media (max-width: 767px) {
+    section.text h3 {
+      font-size: 28px;
+    }
+  }
+  section.text h4 {
+    font-weight: 400;
+  }
+  section.text hr {
+    background: none;
+    border: 0;
+    margin-top: 40px;
+    border-bottom: 1px solid #A6C4A7;
+  }
+  section.text *+h2,
+  section.text *+h3,
+  section.text *+h4 {
+    padding-top: 27px;
+  }
+  section.text h3 + h3 {
+    padding-top: 0;
+    margin-top: -12px;
+  }
+  section.text p {
+    line-height: 135%;
+  }
+  section.text p + .acc,
+  section.text p + ol,
+  section.text p + p,
+  section.text p + ul {
+    padding-top: 16px;
+  }
+  section.text p.f--20 {
+    font-size: 20px;
+  }
+  section.text ul {
+    line-height: 135%;
+  }
+  section.text ul + .acc,
+  section.text ul + ol,
+  section.text ul + p,
+  section.text ul + ul {
+    padding-top: 16px;
+  }
+  section.text ul li {
+    position: relative;
+    padding-left: 25px;
+  }
+  section.text ul li:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--Charcoal);
+    top: 10px;
+    left: 11px;
+    border-radius: 50%;
+  }
+  section.text ul li ul {
+    padding-top: 5px;
+  }
+  section.text ol {
+    line-height: 135%;
+    counter-reset: counter;
+  }
+  section.text ol + .acc,
+  section.text ol + ol,
+  section.text ol + p,
+  section.text ol + ul {
+    padding-top: 16px;
+  }
+  section.text ol li {
+    position: relative;
+    padding-left: 20px;
+    counter-increment: counter;
+  }
+  section.text ol li:before {
+    content: counter(counter) ".";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 500;
+  }
+  section.text blockquote {
+    padding: 15px 20px;
+    background: #EDEADE;
+    margin-top: 20px;
+    line-height: 135%;
+  }
+  section.text blockquote + blockquote {
+    margin-top: 0;
+    padding-top: 5px;
+  }
+  section.text blockquote + p {
+    padding-top: 16px;
+  }
+  section.text blockquote a {
+    color: var(--Charcoal);
+    border-color: var(--Charcoal);
+  }
+  @media (min-width: 1025px) {
+    section.text blockquote a:hover {
+      color: var(--Red);
+      border-color: var(--Red);
+    }
+  }
+  section.text .btn {
+    margin-top: 7px;
+  }
+  section.text .btn.back {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 300;
+    pointer-events: none;
+    font-size: 14px;
+  }
+  section.text .pad {
+    padding-top: 16px;
+  }
+  section.text .pad h3:first-of-type {
+    margin-top: -9px;
+  }
+  section.separator + section.text {
+    padding-top: 0;
+    margin-top: -5px;
+  }
+  section.separator + section.text .max h3 {
+    color: var(--DarkGreen);
+  }
+  section.separator:first-of-type + section.text {
+    margin-top: 20px;
+  }
+</style>

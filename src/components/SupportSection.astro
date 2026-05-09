@@ -1,0 +1,67 @@
+---
+import supportSvg from "./svg/support-decoration.svg.html?raw";
+
+export interface Props {
+  title: string;
+  patreonUrl?: string;
+  paypalUrl?: string;
+  contactEmail?: string;
+  moreUrl?: string;
+  moreText?: string;
+}
+
+const {
+  title,
+  patreonUrl = "https://www.patreon.com/rootsofprogress",
+  paypalUrl = "https://www.paypal.com/donate?hosted_button_id=DH53T4CSFD8GC",
+  contactEmail = "jason@rootsofprogress.org",
+  moreUrl = "/support/",
+  moreText = "More details here",
+} = Astro.props;
+---
+
+<section class="support" data-view>
+  <div class="container">
+    <div class="grid vcenter-xs">
+      <div class="col-6-md" set:html={supportSvg} />
+      <div class="col-6-md">
+        <h2 class="t--fadedown t--delay_250">{title}</h2>
+        <div class="text t--fadedown t--delay_500">
+        <p>You can support us monthly through Patreon:</p>
+        <p><a href={patreonUrl} target="_blank" data-nou><img src="https://rootsofprogress.org/wp-content/themes/theme/assets/img/patreon.png" style="height:38px;" alt="Patreon" /></a></p>
+        <p>For a one-time donation, we take <a href={paypalUrl} rel="noopener" target="_blank">PayPal</a>. Or <a href={`mailto:${contactEmail}`}>get in touch</a> to talk about  a larger contribution or other payment methods.</p>
+        <p>We are a 501(c)(3) public educational charity; in the US, donations to  such organizations are tax-deductible. </p>
+        <p><a href={moreUrl}>{moreText}</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  section.support {
+    background: #EDEADE;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  @media (max-width: 1023px) {
+    section.support {
+      padding: 36px 0;
+      font-size: 17px;
+    }
+    section.support svg {
+      display: none;
+    }
+  }
+  section.support h2 {
+    margin-bottom: 27px;
+  }
+  section.support p {
+    line-height: 135%;
+  }
+  section.support p + ol,
+  section.support p + p,
+  section.support p + ul {
+    padding-top: 16px;
+  }
+</style>

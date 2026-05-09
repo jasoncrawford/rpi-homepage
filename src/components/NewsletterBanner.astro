@@ -1,0 +1,27 @@
+---
+export interface Props {
+  text: string;
+  linkText: string;
+  href: string;
+}
+
+const { text, linkText, href } = Astro.props;
+---
+
+<section class="newsletter">
+  <div class="container">
+    <div class="grid">
+      <div class="col-6-sm">
+        <div class="text" set:html={text} />
+      </div>
+      <div class="col-6-sm">
+        <a href={href}>
+          <span>{linkText}</span>
+          <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.1693 6.50004L13.6191 6.05509L14.0592 6.50004L13.6191 6.94498L13.1693 6.50004ZM12.5817 7.13278L0.830688 7.13278L0.830689 5.86729L12.5817 5.86729V7.13278ZM8.33119 0.708379L13.6191 6.05509L12.7194 6.94498L7.43142 1.59826L8.33119 0.708379ZM13.6191 6.94498L8.33119 12.2917L7.43142 11.4018L12.7194 6.05509L13.6191 6.94498Z" fill="#FFFCF2"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
