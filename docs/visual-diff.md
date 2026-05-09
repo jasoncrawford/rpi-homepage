@@ -7,10 +7,9 @@
 ```bash
 npm run visual-diff -- /
 npm run visual-diff -- /about/
-npm run visual-diff -- /demo/homepage-demo
 ```
 
-Output: six PNG files in `tmp/visual-diff/` (two for `/demo/` paths — no live counterpart, no diff).
+Output: six PNG files in `tmp/visual-diff/`. For paths under `/demo/...` (local-only routes), only two `local` PNGs are produced — no live counterpart, no diff.
 
 File naming: `<slug>-{local,live,diff}-{desktop,mobile}.png`
 
