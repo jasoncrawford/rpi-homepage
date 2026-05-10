@@ -56,10 +56,34 @@ async function waitForDevServer(url) {
   throw new Error(`Dev server at ${url} did not become ready within ${DEV_READY_TIMEOUT_MS}ms`);
 }
 
+// Scroll from top to bottom in half-viewport steps so each lazy-loaded image
+// (loading="lazy") enters the intersection observer's viewport and starts its
+// network request. Then scroll back to top so any scroll-state classes on the
+// header (e.g. header.scroll) reset before the screenshot.
+async function triggerLazyImages(page) {
+  await page.evaluate(async () => {
+    await new Promise(resolve => {
+      let y = 0;
+      const step = window.innerHeight / 2;
+      const interval = setInterval(() => {
+        window.scrollTo(0, y);
+        y += step;
+        if (y >= document.body.scrollHeight) {
+          clearInterval(interval);
+          window.scrollTo(0, 0);
+          resolve();
+        }
+      }, 100);
+    });
+  });
+  await page.waitForLoadState('networkidle');
+}
+
 async function screenshot(browser, url, slug, label, viewport, size) {
   const ctx = await browser.newContext({ viewport });
   const page = await ctx.newPage();
   await page.goto(url, { waitUntil: 'networkidle' });
+  await triggerLazyImages(page);
   const outPath = path.join(OUT_DIR, `${slug}-${label}-${size}.png`);
   await page.screenshot({ path: outPath, fullPage: true });
   await ctx.close();
