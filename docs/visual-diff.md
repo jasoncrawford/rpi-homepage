@@ -17,7 +17,7 @@ File naming: `<slug>-{local,live,diff}-{desktop,mobile}.png`
 
 1. Starts `astro dev` on port 4321 and waits for it to be ready.
 2. Opens Chromium (headless) via Playwright.
-3. Captures full-page screenshots at 1280×800 (desktop) and 375×800 (mobile).
+3. For each viewport, loads the page, scrolls top-to-bottom in half-viewport steps so each `loading="lazy"` image enters the intersection observer's viewport and starts its network request, scrolls back to top (so any scroll-state header class resets), waits for network idle, then captures a full-page screenshot at 1280×800 (desktop) and 375×800 (mobile).
 4. For non-demo paths, generates a `diff` PNG per viewport that highlights every mismatched pixel in red on top of the local screenshot, and prints the percent of mismatched pixels.
 5. Tears down the dev server on exit, including on error.
 
