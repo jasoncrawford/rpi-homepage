@@ -32,6 +32,21 @@ Migratable pages requiring Astro routes: **172**
 
 ---
 
+## Shared conventions (apply to every page type)
+
+- **CSS:** every rule in `public/styles.css` and component `<style is:global>` blocks must trace to a captured source rule in `capture/css/`. Don't invent rules — see the `no-invented-css` skill and the `CLAUDE.md` non-negotiable.
+- **Verbatim SVGs:** decorative SVGs (logos, icon patterns, the Fellowship logo divider, etc.) live as raw `*.svg.html` files under `src/components/svg/` and are imported with Vite's `?raw` loader, e.g.:
+  ```astro
+  ---
+  import logoMark from "../components/svg/fellowship-logo.svg.html?raw";
+  ---
+  <div class="sep" set:html={logoMark} />
+  ```
+  Never paste SVG path data into a string literal — the LLM silently truncates after a few hundred characters of `<path d="...">` data. See the `verbatim-content-extraction` skill.
+- **Visual diff** is required on every page/component PR — see `docs/visual-diff.md` (including the "measure, don't eyeball" technique for debugging high diffs).
+
+---
+
 ## Migratable Page Types
 
 ### 1. `homepage`

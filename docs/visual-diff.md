@@ -43,6 +43,43 @@ Small rendering deltas (anti-aliasing, font hinting) are fine — pixelmatch tol
 2. If pre-existing, note it in the PR description so reviewers have context.
 3. If caused by your changes, iterate until local matches live (or the departure is intentional and approved).
 
+## Debugging high diffs — measure, don't eyeball
+
+When the diff PNG is busy with red and you can't tell what's wrong, **stop staring at the PNG and measure with Playwright**. Eyeballing typically takes hours and guesses wrong; measurement finds the offending property in seconds.
+
+The pattern: open both URLs in the same browser context, query the DOM, compare. Section heights first to find the offending section, then computed CSS on its children to find the offending property.
+
+```js
+// Inside a Playwright script. Run against http://127.0.0.1:4321/ and the live URL.
+const sections = await page.evaluate(() =>
+  [...document.querySelectorAll('main > section')].map(s => ({
+    cls: s.className,
+    h: Math.round(s.getBoundingClientRect().height),
+  }))
+);
+// Compare local[i].h vs live[i].h to find the section with the largest delta.
+
+// Then on the offending section, compare computed CSS on its children:
+const styles = await page.evaluate(() => {
+  const out = {};
+  for (const sel of ['.headline', '.title', '.bottoms', /* ... */]) {
+    const el = document.querySelector(sel);
+    if (!el) continue;
+    const cs = getComputedStyle(el);
+    out[sel] = { font: cs.fontFamily, color: cs.color, padding: cs.padding };
+  }
+  return out;
+});
+```
+
+Trace each property where local differs from live:
+
+- **In your CSS but not in captured?** → invented; delete it. (See the `no-invented-css` skill.)
+- **In captured but not in yours?** → missing; port it.
+- **In both at different specificity / media query?** → fix the cascade.
+
+Real result: this technique took the C12 homepage diff from 12% → 2.9% by surfacing six invented rules that no amount of eyeballing would have found.
+
 ## Chromium install
 
 `npm install` automatically installs the Chromium browser via the `postinstall` script. If you skipped that or need to re-run it:
