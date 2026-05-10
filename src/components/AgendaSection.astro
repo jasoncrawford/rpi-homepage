@@ -1,0 +1,82 @@
+---
+export interface Props {
+  heading: string;
+  description?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  background?: string;
+}
+
+const { heading, description, imageSrc, imageAlt = "", imageWidth, imageHeight, background } = Astro.props;
+const style = background ? `background:${background}` : undefined;
+---
+
+<section class="text agenda" data-view style={style}>
+  <div class="container">
+    <div class="grid">
+      <div class="col-6-md">
+        <div class="max t--fadedown"><h2>{heading}</h2></div>
+      </div>
+      {description && (
+        <div class="col-6-md">
+          <div class="text t--fadedown t--delay_250">
+            <Fragment set:html={description} />
+          </div>
+        </div>
+      )}
+    </div>
+    {imageSrc && (
+      <div class="grid">
+        <div class="col-12-sm">
+          <div class="visible-md">
+            <div style="padding-top:40px;">
+              <img
+                src={imageSrc}
+                alt={imageAlt}
+                width={imageWidth}
+                height={imageHeight}
+                decoding="async"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="hidden-md">
+            <div style="padding-top:20px">
+              <img
+                src={imageSrc}
+                alt={imageAlt}
+                width={imageWidth}
+                height={imageHeight}
+                decoding="async"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+  </div>
+</section>
+
+<style is:global>
+  section.text.agenda img {
+    display: block;
+    width: 100%;
+  }
+  .visible-md {
+    display: none;
+  }
+  .hidden-md {
+    display: block;
+  }
+  @media (min-width: 1024px) {
+    .visible-md {
+      display: block;
+    }
+    .hidden-md {
+      display: none;
+    }
+  }
+</style>

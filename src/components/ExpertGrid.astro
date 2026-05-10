@@ -1,0 +1,248 @@
+---
+import accSepLogo from "./svg/acc-sep-logo.svg.html?raw";
+
+export interface Expert {
+  id: string;
+  name: string;
+  position: string;
+  image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  bio?: string;
+  linkedinUrl?: string;
+  linkedinLabel?: string;
+  profileUrl?: string;
+  profileLabel?: string;
+}
+
+export interface Props {
+  heading?: string;
+  description?: string;
+  experts: Expert[];
+}
+
+const { heading, description, experts } = Astro.props;
+---
+
+<section class="fellows alt popups" data-view>
+  <div class="container">
+    {heading && (
+      <div class="acc-sep">
+        <span></span>
+        <Fragment set:html={accSepLogo} />
+        <span></span>
+      </div>
+      <div class="grid">
+        <div class="col-6-md">
+          <div class="max t--fadedown"><h2>{heading}</h2></div>
+        </div>
+        {description && (
+          <div class="col-6-md">
+            <div class="text t--fadedown t--delay_250">
+              <Fragment set:html={description} />
+            </div>
+          </div>
+        )}
+      </div>
+    )}
+    <div class="acc">
+      <div class="row">
+        <div class="team-a a">
+          <div class="grid">
+            {experts.map((expert) => (
+              <div class="col-6-sm col-4-md" id={expert.id}>
+                <div class="block alt">
+                  <div class="info mh" data-mh="info">
+                    <h4>{expert.name}</h4>
+                    <div class="position">{expert.position}</div>
+                  </div>
+                  {expert.image && (
+                    <div class="thumb">
+                      <img
+                        src={expert.image}
+                        alt={expert.name}
+                        width={expert.imageWidth}
+                        height={expert.imageHeight}
+                        decoding="async"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+                  <div class="inside">
+                    {expert.bio && (
+                      <div class="bio mh" data-mh="bio">
+                        <Fragment set:html={expert.bio} />
+                      </div>
+                    )}
+                  </div>
+                  <div class="links">
+                    {expert.linkedinUrl && (
+                      <a href={expert.linkedinUrl} target="_blank" rel="noopener noreferrer">
+                        <div>{expert.linkedinLabel ?? `${expert.name}'s LinkedIn`}</div>
+                        <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_experts_li)"><path d="M22.5022 0H1.7941C0.802125 0 0 0.78314 0 1.75139V22.5449C0 23.5132 0.802125 24.3011 1.7941 24.3011H22.5022C23.4942 24.3011 24.3011 23.5132 24.3011 22.5497V1.75139C24.3011 0.78314 23.4942 0 22.5022 0ZM7.20963 20.7081H3.60244V9.10816H7.20963V20.7081ZM5.40604 7.52764C4.24794 7.52764 3.31292 6.59262 3.31292 5.43926C3.31292 4.28591 4.24794 3.35089 5.40604 3.35089C6.55939 3.35089 7.49441 4.28591 7.49441 5.43926C7.49441 6.58787 6.55939 7.52764 5.40604 7.52764ZM20.7081 20.7081H17.1057V15.0695C17.1057 13.7263 17.0819 11.9939 15.2309 11.9939C13.3561 11.9939 13.0713 13.4605 13.0713 14.9746V20.7081H9.47362V9.10816H12.9289V10.6934H12.9764C13.4558 9.78213 14.6329 8.81863 16.3842 8.81863C20.0341 8.81863 20.7081 11.2203 20.7081 14.3433V20.7081Z" fill="#5F6E60"/></g><defs><clipPath id="clip0_experts_li"><rect width="24.3011" height="24.3011" fill="white"/></clipPath></defs></svg>
+                      </a>
+                    )}
+                    {expert.profileUrl && (
+                      <a href={expert.profileUrl}>
+                        <div>{expert.profileLabel ?? `Learn more about ${expert.name}`}</div>
+                        <svg width="11" height="12" viewbox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 6L0 12L-5.24537e-07 1.90735e-06L7 6Z" fill="#2C2626"/></svg>
+                      </a>
+                    )}
+                  </div>
+                </div>
+                <div class="popup" data-lenis-prevent></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  section.fellows {
+    padding: 50px 0;
+  }
+  @media (max-width: 767px) {
+    section.fellows {
+      padding: 42px 0;
+    }
+  }
+  section.fellows .acc-sep {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+  section.fellows .acc-sep span {
+    background: #A6C4A7;
+    display: block;
+    height: 1px;
+    width: 50%;
+  }
+  section.fellows.alt > .container > .grid {
+    padding: 0 10px;
+  }
+  @media (max-width: 767px) {
+    section.fellows.alt > .container > .grid {
+      padding: 0;
+      margin-top: -18px;
+    }
+  }
+  section.fellows.alt .info {
+    background: #fff;
+    padding: 20px;
+  }
+  section.fellows.alt .block {
+    padding-top: 0;
+    margin-bottom: 30px;
+  }
+  section.fellows.alt .block.alt {
+    border: 1px solid #A6C4A7;
+    border-bottom: 0;
+  }
+  section.fellows.alt .block.alt .links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    padding: 15px;
+    border: 0;
+    border-top: 1px solid #A6C4A7;
+    background: #fff;
+    transition: all 0.25s ease;
+    color: #000;
+  }
+  @media (min-width: 1025px) {
+    section.fellows.alt .block.alt .links a:hover {
+      background: #EDEADE;
+    }
+  }
+  section.fellows.alt .block.alt .links a:last-child {
+    background: #5F6E60;
+    color: #FFFCF2;
+  }
+  section.fellows.alt .block.alt .links a:last-child svg * {
+    fill: #FFFCF2;
+  }
+  @media (min-width: 1025px) {
+    section.fellows.alt .block.alt .links a:last-child:hover {
+      background: var(--Red);
+    }
+  }
+  section.fellows.alt .block.alt .links a img,
+  section.fellows.alt .block.alt .links a svg {
+    max-height: 25px;
+    width: initial;
+    display: block;
+  }
+  section.fellows .block .thumb {
+    position: relative;
+    padding-bottom: 100%;
+  }
+  section.fellows .block .thumb img {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  section.fellows .block .inside {
+    background: #fff;
+    padding: 15px;
+  }
+  section.fellows.popups .block h4 {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 109%;
+    letter-spacing: -0.03em;
+  }
+  section.fellows.popups .block .position {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  section.fellows .block h4 {
+    color: var(--DarkGreen);
+    font-size: 22px;
+    font-family: "Palast", Helvetica, Arial, sans-serif;
+  }
+  section.fellows .block .position {
+    font-size: 15px;
+    margin-top: 8px;
+  }
+  section.fellows.alt .bio {
+    font-size: 15px;
+    line-height: 150%;
+  }
+  section.fellows.alt .bio p + p {
+    padding-top: 10px;
+  }
+  section.fellows.alt .block.alt .bio p + p {
+    padding-top: 5px;
+  }
+  section.fellows.popups .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background: #FFFCF2;
+    padding: 30px 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    overflow: auto;
+  }
+  section.fellows.popups .popup.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+</style>
