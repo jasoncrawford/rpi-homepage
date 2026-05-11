@@ -15,6 +15,7 @@
     "postinstall": "npx playwright install chromium"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "astro": "^4.16.19",
     "js-yaml": "^4.1.1",
     "typescript": "^5.9.3"

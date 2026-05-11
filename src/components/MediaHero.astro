@@ -1,0 +1,79 @@
+---
+export interface Props {
+  src: string;
+  alt?: string;
+  width?: number;
+  height?: number;
+}
+
+const { src, alt = "", width, height } = Astro.props;
+---
+
+<section class="media" data-view>
+  <div class="bg-wrap-75">
+    <div class="bg">
+      <div class="parallax">
+        <img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          decoding="async"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  section.media {
+    position: relative;
+  }
+  section.media .bg-wrap-75 {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 617px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+  }
+  @media (max-width: 1023px) {
+    section.media .bg-wrap-75 {
+      position: relative;
+      padding-bottom: 80%;
+      width: 100% !important;
+      height: auto;
+    }
+  }
+  @media (max-width: 767px) {
+    section.media .bg-wrap-75 {
+      padding-bottom: 100%;
+    }
+  }
+  section.media .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+  }
+  section.media .bg .parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  section.media .bg .parallax img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+  }
+</style>
