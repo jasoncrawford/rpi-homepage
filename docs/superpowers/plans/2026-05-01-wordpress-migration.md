@@ -100,10 +100,10 @@ One issue per page type. Each issue:
 
 - References the relevant captured HTML files and `docs/design-tokens.md`
 - Implements the components in `src/components/`
-- Builds a `*-demo.astro` route under `src/pages/_demo/` that renders sample data through the component, for visual review
+- Wires the components into the corresponding real page route (`src/pages/index.astro`, `src/pages/about.astro`, etc.) using captured content from `capture/html/`
 - Updates or replaces the existing PersonCard / HeroSection / EventCard placeholders rather than adding parallel ones
 
-Component fidelity is judged by visual diff against the original, not against the spec. Use `npm run visual-diff -- /demo/<component>` to screenshot the demo route and compare with `npm run visual-diff -- /<corresponding-live-path>`.
+Component fidelity is judged by visual diff of the real page against the original. Run `npm run visual-diff -- /<live-path>` and compare local against live (the script produces a red-pixel diff overlay automatically). Do not build separate `/demo/...` routes — they sidestep the live diff and let regressions slip through.
 
 ---
 

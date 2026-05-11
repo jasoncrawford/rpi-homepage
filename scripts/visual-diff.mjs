@@ -4,14 +4,13 @@
  * Examples:
  *   node scripts/visual-diff.mjs /
  *   node scripts/visual-diff.mjs /about/
- *   node scripts/visual-diff.mjs /demo/homepage-demo
  *
  * Takes desktop (1280×800) and mobile (375×800) full-page screenshots of:
- *   - Local:  http://localhost:4321<path>  (always)
- *   - Live:   https://rootsofprogress.org<path>  (skipped for /demo/... paths)
+ *   - Local:  http://localhost:4321<path>
+ *   - Live:   https://rootsofprogress.org<path>
  *
- * For non-demo paths, also produces a pixel-diff overlay PNG per viewport
- * (red highlights on the local screenshot wherever it disagrees with live).
+ * Also produces a pixel-diff overlay PNG per viewport (red highlights on the
+ * local screenshot wherever it disagrees with live).
  *
  * Saves PNGs to tmp/visual-diff/ and prints the paths.
  */
@@ -36,10 +35,6 @@ const DEV_POLL_MS = 500;
 
 function pathToSlug(urlPath) {
   return urlPath.replace(/^\//, '').replace(/\/$/, '').replace(/\//g, '-') || 'home';
-}
-
-function isDemo(urlPath) {
-  return urlPath.startsWith('/demo/') || urlPath === '/demo';
 }
 
 async function waitForDevServer(url) {
@@ -129,14 +124,13 @@ async function diffPNGs(localPath, livePath, diffPath) {
 async function main() {
   const urlPath = process.argv[2];
   if (!urlPath || !urlPath.startsWith('/')) {
-    console.error('Usage: node scripts/visual-diff.mjs <path>  (e.g. / or /about/ or /demo/homepage-demo)');
+    console.error('Usage: node scripts/visual-diff.mjs <path>  (e.g. / or /about/)');
     process.exit(1);
   }
 
   await fs.mkdir(OUT_DIR, { recursive: true });
 
   const slug = pathToSlug(urlPath);
-  const skipLive = isDemo(urlPath);
 
   // Start astro dev server
   const devServer = spawn('npx', ['astro', 'dev', '--port', String(LOCAL_PORT), '--host', '127.0.0.1'], {
@@ -171,27 +165,22 @@ async function main() {
         console.log(`Saved: ${localPath}`);
         saved.push(localPath);
 
-        if (!skipLive) {
-          const liveUrl = `${LIVE_BASE}${urlPath}`;
-          const livePath = await screenshot(browser, liveUrl, slug, 'live', viewport, size);
-          console.log(`Saved: ${livePath}`);
-          saved.push(livePath);
+        const liveUrl = `${LIVE_BASE}${urlPath}`;
+        const livePath = await screenshot(browser, liveUrl, slug, 'live', viewport, size);
+        console.log(`Saved: ${livePath}`);
+        saved.push(livePath);
 
-          const diffPath = path.join(OUT_DIR, `${slug}-diff-${size}.png`);
-          const { mismatched, total } = await diffPNGs(localPath, livePath, diffPath);
-          const pct = ((mismatched / total) * 100).toFixed(2);
-          console.log(`Saved: ${diffPath}  (${pct}% mismatch)`);
-          saved.push(diffPath);
-        }
+        const diffPath = path.join(OUT_DIR, `${slug}-diff-${size}.png`);
+        const { mismatched, total } = await diffPNGs(localPath, livePath, diffPath);
+        const pct = ((mismatched / total) * 100).toFixed(2);
+        console.log(`Saved: ${diffPath}  (${pct}% mismatch)`);
+        saved.push(diffPath);
       }
     } finally {
       await browser.close();
     }
 
     console.log(`\nDone. ${saved.length} screenshots in ${OUT_DIR}/`);
-    if (skipLive) {
-      console.log('(Live screenshots skipped: /demo/ path)');
-    }
   } finally {
     cleanup();
   }
