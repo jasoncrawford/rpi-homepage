@@ -9,7 +9,7 @@ npm run visual-diff -- /
 npm run visual-diff -- /about/
 ```
 
-Output: six PNG files in `tmp/visual-diff/`. For paths under `/demo/...` (local-only routes), only two `local` PNGs are produced — no live counterpart, no diff.
+Output: six PNG files in `tmp/visual-diff/` per path (one local, one live, one diff per viewport).
 
 File naming: `<slug>-{local,live,diff}-{desktop,mobile}.png`
 
@@ -18,10 +18,10 @@ File naming: `<slug>-{local,live,diff}-{desktop,mobile}.png`
 1. Starts `astro dev` on port 4321 and waits for it to be ready.
 2. Opens Chromium (headless) via Playwright.
 3. For each viewport, loads the page, scrolls top-to-bottom in half-viewport steps so each `loading="lazy"` image enters the intersection observer's viewport and starts its network request, scrolls back to top (so any scroll-state header class resets), waits for network idle, then captures a full-page screenshot at 1280×800 (desktop) and 375×800 (mobile).
-4. For non-demo paths, generates a `diff` PNG per viewport that highlights every mismatched pixel in red on top of the local screenshot, and prints the percent of mismatched pixels.
+4. Generates a `diff` PNG per viewport that highlights every mismatched pixel in red on top of the local screenshot, and prints the percent of mismatched pixels.
 5. Tears down the dev server on exit, including on error.
 
-`/demo/...` paths are local-only — there's nothing to compare on the live site, so no `live` or `diff` PNG is produced.
+Build pages at their real URLs (`/`, `/about/`, etc.) and diff against the live site. There is no `/demo/` sandbox — see `CLAUDE.md` for why.
 
 ## What to look for
 

@@ -22,7 +22,9 @@ npm run visual-diff -- /           # homepage
 npm run visual-diff -- /about/     # any path
 ```
 
-Produces PNGs in `tmp/visual-diff/<slug>-{local,live,diff}-{desktop,mobile}.png`. The `diff` PNG highlights every mismatched pixel in red. For `/demo/...` paths (local-only routes), only the local screenshots are taken — no live, no diff.
+Produces PNGs in `tmp/visual-diff/<slug>-{local,live,diff}-{desktop,mobile}.png`. The `diff` PNG highlights every mismatched pixel in red.
+
+Build at the real URL and diff against live. Don't introduce `/demo/...` routes for visual review — they exist for sample-data sandboxing we no longer need (the captured site has the real content), and they make it easy to skip the live comparison entirely.
 
 ### Verify with Read tool
 
