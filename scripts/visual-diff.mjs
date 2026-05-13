@@ -16,8 +16,10 @@
  */
 
 import fs from 'fs/promises';
+import net from 'net';
 import path from 'path';
 import { spawn } from 'child_process';
+import { once } from 'events';
 import { chromium } from 'playwright';
 import { PNG } from 'pngjs';
 import pixelmatch from 'pixelmatch';
@@ -35,6 +37,15 @@ const DEV_POLL_MS = 500;
 
 function pathToSlug(urlPath) {
   return urlPath.replace(/^\//, '').replace(/\/$/, '').replace(/\//g, '-') || 'home';
+}
+
+async function isPortFree(port, host) {
+  return new Promise(resolve => {
+    const server = net.createServer();
+    server.once('error', () => resolve(false));
+    server.once('listening', () => server.close(() => resolve(true)));
+    server.listen(port, host);
+  });
 }
 
 async function waitForDevServer(url) {
@@ -132,23 +143,39 @@ async function main() {
 
   const slug = pathToSlug(urlPath);
 
-  // Start astro dev server
+  if (!(await isPortFree(LOCAL_PORT, '127.0.0.1'))) {
+    console.error(`Port ${LOCAL_PORT} on 127.0.0.1 is already in use. Stop the process holding it (e.g. \`pkill -9 -f 'astro dev'\` — do NOT pkill node, that kills your shell/agent) and retry.`);
+    process.exit(1);
+  }
+
+  // Start astro dev server.
+  // - --host 127.0.0.1 forces IPv4 binding; without it Vite calls
+  //   listen('localhost', ...) and Node may resolve to ::1, leaving nothing
+  //   listening on 127.0.0.1.
+  // - stderr is inherited so astro errors (port conflicts, config problems)
+  //   surface immediately instead of being swallowed.
+  // - detached:true puts npx and its astro grandchild into a new process
+  //   group, so we can kill the whole tree with a negative PID below.
+  //   Without this, kill() reaches only npx and astro is reparented to init
+  //   and keeps running, holding inherited file descriptors open and the
+  //   port pinned for the next run.
   const devServer = spawn('npx', ['astro', 'dev', '--port', String(LOCAL_PORT), '--host', '127.0.0.1'], {
-    stdio: ['ignore', 'pipe', 'pipe'],
-    detached: false,
+    stdio: ['ignore', 'ignore', 'inherit'],
+    detached: true,
   });
 
   let devServerExited = false;
   devServer.on('exit', () => { devServerExited = true; });
 
-  const cleanup = () => {
-    if (!devServerExited) {
-      devServer.kill('SIGTERM');
-    }
+  // SIGKILL the whole process group. SIGTERM is ignored by Vite during HMR.
+  // Negative PID kills every process in devServer's group (npx + astro).
+  const killDevServer = () => {
+    if (devServerExited) return;
+    try { process.kill(-devServer.pid, 'SIGKILL'); } catch { /* already dead */ }
   };
-  process.on('exit', cleanup);
-  process.on('SIGINT', () => { cleanup(); process.exit(130); });
-  process.on('SIGTERM', () => { cleanup(); process.exit(143); });
+  process.on('exit', killDevServer);
+  process.on('SIGINT', () => { killDevServer(); process.exit(130); });
+  process.on('SIGTERM', () => { killDevServer(); process.exit(143); });
 
   try {
     console.log(`Starting astro dev on port ${LOCAL_PORT}…`);
@@ -182,7 +209,8 @@ async function main() {
 
     console.log(`\nDone. ${saved.length} screenshots in ${OUT_DIR}/`);
   } finally {
-    cleanup();
+    killDevServer();
+    if (!devServerExited) await once(devServer, 'exit');
   }
 }
 

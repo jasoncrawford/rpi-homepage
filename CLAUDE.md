@@ -26,6 +26,12 @@ Produces PNGs in `tmp/visual-diff/<slug>-{local,live,diff}-{desktop,mobile}.png`
 
 Build at the real URL and diff against live. Don't introduce `/demo/...` routes for visual review — they exist for sample-data sandboxing we no longer need (the captured site has the real content), and they make it easy to skip the live comparison entirely.
 
+### If port 4321 is busy
+
+The script pre-checks port 4321 and bails immediately with a message that includes the right command. Do exactly what it says: `pkill -9 -f 'astro dev'`.
+
+**Never run `pkill -f node` (or `-9 node`, or any unscoped node kill).** Claude Code itself is a node process — those commands kill the agent's own shell, ending the session mid-task. This has happened twice already. Always scope kills to `'astro dev'` or use `ss -tlnp | grep 4321` to find the exact PID and kill that one.
+
 ### Verify with Read tool
 
 Use the `Read` tool to view each PNG — Claude can see images.
